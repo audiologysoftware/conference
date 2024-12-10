@@ -1,0 +1,130 @@
+/* General Styles for About Section */
+.about-section {
+  background: #f9f9f9; /* Light gray background for contrast */
+  padding: 50px 20px; /* Spacing around the section */
+  color: #333; /* Dark text color for readability */
+  font-family: 'Arial', sans-serif;
+}
+
+.about-section .container {
+  max-width: 1200px; /* Limit content width */
+  margin: 0 auto; /* Center align content */
+  padding: 20px;
+}
+
+.about-section h2 {
+  color: #1a73e8; /* Eye-catching blue for headings */
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #1a73e8; /* Underline for distinction */
+  display: inline-block;
+}
+
+.about-section p {
+  line-height: 1.8; /* Increase line height for readability */
+  margin-bottom: 15px;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.about-section ul {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.about-section ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  list-style: disc; /* Standard bullet points */
+  color: #555;
+}
+
+.about-section .highlight {
+  font-size: 18px;
+  color: #000;
+  margin-top: 20px;
+}
+
+/* Responsive Adjustments for Mobile Devices */
+@media screen and (max-width: 768px) {
+  .about-section {
+    padding: 30px 15px; /* Reduce padding for smaller screens */
+  }
+
+  .about-section h2 {
+    font-size: 24px; /* Adjust header size for mobile */
+    margin-bottom: 10px; /* Reduce margin for better spacing */
+    border-bottom: 2px solid #1a73e8; /* Keep the underline */
+  }
+
+  .about-section p {
+    font-size: 14px; /* Smaller font size for paragraph text */
+    line-height: 1.6; /* Adjust line height for better readability */
+    margin-bottom: 10px; /* Reduce margin for better spacing */
+    text-align: left; /* Align text left for better readability on mobile */
+  }
+
+  .about-section ul {
+    padding-left: 15px; /* Adjust padding */
+  }
+
+  .about-section ul li {
+    font-size: 14px; /* Adjust list item font size */
+    margin-bottom: 8px; /* Reduce margin between list items */
+  }
+
+  .about-section .highlight {
+    font-size: 16px; /* Adjust highlight text font size */
+    margin-top: 15px; /* Adjust margin */
+  }
+
+  /* Stack sections on smaller screens */
+  .about-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .about-section .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between about-jss and about-conference */
+    width: 100%;
+  }
+
+  .about-jss, .about-conference {
+    width: 100%; /* Ensure both sections are full width */
+  }
+
+  .about-jss h2, .about-conference h2 {
+    font-size: 22px; /* Smaller heading size */
+  }
+}
+
+/* Additional Adjustments for Small Mobile Screens (below 480px) */
+@media screen and (max-width: 480px) {
+  .about-section {
+    padding: 20px 10px; /* Further reduce padding */
+  }
+
+  .about-section h2 {
+    font-size: 20px; /* Adjust header size for very small screens */
+    margin-bottom: 5px; /* Reduce margin for small screens */
+  }
+
+  .about-section p {
+    font-size: 13px; /* Reduce paragraph font size */
+    line-height: 1.5; /* Tighter line height for small screens */
+  }
+
+  .about-section ul li {
+    font-size: 13px; /* Adjust list item font size */
+    margin-bottom: 5px; /* Reduce space between list items */
+  }
+
+  .about-section .highlight {
+    font-size: 14px; /* Reduce highlight text font size */
+  }
+}

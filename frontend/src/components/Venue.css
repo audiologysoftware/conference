@@ -1,0 +1,120 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Venue Section */
+  #venue {
+    padding: 80px 0;
+    background-color: #f0f8ff;
+  }
+  
+  .venue-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .venue-header {
+    margin-bottom: 40px;
+  }
+  
+  .venue-header h2 {
+    font-size: 36px;
+    color: #2C3E50;
+    font-weight: bold;
+  }
+  
+  .venue-header p {
+    font-size: 18px;
+    color: #7f8c8d;
+  }
+  
+  /* Venue Map & Info */
+  .venue-map-and-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .venue-map iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .venue-info h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2C3E50;
+  }
+  
+  .venue-info p {
+    font-size: 18px;
+    color: #34495e;
+  }
+  
+  /* Gallery Section */
+  .venue-gallery-container {
+    margin-top: 50px;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery-link {
+    display: block;
+  }
+  
+  .gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .venue-map-and-info {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .venue-header h2 {
+      font-size: 28px;
+    }
+  
+    .venue-header p {
+      font-size: 16px;
+    }
+  
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

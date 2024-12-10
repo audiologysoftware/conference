@@ -1,0 +1,160 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #74b9ff, #a29bfe);
+    color: #2d3436;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Container */
+  .conference-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Title */
+  .conference-title {
+    font-size: 3rem;
+    color: #0984e3;
+    margin-bottom: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Tabs */
+  .conference-nav-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .conference-nav-item {
+    margin: 0 15px;
+  }
+  
+  .conference-nav-link {
+    padding: 12px 40px;
+    font-size: 18px;
+    color: #ffffff;
+    background: linear-gradient(to right, #6c5ce7, #81ecec);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .conference-nav-link.active {
+    background: linear-gradient(to right, #0984e3, #00cec9);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .conference-nav-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Tab Content */
+  .conference-tab-content {
+    padding: 25px;
+    background: linear-gradient(to bottom, #dfe6e9, #ffffff);
+    border-radius: 15px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .conference-tab-pane {
+    display: block;
+  }
+  
+  .conference-tab-pane h4 {
+    font-size: 2rem;
+    color: #2d3436;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
+  
+  /* Schedule List */
+  .conference-tab-pane ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .conference-tab-pane ul li {
+    padding: 15px 20px;
+    font-size: 18px;
+    color: #2d3436;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .conference-tab-pane ul li:before {
+    content: "▶";
+    position: absolute;
+    left: 15px;
+    color: #0984e3;
+    font-size: 16px;
+  }
+  
+  .conference-tab-pane ul li:hover {
+    background: #74b9ff;
+    color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .conference-nav-tabs {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .conference-nav-item {
+      margin-bottom: 10px;
+    }
+  
+    .conference-nav-link {
+      padding: 10px 30px;
+      width: 80%;
+    }
+  
+    .conference-tab-pane ul li {
+      font-size: 16px;
+    }
+  
+    .conference-tab-pane h4 {
+      font-size: 1.8rem;
+    }
+  
+    .conference-title {
+      font-size: 2.5rem;
+    }
+  }
+  

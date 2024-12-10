@@ -1,0 +1,130 @@
+/* General Styles for Navbar */
+.navbar {
+  background: linear-gradient(45deg, #003366, #0066cc); /* Gradient background */
+  padding: 20px 30px; /* Spacious navbar padding */
+  position: fixed; /* Sticky at the top */
+  width: 100%; /* Full width */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* High priority stacking */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Navbar List (Menu Items) */
+.navbar-list {
+  display: flex;
+  justify-content: center; /* Center menu items */
+  gap: 30px; /* Space between items */
+  margin: 0;
+  padding: 0;
+  list-style: none; /* No bullets */
+}
+
+/* Navbar Links */
+.navbar-link {
+  text-decoration: none; /* No underline */
+  font-size: 18px; /* Readable font */
+  color: #fff; /* White text */
+  padding: 12px 20px; /* Spacing around links */
+  border-radius: 50px; /* Rounded corners */
+  font-weight: 500; /* Medium weight */
+  transition: all 0.3s ease; /* Smooth transitions */
+  position: relative; /* For pseudo-element effects */
+}
+
+/* Hover Effect */
+.navbar-link:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Subtle highlight */
+  color: #fff; /* Keep white text */
+}
+
+/* Active Link Styling */
+.navbar-link.active {
+  background-color: #004d80; /* Highlight active link */
+  font-weight: 600; /* Bold font */
+  color: #fff; /* White text */
+  box-shadow: 0 0 10px rgba(0, 77, 128, 0.5); /* Glow effect */
+}
+
+/* Special Style for Registration Link */
+.navbar-link.registration {
+  background-color: #d76418; /* Orange for emphasis */
+  color: #fff;
+  border-radius: 5px; /* Slightly rounded */
+  font-weight: bold;
+}
+
+.navbar-link.registration.active {
+  background-color: #b35d00; /* Darker orange for active */
+}
+
+/* Mobile Menu Toggle Button */
+.navbar-toggle {
+  display: none; /* Hidden by default */
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 20px; /* Compact padding */
+  }
+
+  .navbar-list {
+    gap: 15px; /* Reduced spacing */
+  }
+
+  .navbar-link {
+    font-size: 16px; /* Smaller font */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px; /* Smaller padding */
+  }
+
+  .navbar-list {
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    gap: 20px; /* Spacing between items */
+    width: 100%; /* Full-width menu */
+    padding: 10px 0;
+    position: absolute;
+    top: 70px; /* Below navbar */
+    left: 0;
+    background-color: #003366; /* Dropdown background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  }
+
+  /* Show menu when open */
+  .navbar-list.open {
+    display: flex; /* Display flex for open menu */
+  }
+
+  .navbar-link {
+    padding: 12px 25px; /* Touchscreen-friendly padding */
+    width: 100%; /* Full width */
+    text-align: center; /* Center text */
+  }
+
+  /* Show toggle button on mobile */
+  .navbar-toggle {
+    display: block; /* Visible */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-link {
+    font-size: 14px; /* Smaller font for tiny screens */
+  }
+}

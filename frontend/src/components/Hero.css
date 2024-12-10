@@ -1,0 +1,243 @@
+/* Hero Section */
+#hero {
+  position: relative;
+  background: url('D:\cbr-conference\frontend\src\assets\img\banner.jpeg') no-repeat center center;
+  background-size: cover;
+  padding: 120px 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+/* Ensure the logo container is only visible within the #hero section */
+#hero .logo-container {
+  position: absolute; /* Position the logo container relative to the hero section */
+  top: 0;  /* Align it at the top of the hero section */
+  left: 0;
+  right: 0;
+  margin-top: 60px;
+  z-index: 10;  /* Ensures it stays above other elements in the hero */
+  padding: 10px;  /* Optional padding for the logo container */
+}
+
+#hero .logo {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 20px;
+}
+
+#hero img {
+  max-height: 80px;
+  width: auto;
+}
+
+/* Hero Section Content */
+.hero-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-container h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 10px 0;
+  color: #c22a0f;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  animation: fadeInUp 1s ease-in-out;
+}
+.herova{
+  font-size: 25px;
+  font-weight: 700;
+  margin: 10px 0;
+  color: #0026ff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  animation: fadeInUp 1s ease-in-out;
+}
+.para{
+  font-size: 15px;
+  font-weight: 700;
+  margin: 10px 0;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  animation: fadeInUp 1s ease-in-out;
+}
+.hero-container h1 span {
+  color: #fff;
+}
+
+.hero-container p {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #f1f1f1;
+  font-weight: normal;
+}
+
+/* Countdown Timer Container */
+#countDiv, #countdown {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+/* Countdown Timer Box Styling */
+#countDiv div, .countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+#countDiv div:hover, .countdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Countdown Timer Numbers Styling */
+#countDiv span, .countdown-number {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ff5733; /* Bright color for numbers */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+}
+
+.countdown-number {
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.countdown-label, #countDiv .smallText {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Keyframe for FadeInUp animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframe for Countdown Animation */
+@keyframes countdownAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  #hero {
+    padding: 80px 0;
+  }
+
+  /* Adjust logo container */
+  #hero .logo-container {
+    margin-top: 40px; /* Reduced top margin */
+  }
+
+  #hero .logo {
+    flex-direction: column; /* Stack logos vertically on smaller screens */
+    align-items: center; /* Center logos horizontally */
+  }
+
+  #hero img {
+    max-height: 60px; /* Reduce logo size on mobile */
+  }
+
+  .hero-container {
+    padding: 0 20px; /* Add padding to avoid edges on small screens */
+  }
+
+  .hero-container h1 {
+    font-size: 2rem; /* Reduce font size for header */
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .hero-container p {
+    font-size: 1rem; /* Reduce font size for paragraph */
+  }
+
+  #countDiv, #countdown {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .countdown-item, #countDiv div {
+    margin-bottom: 15px;
+    width: 100px; /* Reduce size of countdown timer boxes */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .countdown-number {
+    font-size: 36px; /* Reduce font size for countdown numbers */
+  }
+
+  .countdown-label, #countDiv .smallText {
+    font-size: 14px; /* Reduce font size for labels */
+  }
+
+  .hero-container h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero {
+    padding: 60px 0; /* Further reduce padding on very small screens */
+  }
+
+  .hero-container h1 {
+    font-size: 1.8rem; /* Further reduce the heading font size */
+  }
+
+  .hero-container p {
+    font-size: 0.9rem; /* Further reduce the paragraph font size */
+  }
+
+  #countDiv {
+    gap: 10px;
+  }
+
+  .countdown-item, #countDiv div {
+    width: 80px; /* Make countdown boxes even smaller on very small screens */
+    padding: 8px;
+  }
+
+  .countdown-number {
+    font-size: 30px; /* Reduce countdown number font size further */
+  }
+
+  .countdown-label, #countDiv .smallText {
+    font-size: 12px; /* Further reduce font size for labels */
+  }
+}
