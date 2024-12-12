@@ -1,7 +1,7 @@
 /* Hero Section */
 #hero {
   position: relative;
-  background: url('D:\cbr-conference\frontend\src\assets\img\banner.jpeg') no-repeat center center;
+  background: url('../assets/img/banner.jpeg') no-repeat center center;
   background-size: cover;
   padding: 120px 0;
   width: 100%;

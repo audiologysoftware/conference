@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Upload.css";
-
+import qr from '../assets/img/speakers/QR code.jpg'
 const Upload = () => {
   const [abstractFile, setAbstractFile] = useState(null);
   const [plagiarismFile, setPlagiarismFile] = useState(null);
@@ -193,7 +193,7 @@ const Upload = () => {
                   <h5><b>QR Code</b></h5>
                   <center>
                     <img
-                      src="assets/img/speakers/QR code.jpg"
+                      src={qr}
                       alt="QR Code"
                       style={{ width: "150px", height: "150px" }}
                     />
