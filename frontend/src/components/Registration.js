@@ -38,10 +38,7 @@ const Registration = () => {
           <div className="col-lg-8">
             <div className="card registration-card">
               <div className="card-body">
-                <h3 className="text-center">Contact Details</h3>
-                <p className="contact-info text-center">Ms. Rashmi D G: 9448130580</p>
-                <p className="contact-info text-center">Mrs. Amruthavarshini: 9739557938</p>
-
+              
                 <h4 className="registration-info">Registration Fees</h4>
                 <table className="table">
                   <thead>
@@ -67,7 +64,7 @@ const Registration = () => {
                     </tr>
                   </tbody>
                 </table>
-                <h5>The last date for early bird registration is 10th November 2023.</h5>
+                <h5>The last date for early bird registration is 20th January 2025.</h5>
 
                 <h6>
                   After registration, please sign up for RCI-CRE points:
@@ -79,7 +76,12 @@ const Registration = () => {
                 <div className="text-center">
                   <button className="btn btn-primary" onClick={openModal}>Register Now</button>
                 </div>
+                <h3>Contact Details</h3>
+                <p >Ms. Rashmi D G: 9448130580</p>
+                <p >Mrs. Amruthavarshini: 9739557938</p>
+
               </div>
+         
             </div>
           </div>
         </div>

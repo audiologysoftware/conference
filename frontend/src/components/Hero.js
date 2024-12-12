@@ -45,7 +45,7 @@ const Hero = () => {
         </div>
         <div className="hero-container" data-aos="zoom-in" data-aos-delay="100">
           <h1 className="mb-4 pb-0">
-            VISHRUTHA 2 : JSS ANNUAL VAK-SHARAVABA CONFERENCE 2025
+            VISHRUTHA 2 : JSS ANNUAL VAK-SHARVANA CONFERENCE 2025
           </h1>
           <h3 className="herova">Exploring The Best Clinical Practices In Communication Disorders,Dysphagia and Balance Problems among Paediatric Population</h3>
           <h4 className="para">21-22 February, Sri Rajendra Centenary Auditorium JSS Hospital, Mysuru</h4>

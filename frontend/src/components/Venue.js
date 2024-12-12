@@ -1,5 +1,11 @@
 import React from 'react';
 import './Venue.css';
+import vg1 from '../assets/img/venue-gallery/1.jpg';
+import vg2 from '../assets/img/venue-gallery/2.jpg';  
+import vg3 from '../assets/img/venue-gallery/3.jpg';
+import vg4 from '../assets/img/venue-gallery/4.jpg';
+import vg5 from '../assets/img/venue-gallery/5.jpg';  
+import vg6 from '../assets/img/venue-gallery/6.jpg';
 
 const Venue = () => {
   return (
@@ -9,7 +15,10 @@ const Venue = () => {
           <h2>Venue</h2>
           <p>Join us at the Sri Rajendra Centenary Auditorium, JSS Hospital, Mysuru.</p>
         </div>
-
+           <div className="venue-header">
+            <h2>Sri Rajendra Centenary Auditorium</h2>
+            <p>JSS Hospital, Mysuru</p>
+          </div>
         <div className="venue-map-and-info">
           <div className="venue-map">
             <iframe 
@@ -22,10 +31,7 @@ const Venue = () => {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-          <div className="venue-info">
-            <h3>Sri Rajendra Centenary Auditorium</h3>
-            <p>JSS Hospital, Mysuru</p>
-          </div>
+    
         </div>
 
       </div>
@@ -34,25 +40,36 @@ const Venue = () => {
         <div className="gallery-grid">
           <div className="gallery-item">
             <a href="assets/img/venue-gallery/1.jpg" className="gallery-link" data-gall="venue-gallery">
-              <img src="assets/img/venue-gallery/1.jpg" alt="Gallery Image 1" className="gallery-img"/>
+              <img src={vg1} alt="Gallery Image 1" className="gallery-img"/>
             </a>
           </div>
           <div className="gallery-item">
             <a href="assets/img/venue-gallery/2.jpg" className="gallery-link" data-gall="venue-gallery">
-              <img src="assets/img/venue-gallery/2.jpg" alt="Gallery Image 2" className="gallery-img"/>
+              <img src={vg2} alt="Gallery Image 2" className="gallery-img"/>
             </a>
           </div>
           <div className="gallery-item">
             <a href="assets/img/venue-gallery/3.jpg" className="gallery-link" data-gall="venue-gallery">
-              <img src="assets/img/venue-gallery/3.jpg" alt="Gallery Image 3" className="gallery-img"/>
+              <img src={vg3} alt="Gallery Image 3" className="gallery-img"/>
             </a>
           </div>
           <div className="gallery-item">
             <a href="assets/img/venue-gallery/4.jpg" className="gallery-link" data-gall="venue-gallery">
-              <img src="assets/img/venue-gallery/4.jpg" alt="Gallery Image 4" className="gallery-img"/>
+              <img src={vg4} alt="Gallery Image 4" className="gallery-img"/>
+            </a>
+          </div>
+          <div className="gallery-item">
+            <a href="assets/img/venue-gallery/5.jpg" className="gallery-link" data-gall="venue-gallery">
+              <img src={vg5} alt="Gallery Image 4" className="gallery-img"/>
+            </a>
+          </div>
+          <div className="gallery-item">
+            <a href="assets/img/venue-gallery/6.jpg" className="gallery-link" data-gall="venue-gallery">
+              <img src={vg6} alt="Gallery Image 4" className="gallery-img"/>
             </a>
           </div>
         </div>
+   
       </div>
 
     </section>

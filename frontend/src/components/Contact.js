@@ -60,7 +60,7 @@ const Contact = () => {
             <div className="contact-email">
               <i className="bi bi-envelope"></i>
               <h3>Email</h3>
-              <p><a href="mailto:hemanthn.shetty@gmail.com">hemanthn.shetty@gmail.com</a></p>
+              <p><a href="mailto:hemanthn.shetty@gmail.com">hemanthn.shetty@jssish.in</a></p>
             </div>
           </div>
         </div>
