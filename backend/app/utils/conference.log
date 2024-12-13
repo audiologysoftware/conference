@@ -1,0 +1,162 @@
+2024-12-12 15:48:44,476 - conference_logger - INFO - Starting application...
+2024-12-12 15:49:45,901 - conference_logger - INFO - Shutting down application...
+2024-12-12 15:49:46,578 - conference_logger - INFO - Starting application...
+2024-12-12 15:49:46,603 - conference_logger - ERROR - Error while creating tables: [Errno 11003] getaddrinfo failed
+2024-12-12 15:53:05,174 - conference_logger - INFO - Starting application...[0m
+2024-12-12 15:53:05,179 - conference_logger - ERROR - Error while creating tables: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 15:53:05,842 - conference_logger - INFO - Starting application...[0m
+2024-12-12 15:53:05,847 - conference_logger - ERROR - Error while creating tables: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 15:53:45,792 - conference_logger - INFO - Starting application...[0m
+2024-12-12 15:53:45,797 - conference_logger - ERROR - Error while creating tables: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 15:55:01,587 - conference_logger - INFO - Starting application...[0m
+2024-12-12 15:55:01,592 - conference_logger - ERROR - Error while creating tables: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 15:55:02,293 - conference_logger - INFO - Starting application...[0m
+2024-12-12 15:55:02,299 - conference_logger - ERROR - Error while creating tables: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 15:57:40,554 - conference_logger - INFO - Starting application...[0m
+2024-12-12 15:57:40,559 - conference_logger - ERROR - Error while creating tables: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 15:58:28,495 - conference_logger - INFO - Starting application...[0m
+2024-12-12 15:58:28,502 - conference_logger - ERROR - Error while creating tables: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 15:59:19,222 - conference_logger - INFO - Starting application...[0m
+2024-12-12 15:59:19,227 - conference_logger - ERROR - Error while creating tables: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 16:00:10,552 - conference_logger - INFO - Starting application...[0m
+2024-12-12 16:00:10,559 - conference_logger - ERROR - Error while creating tables: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 16:00:34,555 - conference_logger - INFO - Starting application...[0m
+2024-12-12 16:00:34,562 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 16:00:34,563 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 16:01:12,855 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-12 16:01:12,856 - conference_logger - INFO - Shutting down application...[0m
+2024-12-12 16:01:13,506 - conference_logger - INFO - Starting application...[0m
+2024-12-12 16:01:13,512 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 16:01:13,513 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 16:01:17,552 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-12 16:01:17,554 - conference_logger - INFO - Shutting down application...[0m
+2024-12-12 16:01:39,869 - conference_logger - INFO - Starting application...[0m
+2024-12-12 16:01:39,874 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 16:01:39,876 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 16:04:31,883 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-12 16:04:31,885 - conference_logger - INFO - Shutting down application...[0m
+2024-12-12 16:04:32,541 - conference_logger - INFO - Starting application...[0m
+2024-12-12 16:04:32,547 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 16:04:32,548 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 16:04:33,104 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-12 16:04:33,105 - conference_logger - INFO - Shutting down application...[0m
+2024-12-12 16:04:33,742 - conference_logger - INFO - Starting application...[0m
+2024-12-12 16:04:33,748 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 16:04:33,749 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 16:27:58,627 - conference_logger - INFO - Starting application...[0m
+2024-12-12 16:27:58,649 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 16:27:58,650 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 16:31:49,168 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-12 16:31:49,168 - conference_logger - INFO - Shutting down application...[0m
+2024-12-12 16:31:51,228 - conference_logger - INFO - Starting application...[0m
+2024-12-12 16:31:51,234 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 16:31:51,236 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-12 16:32:00,731 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-12 16:32:00,732 - conference_logger - INFO - Shutting down application...[0m
+2024-12-13 11:11:44,562 - conference_logger - INFO - Starting application...[0m
+2024-12-13 11:11:44,575 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 11:11:44,576 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 11:19:09,198 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-13 11:21:56,976 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-13 11:22:03,522 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-13 11:22:03,524 - conference_logger - INFO - Shutting down application...[0m
+2024-12-13 11:22:24,838 - conference_logger - INFO - Starting application...[0m
+2024-12-13 11:22:24,843 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 11:22:24,845 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 11:22:56,189 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-13 11:23:08,069 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-13 11:23:08,071 - conference_logger - INFO - Shutting down application...[0m
+2024-12-13 11:23:14,157 - conference_logger - INFO - Starting application...[0m
+2024-12-13 11:23:14,163 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 11:23:14,164 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 11:26:20,190 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-13 11:26:20,192 - conference_logger - INFO - Shutting down application...[0m
+2024-12-13 11:26:20,879 - conference_logger - INFO - Starting application...[0m
+2024-12-13 11:26:20,885 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 11:26:20,887 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 11:26:29,042 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-13 11:26:29,042 - conference_logger - INFO - Shutting down application...[0m
+2024-12-13 11:26:29,696 - conference_logger - INFO - Starting application...[0m
+2024-12-13 11:26:29,702 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 11:26:29,703 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 11:35:21,920 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-13 11:35:21,921 - conference_logger - INFO - Shutting down application...[0m
+2024-12-13 11:35:22,645 - conference_logger - INFO - Starting application...[0m
+2024-12-13 11:35:22,651 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 11:35:22,653 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:01:00,554 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-13 12:01:00,556 - conference_logger - INFO - Shutting down application...[0m
+2024-12-13 12:01:28,461 - conference_logger - INFO - Starting application...[0m
+2024-12-13 12:01:28,467 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:01:28,468 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:01:40,380 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-13 12:02:21,940 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-13 12:02:21,942 - conference_logger - INFO - Shutting down application...[0m
+2024-12-13 12:02:22,614 - conference_logger - INFO - Starting application...[0m
+2024-12-13 12:02:22,622 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:02:22,623 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:03:04,414 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-13 12:03:04,415 - conference_logger - INFO - Shutting down application...[0m
+2024-12-13 12:03:05,106 - conference_logger - INFO - Starting application...[0m
+2024-12-13 12:03:05,111 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:03:05,112 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:03:32,291 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-13 12:03:36,575 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-13 12:03:36,576 - conference_logger - INFO - Shutting down application...[0m
+2024-12-13 12:03:37,228 - conference_logger - INFO - Starting application...[0m
+2024-12-13 12:03:37,234 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:03:37,235 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:03:42,199 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-13 12:03:52,375 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-13 12:03:52,376 - conference_logger - INFO - Shutting down application...[0m
+2024-12-13 12:03:53,063 - conference_logger - INFO - Starting application...[0m
+2024-12-13 12:03:53,069 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:03:53,070 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:03:56,285 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-13 12:04:53,409 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-13 12:04:53,411 - conference_logger - INFO - Shutting down application...[0m
+2024-12-13 12:04:54,086 - conference_logger - INFO - Starting application...[0m
+2024-12-13 12:04:54,091 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:04:54,093 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:04:57,039 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-13 12:05:18,388 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-13 12:05:18,389 - conference_logger - INFO - Shutting down application...[0m
+2024-12-13 12:05:19,090 - conference_logger - INFO - Starting application...[0m
+2024-12-13 12:05:19,096 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:05:19,097 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:05:20,970 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-13 12:05:20,972 - conference_logger - ERROR - Error at root endpoint: can only concatenate str (not "int") to str[0m
+2024-12-13 12:06:16,770 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-13 12:06:16,771 - conference_logger - INFO - Shutting down application...[0m
+2024-12-13 12:06:17,478 - conference_logger - INFO - Starting application...[0m
+2024-12-13 12:06:17,483 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:06:17,486 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:06:20,431 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-13 12:06:48,316 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-13 12:06:48,317 - conference_logger - INFO - Shutting down application...[0m
+2024-12-13 12:06:48,979 - conference_logger - INFO - Starting application...[0m
+2024-12-13 12:06:48,985 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:06:48,987 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:07:07,840 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-13 12:07:07,841 - conference_logger - INFO - Shutting down application...[0m
+2024-12-13 12:07:08,547 - conference_logger - INFO - Starting application...[0m
+2024-12-13 12:07:08,554 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:07:08,556 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:08:09,964 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-13 12:08:09,965 - conference_logger - INFO - Shutting down application...[0m
+2024-12-13 12:08:10,659 - conference_logger - INFO - Starting application...[0m
+2024-12-13 12:08:10,664 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:08:10,666 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:08:15,463 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-13 12:08:15,464 - conference_logger - INFO - Shutting down application...[0m
+2024-12-13 12:08:16,162 - conference_logger - INFO - Starting application...[0m
+2024-12-13 12:08:16,170 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:08:16,172 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 12:08:18,361 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-13 12:08:22,776 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-13 12:09:52,999 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-13 15:03:11,914 - conference_logger - INFO - Starting application...[0m
+2024-12-13 15:03:11,923 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 15:03:11,926 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-13 15:30:41,454 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-13 15:30:41,455 - conference_logger - INFO - Shutting down application...[0m
