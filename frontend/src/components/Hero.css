@@ -238,6 +238,6 @@
   }
 
   .countdown-label, #countDiv .smallText {
-    font-size: 12px; /* Further reduce font size for labels */
+    font-size: 12px; /* Further reduce font for labels */
   }
 }

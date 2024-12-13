@@ -1,186 +1,210 @@
-/* General Section Styling */
-.section-with-bg {
-  padding: 50px 0;
+/* General Page Styles */
+#buy-tickets {
   background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .section-header h2 {
-  font-size: 28px;
+  font-size: 2.5rem;
   font-weight: bold;
   color: #333;
   margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
-.paper-container {
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Contact Info Section */
+.contact-info {
+  margin-top: 20px;
 }
 
-.paper-table {
+.contact-info label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.contact-info .form-input {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 20px;
-}
-
-/* Form Elements */
-form {
-  width: 100%;
-}
-
-form .form-group {
+  padding: 12px;
   margin-bottom: 20px;
-}
-
-form input[type="email"],
-form input[type="text"],
-form input[type="file"] {
-  width: 100%;
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ccc;
   border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  color: #333;
   box-sizing: border-box;
-  transition: all 0.3s ease;
 }
 
-form input[type="email"]:focus,
-form input[type="text"]:focus,
-form input[type="file"]:focus {
+.contact-info .form-input:focus {
   border-color: #417bb2;
   outline: none;
-  box-shadow: 0 0 5px rgba(65, 123, 178, 0.5);
 }
 
-.text-input {
-  font-size: 16px;
+/* Paper Upload Section */
+.paper-container {
+  margin-top: 40px;
 }
 
-form label {
-  font-weight: bold;
-  color: #555;
-  display: block;
-  margin-bottom: 5px;
-}
-
-/* Buttons */
-button.btn {
-  background-color: #417bb2;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button.btn:hover {
-  background-color: #345e8a;
-}
-
-button:focus {
-  outline: none;
-}
-
-/* Abstract and Paper Sections */
-td.abstract,
-td.paper {
-  vertical-align: top;
-  text-align: left;
-}
-
-.abstract h2,
-.paper h3 {
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.abstract p,
-.paper p {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.5;
-}
-
-/* Payment Section */
-#payment-form {
+.paper-container table {
   width: 100%;
-}
-
-.paper-container h5 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.payment-response {
-  color: green;
-  font-size: 14px;
-  margin-top: 10px;
-}
-
-.paper-container p {
-  font-size: 14px;
-  color: #555;
-}
-
-table img {
-  margin-top: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-/* QR Code Section */
-img[alt="QR Code"] {
-  border-radius: 8px;
-  margin-bottom: 15px;
+  border-spacing: 20px;
 }
 
 .paper-container td {
   vertical-align: top;
-  padding: 10px;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .paper-table {
+.paper-container .abstract,
+.paper-container .paper {
+  width: 48%;
+}
+
+.paper-container .abstract h2,
+.paper-container .paper h3 {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.paper-container label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.paper-container input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.paper-container input[type="file"]:focus {
+  border-color: #417bb2;
+}
+
+/* Submit Button */
+.text-center .btn {
+  background-color: #417bb2;
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.text-center .btn:active {
+  background-color: #355e8f;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  /* Section Header */
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  /* Contact Info Section */
+  .contact-info label {
+    font-size: 0.9rem;
+  }
+
+  /* Paper Upload Section */
+  .paper-container table {
     display: block;
   }
 
-  .paper-table td {
+  .paper-container td {
+    width: 100%;
     display: block;
+    margin-bottom: 20px;
+  }
+
+  .paper-container .abstract,
+  .paper-container .paper {
     width: 100%;
   }
 
-  td.abstract,
-  td.paper {
-    margin-bottom: 20px;
+  .paper-container label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .paper-container input[type="file"] {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .text-center .btn {
+    width: 100%;
+    padding: 12px 25px;
+    max-width: none;
+  }
+
+  .paper-container table {
+    width: 100%;
+    border-spacing: 10px;
+  }
+
+  .paper-container td {
+    width: 100%;
+  }
+
+  .contact-info .form-input {
+    font-size: 0.9rem;
   }
 }
 
-@media screen and (max-width: 480px) {
+/* Extra Small Mobile View (480px and below) */
+@media (max-width: 480px) {
   .section-header h2 {
-    font-size: 24px;
+    font-size: 1.8rem;
   }
 
-  form input[type="email"],
-  form input[type="text"],
-  form input[type="file"] {
-    font-size: 14px;
+  .contact-info p {
+    font-size: 0.9rem;
+  }
+
+  .paper-container .abstract h2,
+  .paper-container .paper h3 {
+    font-size: 1.2rem;
+  }
+
+  .text-center .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .paper-container label {
+    font-size: 0.9rem;
+  }
+
+  .paper-container input[type="file"] {
     padding: 8px;
-  }
-
-  button.btn {
-    font-size: 14px;
-    padding: 8px 15px;
-  }
-
-  .paper-container {
-    padding: 20px;
   }
 }

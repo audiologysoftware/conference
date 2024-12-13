@@ -11,6 +11,7 @@ import Registration from '../components/Registration';
 import Upload from '../components/Upload';
 import Contact from '../components/Contact';
 import Venue from '../components/Venue';
+import Accommodations from '../components/Accommodations';
 
 
 function Home() {
@@ -27,6 +28,7 @@ function Home() {
           <Upload/>
          <Contact/>
          <Venue/>
+         <Accommodations/>
         </div>
     );
 }
