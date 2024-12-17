@@ -34,9 +34,13 @@ const Navbar = () => {
 
   return (
     <nav id="navbar" className="navbar">
-      <button className="navbar-toggle" onClick={handleMobileMenuToggle}>
-        ☰
-      </button>
+    <button 
+  className="navbar-toggle" 
+  aria-label="Toggle navigation menu" 
+  onClick={handleMobileMenuToggle}>
+  ☰
+</button>
+
       
       <ul className={`navbar-list ${isMobileMenuOpen ? 'open' : ''}`}>
         <li><a className={`navbar-link ${activeLink === 'hero' ? 'active' : ''}`} href="#hero">HOME</a></li>

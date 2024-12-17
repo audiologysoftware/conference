@@ -1,23 +1,26 @@
 /* General Page Styles */
-#buy-tickets {
-  background-color: #f9f9f9;
-  padding: 50px 0;
+.upload-card-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 15px;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+.upload-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 1000px;
+  padding: 30px;
   box-sizing: border-box;
 }
 
-/* Section Header */
-.section-header {
+.upload-card-header {
   text-align: center;
   margin-bottom: 40px;
 }
 
-.section-header h2 {
+.upload-card-title {
   font-size: 2.5rem;
   font-weight: bold;
   color: #333;
@@ -25,11 +28,15 @@
 }
 
 /* Contact Info Section */
-.contact-info {
+.contact-info-container {
   margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 20px;
+  padding: 20px;
 }
 
-.contact-info label {
+.input-label {
   font-size: 1rem;
   font-weight: bold;
   color: #333;
@@ -37,49 +44,69 @@
   margin-bottom: 8px;
 }
 
-.contact-info .form-input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  color: #333;
-  box-sizing: border-box;
+/* Contact Info Container */
+.contact-info-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Two columns: first column for labels, second for inputs */
+  gap: 10px; /* Space between the grid items */
+  align-items: center; /* Align items vertically */
+  max-width: 600px; /* Limit the container width */
+  margin: 0 auto; /* Center the container horizontally */
+  text-align: center;
 }
 
-.contact-info .form-input:focus {
+/* Input labels */
+.input-label {
+  font-size: 14px;
+  color: #333;
+  text-align: right; /* Align labels to the right */
+  font-weight: bold;
+  padding-right: 10px; /* Add some space between the label and input */
+}
+
+/* Contact input fields */
+.contact-input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Make inputs take up the full available width */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+
+.contact-input:focus {
   border-color: #417bb2;
   outline: none;
 }
 
-/* Paper Upload Section */
-.paper-container {
+/* File Upload Section */
+.upload-files-container {
   margin-top: 40px;
 }
 
-.paper-container table {
+.upload-table {
   width: 100%;
   border-spacing: 20px;
 }
 
-.paper-container td {
+.upload-table td {
   vertical-align: top;
+  width: 50%;
 }
 
-.paper-container .abstract,
-.paper-container .paper {
-  width: 48%;
+.abstract-container,
+.full-paper-container {
+  padding: 20px;
 }
 
-.paper-container .abstract h2,
-.paper-container .paper h3 {
+.file-title {
   color: #333;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-.paper-container label {
+.file-upload-label {
   display: block;
   font-size: 1rem;
   font-weight: bold;
@@ -87,7 +114,7 @@
   margin-bottom: 8px;
 }
 
-.paper-container input[type="file"] {
+.upload-files-container input[type="file"] {
   width: 100%;
   padding: 12px;
   margin-bottom: 20px;
@@ -96,12 +123,23 @@
   box-sizing: border-box;
 }
 
-.paper-container input[type="file"]:focus {
+.upload-files-container input[type="file"]:focus {
   border-color: #417bb2;
+  outline: none;
 }
 
 /* Submit Button */
-.text-center .btn {
+/* Submit Buttons Container */
+.submit-btn-container {
+  display: flex;
+  justify-content: space-between; /* Align the submit buttons on the same line */
+  gap: 20px; /* Add space between the buttons */
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Submit Button Style */
+.submit-btn {
   background-color: #417bb2;
   color: #fff;
   padding: 12px 25px;
@@ -110,101 +148,45 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 100%;
-  max-width: 300px;
+  width: 48%; /* Ensure the buttons share equal width */
 }
 
-.text-center .btn:active {
+.submit-btn:hover {
+  background-color: #355e8f;
+}
+
+
+.submit-btn:hover {
   background-color: #355e8f;
 }
 
 /* Responsive Styles for Mobile */
 @media (max-width: 768px) {
-  .container {
-    padding: 0 10px;
+  .upload-card {
+    width: 90%;
   }
 
-  /* Section Header */
-  .section-header h2 {
+  .upload-card-title {
     font-size: 2rem;
   }
 
-  /* Contact Info Section */
-  .contact-info label {
+  .input-label {
     font-size: 0.9rem;
   }
 
-  /* Paper Upload Section */
-  .paper-container table {
-    display: block;
-  }
-
-  .paper-container td {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-
-  .paper-container .abstract,
-  .paper-container .paper {
+  .upload-table td {
     width: 100%;
   }
 
-  .paper-container label {
-    font-size: 1rem;
-    margin-bottom: 10px;
-  }
-
-  .paper-container input[type="file"] {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
-  .text-center .btn {
+  .submit-btn {
     width: 100%;
     padding: 12px 25px;
     max-width: none;
   }
-
-  .paper-container table {
-    width: 100%;
-    border-spacing: 10px;
-  }
-
-  .paper-container td {
-    width: 100%;
-  }
-
-  .contact-info .form-input {
-    font-size: 0.9rem;
-  }
 }
 
-/* Extra Small Mobile View (480px and below) */
 @media (max-width: 480px) {
-  .section-header h2 {
+  .upload-card-title {
     font-size: 1.8rem;
-  }
-
-  .contact-info p {
-    font-size: 0.9rem;
-  }
-
-  .paper-container .abstract h2,
-  .paper-container .paper h3 {
-    font-size: 1.2rem;
-  }
-
-  .text-center .btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-
-  .paper-container label {
-    font-size: 0.9rem;
-  }
-
-  .paper-container input[type="file"] {
-    padding: 8px;
   }
 }

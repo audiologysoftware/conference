@@ -12,6 +12,7 @@ import Upload from '../components/Upload';
 import Contact from '../components/Contact';
 import Venue from '../components/Venue';
 import Accommodations from '../components/Accommodations';
+import Footer from '../components/Footer';
 
 
 function Home() {
@@ -29,6 +30,7 @@ function Home() {
          <Contact/>
          <Venue/>
          <Accommodations/>
+         <Footer/>
         </div>
     );
 }
