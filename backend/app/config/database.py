@@ -4,8 +4,9 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import OperationalError
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
+from sqlalchemy.sql import text
 from dotenv import load_dotenv
-from app.utils.logger import logger
+from loguru import logger
 import asyncio
 
 os.makedirs("app/config", exist_ok=True)
@@ -30,8 +31,10 @@ async def check_database() -> bool:
     try:
         # Try to connect to the database to check if it's running
         async with engine.connect() as conn:
-            # Use a simple SQL statement to verify connection
-            await conn.execute("SELECT 1")
+            from app.models import manuscript_model
+            from app.models import user_model
+            # Use text() to create an executable SQL statement
+            await conn.execute(text("SELECT 1"))
         logger.info("Database is running.")
         return True
     except OperationalError as e:
