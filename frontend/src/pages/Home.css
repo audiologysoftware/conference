@@ -8,14 +8,15 @@
     overflow-x: hidden; /* Prevent horizontal scroll */
     background-color: #f9f9f9; /* Neutral background for a clean look */
     box-sizing: border-box; /* Include padding in width and height */
+    gap: 10px; /* Reduce space between sections */
 }
 
 /* Section Styling */
 .container > * {
     width: 100%; /* Ensure each section spans the full width */
-    margin: 0 auto; /* Center-align each section */
+    margin: 0; /* Remove any default margin */
+    padding: 30px 20px; /* Reduced top and bottom padding */
 }
-
 
 /* Hero Section */
 .hero {
@@ -26,6 +27,7 @@
     color: #fff; /* White text for contrast */
     text-align: center;
     height: 100vh; /* Full viewport height for a striking intro */
+    padding: 30px 20px; /* Adjusted padding */
 }
 
 /* About Section */
@@ -33,7 +35,7 @@
     background: #ffffff; /* Clean white background */
     color: #333; /* Dark text for readability */
     text-align: center;
-    padding: 50px 20px;
+    padding: 30px 20px; /* Adjusted padding */
 }
 
 /* Speaker Section */
@@ -41,7 +43,8 @@
     background: #f2f2f2; /* Light gray background */
     color: #555; /* Slightly darker text */
     text-align: center;
-    padding: 50px 20px;
+    padding: 30px 20px; /* Adjusted padding */
+   
 }
 
 /* Organizers Section */
@@ -49,7 +52,7 @@
     background: #ffffff; /* Alternate white background */
     color: #333;
     text-align: center;
-    padding: 50px 20px;
+    padding: 30px 20px; /* Adjusted padding */
 }
 
 /* Sponsors Section */
@@ -57,7 +60,7 @@
     background: #f9f9f9; /* Neutral background */
     color: #444;
     text-align: center;
-    padding: 50px 20px;
+    padding: 30px 20px; /* Adjusted padding */
 }
 
 /* Schedule Section */
@@ -65,17 +68,17 @@
     background: #ffffff; /* White for contrast */
     color: #333;
     text-align: center;
-    padding: 50px 20px;
+    padding: 30px 20px; /* Adjusted padding */
 }
 
 /* Responsive Adjustments */
 @media screen and (max-width: 768px) {
     .container > * {
-        padding: 30px 15px; /* Reduce padding on smaller screens */
+        padding: 20px 15px; /* Reduce padding further on smaller screens */
     }
 
     .hero {
         height: auto; /* Allow content to determine height */
-        padding: 50px 20px;
+        padding: 30px 20px;
     }
 }

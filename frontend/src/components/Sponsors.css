@@ -2,17 +2,21 @@
 #sponsors {
   padding: 60px 0;
   background-color: #f0f0f0; /* Light background for better contrast */
+  margin: 0; /* Remove any margin */
 }
 
+/* General Container Styling */
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0; /* Remove any extra padding around container */
+  box-sizing: border-box; /* Ensure padding and border are included in width/height */
 }
 
 /* Section header */
 .section-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 0; /* Remove margin below header */
 }
 
 .section-header h2 {
@@ -21,7 +25,7 @@
   color: #333;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 20px;
+  margin-bottom: 10px; /* Reduce space below header */
 }
 
 .section-header::after {
@@ -30,7 +34,7 @@
   width: 100px;
   height: 3px;
   background-color: #007bff; /* Blue line underneath header */
-  margin: 20px auto;
+  margin: 10px auto; /* Reduce space around the line */
 }
 
 /* Supporter logos container */
@@ -39,7 +43,8 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px; /* Space between logos */
-  margin-top: 20px;
+  margin-top: 0; /* Remove margin-top */
+  padding-top: 0; /* Remove any padding from top */
 }
 
 /* Each supporter logo container */
@@ -54,6 +59,7 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Smooth hover effect */
   background-color: #fff; /* White background for logos */
+  margin: 0; /* Remove margin from each logo container */
 }
 
 /* Image styling */
@@ -120,4 +126,7 @@ img, svg {
 /* General font */
 * {
   font-family: "Ruluko", sans-serif;
+  margin: 0; /* Remove margin globally */
+  padding: 0; /* Remove padding globally */
+  box-sizing: border-box; /* Ensure consistent box-sizing across elements */
 }

@@ -1,32 +1,41 @@
-/* General Styles for Navbar */
+/* Navbar Styles */
 .navbar {
   background: linear-gradient(45deg, #003366, #0066cc); /* Gradient background */
-  padding: 20px 30px; /* Spacious navbar padding */
+  padding: 10px 20px; /* Further reduced padding */
   position: fixed; /* Sticky at the top */
-  width: 100%; /* Full width */
+  width: 100%; /* Ensure full width */
   top: 0;
   left: 0;
   z-index: 1000; /* High priority stacking */
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   transition: background-color 0.3s ease-in-out;
+  box-sizing: border-box; /* Ensure padding does not affect width */
+  max-width: 100%; /* Prevent navbar from stretching */
+}
+
+/* Prevent Horizontal Scrolling */
+body {
+  margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Navbar List (Menu Items) */
 .navbar-list {
   display: flex;
   justify-content: center; /* Center menu items */
-  gap: 30px; /* Space between items */
+  gap: 10px; /* Further reduced gap */
   margin: 0;
   padding: 0;
   list-style: none; /* No bullets */
+  white-space: nowrap; /* Prevent wrapping of items */
 }
 
 /* Navbar Links */
 .navbar-link {
   text-decoration: none; /* No underline */
-  font-size: 18px; /* Readable font */
+  font-size: 12px; /* Further reduced font size */
   color: #fff; /* White text */
-  padding: 12px 20px; /* Spacing around links */
+  padding: 8px 12px; /* Reduced padding */
   border-radius: 50px; /* Rounded corners */
   font-weight: 500; /* Medium weight */
   transition: all 0.3s ease; /* Smooth transitions */
@@ -71,32 +80,32 @@
   top: 20px;
   right: 20px;
 }
-
 /* Mobile Menu Styles */
 @media (max-width: 1024px) {
   .navbar {
-    padding: 15px 20px; /* Compact padding */
+    padding: 8px 15px; /* Smaller padding for mobile */
   }
 
   .navbar-list {
-    gap: 15px; /* Reduced spacing */
+    gap: 8px; /* Reduced gap between items */
   }
 
   .navbar-link {
-    font-size: 16px; /* Smaller font */
+    font-size: 11px; /* Slightly smaller font size */
+    padding: 6px 10px; /* Adjusted padding */
   }
 }
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 15px; /* Smaller padding */
+    padding: 8px 10px; /* Smaller padding for mobile */
   }
 
   .navbar-list {
     display: none; /* Hidden by default */
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items */
-    gap: 20px; /* Spacing between items */
+    gap: 15px; /* Spacing between items */
     width: 100%; /* Full-width menu */
     padding: 10px 0;
     position: absolute;
@@ -112,19 +121,35 @@
   }
 
   .navbar-link {
-    padding: 12px 25px; /* Touchscreen-friendly padding */
+    padding: 8px 20px; /* Touchscreen-friendly padding */
     width: 100%; /* Full width */
     text-align: center; /* Center text */
+    font-size: 12px; /* Slightly larger font for better readability */
   }
 
   /* Show toggle button on mobile */
   .navbar-toggle {
     display: block; /* Visible */
+    font-size: 30px; /* Larger icon */
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .navbar-link {
-    font-size: 14px; /* Smaller font for tiny screens */
+    font-size: 10px; /* Even smaller font for small screens */
+    padding: 5px 8px; /* Smaller padding for compact view */
+  }
+
+  .navbar-toggle {
+    font-size: 25px; /* Slightly smaller toggle button on very small screens */
+    top: 15px; /* Adjust toggle button position */
+    right: 15px; /* Adjust toggle button position */
   }
 }

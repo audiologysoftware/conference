@@ -1,14 +1,15 @@
+
 import React, { useState } from "react";
 import "./Upload.css";
-import qr from '../assets/img/speakers/QR code.jpg'
+
+
 const Upload = () => {
+  const [correspondingEmail, setCorrespondingEmail] = useState();
+  const [paperTitle, setPaperTitle] = useState();
+  const [authorNames, setAuthorNames] = useState();
   const [abstractFile, setAbstractFile] = useState(null);
   const [plagiarismFile, setPlagiarismFile] = useState(null);
   const [manuscriptFile, setManuscriptFile] = useState(null);
-  const [email, setEmail] = useState("");
-  const [paymentEmail, setPaymentEmail] = useState("");
-  const [transactionId, setTransactionId] = useState("");
-  const [paymentResponse, setPaymentResponse] = useState("");
 
   const handleFileChange = (e, setter) => {
     setter(e.target.files[0]);
@@ -16,200 +17,172 @@ const Upload = () => {
 
   const handleSubmit = (e, type) => {
     e.preventDefault();
+    if (type === "Abstract" && !abstractFile) {
+      alert("Please upload an abstract file before submitting.");
+      return;
+    }
+    if (type === "Full-Length Paper" && (!plagiarismFile || !manuscriptFile)) {
+      alert("Please upload both plagiarism and manuscript files before submitting.");
+      return;
+    }
     alert(`Submitted ${type} successfully!`);
   };
 
-  const handlePaymentSubmit = (e) => {
-    e.preventDefault();
-    setPaymentResponse("Payment details submitted successfully!");
-  };
-
   return (
-    <section id="buy-tickets" className="section-with-bg text-center">
-      <div className="container" data-aos="fade-up">
-        {/* Paper Upload Section */}
-        <div className="section-header">
-          <h2>Manuscript Upload</h2>
-        </div>
-        <div className="paper-container">
-          <form method="POST" action="#" id="paper-upload-form">
-            <table className="paper-table">
-              <tbody>
-                <tr>
-                  <td className="abstract" style={{ verticalAlign: "top" }}>
-                    <h2 className="dark-black-text"><b>Abstract</b></h2>
-                    <p>
-                      <a href="https://docs.google.com/document/d/1uf_wllM4xaO1sz856e943OizSHsQztgW/edit?usp=sharing&ouid=104714808109637915499&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer"><u>Download template</u></a>
-                      <br />
-                      <a href="https://docs.google.com/document/d/1eosrShnBkmhTXX1LqphqTcR15PJgxNCp/edit?usp=sharing&ouid=104714808109637915499&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer"><u>Download Submission Guideline</u></a>
-                    </p>
-                    <div className="form-group">
-                      <label>Email ID</label>
-                      <input
-                        type="email"
-                        name="emailid"
-                        className="text-input"
-                        id="abstract-emailid"
-                        placeholder="Email ID"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                      />
-                    </div>
-                    <br />
-                    <label>Abstract Upload</label>
-                    <input
-                      type="file"
-                      id="abstractAttachment"
-                      name="file"
-                      onChange={(e) => handleFileChange(e, setAbstractFile)}
-                    />
-                    <br /><br />
-                    <div className="text-center">
-                      <button
-                        type="button"
-                        id="abstract-submit"
-                        className="btn"
-                        onClick={(e) => handleSubmit(e, "Abstract")}
-                      >
-                        Submit
-                      </button>
-                    </div>
-                  </td>
-
-                  <td className="paper" style={{ verticalAlign: "top" }}>
-                    <h3 className="dark-black-text"><b>Full-Length Paper</b></h3>
-                    <p>
-                      <a href="https://docs.google.com/document/d/1q9rT7fRW2cJ_2LbxbmFRg1XQUGJXAouU/edit?usp=sharing&ouid=104714808109637915499&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer"><u>Download template</u></a>
-                      <br />
-                      <a href="https://docs.google.com/document/d/1mzCue_s_ClAt0EVG_EHL-GVgocd0exWL/edit?usp=sharing&ouid=104714808109637915499&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer"><u>Download Submission Guideline</u></a>
-                      <br />
-                      <a href="https://shorturl.at/oxJPQ" target="_blank" rel="noopener noreferrer"><u>Plagiarism website</u></a>
-                    </p>
-                    <div className="form-group">
-                      <label>Email ID</label>
-                      <input
-                        type="email"
-                        name="emailid"
-                        className="text-input"
-                        id="fullpaper-emailid"
-                        placeholder="Email ID"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                      />
-                    </div>
-                    <br />
-                    <label>Plagiarism Upload</label>
-                    <input
-                      type="file"
-                      id="plagiarismAttachment"
-                      name="plagiarismAttachment"
-                      onChange={(e) => handleFileChange(e, setPlagiarismFile)}
-                    />
-                    <br /><br />
-                    <label>Manuscript Upload</label>
-                    <input
-                      type="file"
-                      id="manuscriptAttachment"
-                      name="manuscriptAttachment"
-                      onChange={(e) => handleFileChange(e, setManuscriptFile)}
-                    />
-                    <div className="text-center">
-                      <button
-                        type="button"
-                        id="fullpaper-submit"
-                        className="btn"
-                        onClick={(e) => handleSubmit(e, "Full-Length Paper")}
-                      >
-                        Submit
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </form>
+    <section className="upload-card-container">
+      <div className="upload-card">
+        <div className="upload-card-header">
+          <h3>Manuscript Upload</h3>
         </div>
 
+        <div className="upload-card-content">
+          {/* Contact Info Section - Text Boxes */}
+          <div className="contact-info-container">
+            <label htmlFor="correspondingEmail" className="input-label">
+              <strong>Corresponding Author's Email ID:</strong>
+            </label>
+            <input
+              type="text"
+              id="correspondingEmail"
+              value={correspondingEmail}
+              onChange={(e) => setCorrespondingEmail(e.target.value)}
+              className="contact-input"
+              placeholder="Enter corresponding author's email"
+            />
 
+            <label htmlFor="paperTitle" className="input-label">
+              <strong>Paper Title:</strong>
+            </label>
+            <input
+              type="text"
+              id="paperTitle"
+              value={paperTitle}
+              onChange={(e) => setPaperTitle(e.target.value)}
+              className="contact-input"
+              placeholder="Enter the title of your paper"
+            />
 
+            <label htmlFor="authorNames" className="input-label">
+              <strong>Author Names:</strong>
+            </label>
+            <input
+              type="text"
+              id="authorNames"
+              value={authorNames}
+              onChange={(e) => setAuthorNames(e.target.value)}
+              className="contact-input"
+              placeholder="Example: Hemanth N,Varun S,Prashanth S S"
+            />
+          </div>
 
-
-        {/* Payment Section */}
-        <div className="section-header">
-          <h2>Payment</h2>
-        </div>
-        <div className="paper-container">
-          <table className="paper-table">
-            <tbody>
-              <tr>
-                <td style={{ verticalAlign: "top" }}>
-                  <h5><b>Transaction Details</b></h5>
-                  <form method="POST" action="#" id="payment-form">
-                    <div className="form-group">
-                      Email ID<br />
+          {/* Paper Upload Section */}
+          <div className="upload-files-container">
+            <form method="POST" action="#" id="paper-upload-form">
+              <table className="upload-table">
+                <tbody>
+                  <tr>
+                    <td className="abstract-container">
+                      <h3 className="file-title">
+                        <b>Abstract</b>
+                      </h3>
+                      <p>
+                        <a
+                          href="https://docs.google.com/document/d/1uf_wllM4xaO1sz856e943OizSHsQztgW/edit?usp=sharing"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <u>Download template</u>
+                        </a>
+                        <br />
+                        <a
+                          href="https://docs.google.com/document/d/1eosrShnBkmhTXX1LqphqTcR15PJgxNCp/edit?usp=sharing"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <u>Download Submission Guideline</u>
+                        </a>
+                      </p>
+                      <label className="file-upload-label">Abstract Upload</label>
                       <input
-                        type="text"
-                        name="emailid"
-                        className="text-input"
-                        placeholder="Email ID"
-                        value={paymentEmail}
-                        onChange={(e) => setPaymentEmail(e.target.value)}
+                        type="file"
+                        id="abstractAttachment"
+                        name="file"
+                        onChange={(e) => handleFileChange(e, setAbstractFile)}
                       />
-                    </div><br />
+                      <br />
+                      <div className="text-center">
+                        <button
+                          type="button"
+                          id="abstract-submit"
+                          className="submit-btn"
+                          onClick={(e) => handleSubmit(e, "Abstract")}
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </td>
 
-                    <div className="form-group">
-                      Transaction ID<br />
+                    <td className="full-paper-container">
+                      <h3 className="file-title">
+                        <b>Full-Length Paper</b>
+                      </h3>
+                      <p>
+                        <a
+                          href="https://docs.google.com/document/d/1q9rT7fRW2cJ_2LbxbmFRg1XQUGJXAouU/edit?usp=sharing"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <u>Download template</u>
+                        </a>
+                        <br />
+                        <a
+                          href="https://docs.google.com/document/d/1mzCue_s_ClAt0EVG_EHL-GVgocd0exWL/edit?usp=sharing"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <u>Download Submission Guideline</u>
+                        </a>
+                        <br />
+                        <a
+                          href="https://shorturl.at/oxJPQ"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <u>Plagiarism website</u>
+                        </a>
+                      </p>
+                      <label className="file-upload-label">Plagiarism Upload</label>
                       <input
-                        type="text"
-                        name="transactionid"
-                        className="text-input"
-                        placeholder="Transaction ID"
-                        value={transactionId}
-                        onChange={(e) => setTransactionId(e.target.value)}
+                        type="file"
+                        id="plagiarismAttachment"
+                        name="plagiarismAttachment"
+                        onChange={(e) => handleFileChange(e, setPlagiarismFile)}
                       />
-                    </div><br />
-
-                    <div className="form-group">
-                      <label>Attachment</label>
-                      <input type="file" name="file" />
-                    </div><br />
-
-                    <div className="text-center">
-                      <button
-                        type="button"
-                        id="payment-submit"
-                        className="btn"
-                        onClick={handlePaymentSubmit}
-                      >
-                        Submit
-                      </button>
-                    </div>
-                    {paymentResponse && (
-                      <div className="text-center mt-3">{paymentResponse}</div>
-                    )}
-                  </form>
-                </td>
-                <td style={{ verticalAlign: "top" }}>
-                  <h5><b>QR Code</b></h5>
-                  <center>
-                    <img
-                      src={qr}
-                      alt="QR Code"
-                      style={{ width: "150px", height: "150px" }}
-                    />
-                  </center>
-                  <br />
-                  <p>
-                    <b>Name:</b> Karnataka Bank Ltd<br />
-                    <b>Event:</b> National Conference On CBR<br />
-                    <b>A/C Number:</b> 6832000100002901<br />
-                    <b>IFSC Code:</b> KARB0000683<br />
-                    <b>Branch:</b> Ramanuja Road
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                      <br />
+                      <label className="file-upload-label">Manuscript Upload</label>
+                      <input
+                        type="file"
+                        id="manuscriptAttachment"
+                        name="manuscriptAttachment"
+                        onChange={(e) => handleFileChange(e, setManuscriptFile)}
+                      />
+                      <br />
+                      <div className="text-center">
+                        <button
+                          type="button"
+                          id="fullpaper-submit"
+                          className="submit-btn"
+                          onClick={(e) => handleSubmit(e, "Full-Length Paper")}
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </form>
+          </div>
         </div>
       </div>
     </section>

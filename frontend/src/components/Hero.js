@@ -12,7 +12,7 @@ const Hero = () => {
   });
 
   useEffect(() => {
-    const eventDate = new Date("2025-02-21T00:00:00"); // Event date: 21st February 2025, Midnight
+    const eventDate = new Date("2025-04-03T00:00:00"); // Event date: 21st February 2025, Midnight
 
     const interval = setInterval(() => {
       const now = new Date();
@@ -48,7 +48,7 @@ const Hero = () => {
             VISHRUTHA 2 : JSS ANNUAL VAK-SHARVANA CONFERENCE 2025
           </h1>
           <h3 className="herova">Exploring The Best Clinical Practices In Communication Disorders,Dysphagia and Balance Problems among Paediatric Population</h3>
-          <h4 className="para">21-22 February, Sri Rajendra Centenary Auditorium JSS Hospital, Mysuru</h4>
+          <h4 className="para">03-04 April, Sri Rajendra Centenary Auditorium JSS Hospital, Mysuru</h4>
           <h4 className="para">Organized by JSS Institute of Speech and Hearing, Mysuru</h4>
 
           <div id="countDiv">

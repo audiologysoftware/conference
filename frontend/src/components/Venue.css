@@ -19,7 +19,7 @@ body {
 }
 
 .venue-container {
-  max-width: 1200px;
+  max-width: 110%;
   margin: 0 auto;
   text-align: center;
 }
