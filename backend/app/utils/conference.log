@@ -160,3 +160,168 @@
 2024-12-13 15:03:11,926 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
 2024-12-13 15:30:41,454 - conference_logger - INFO - Database connection closed successfully.[0m
 2024-12-13 15:30:41,455 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:03:58,748 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:03:58,768 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-16 09:03:58,770 - conference_logger - ERROR - Unexpected error while checking database: [Errno 11003] getaddrinfo failed[0m
+2024-12-16 09:04:19,668 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-16 09:18:51,867 - conference_logger - INFO - Database connection closed successfully.[0m
+2024-12-16 09:18:51,868 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:23:53,662 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:28:53,816 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:28:59,204 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:31:44,061 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:31:44,816 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:32:01,295 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:32:02,037 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:33:41,701 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:33:42,427 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:33:56,270 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:33:57,008 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:34:18,252 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:34:19,128 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:41:12,694 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:41:13,397 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:41:51,294 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:41:53,914 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:42:33,249 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:42:33,987 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:43:17,817 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:43:18,745 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:43:38,822 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:43:39,764 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:45:51,043 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:45:51,764 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:47:08,342 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:47:09,331 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:51:38,341 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:51:39,201 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:52:12,627 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:52:13,358 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:52:20,915 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:52:21,640 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:56:25,698 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:56:26,437 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:56:41,824 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:56:46,171 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:57:05,890 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:57:06,682 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:57:53,646 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:57:54,384 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:57:59,679 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:58:00,407 - conference_logger - INFO - Starting application...[0m
+2024-12-16 09:59:57,181 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 09:59:58,043 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:20:03,949 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 10:20:05,247 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:21:18,263 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 10:21:31,117 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:21:45,435 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-16 10:21:45,478 - conference_logger - INFO - Favicon endpoint accessed.[0m
+2024-12-16 10:22:04,895 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 10:22:05,667 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:26:08,030 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 10:27:12,465 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:27:46,017 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 10:28:22,290 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:28:38,449 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 10:28:39,168 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:29:23,189 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 10:29:23,998 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:30:03,980 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 10:30:04,707 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:30:34,761 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 10:30:35,494 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:30:39,706 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 10:30:40,497 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:30:47,528 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 10:30:48,379 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:31:28,562 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 10:33:09,364 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:33:37,132 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 10:33:37,929 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:33:43,973 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 10:33:48,817 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:34:07,758 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 10:34:08,589 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:34:16,470 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 10:34:17,236 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:34:25,012 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 10:34:25,740 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:34:42,344 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 10:34:43,196 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:34:47,618 - conference_logger - INFO - Shutting down application...[0m
+2024-12-16 10:34:48,366 - conference_logger - INFO - Starting application...[0m
+2024-12-16 10:35:16,611 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 09:46:45,809 - conference_logger - INFO - Starting application...[0m
+2024-12-17 09:47:05,302 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-17 09:47:05,329 - conference_logger - INFO - Favicon endpoint accessed.[0m
+2024-12-17 09:47:11,782 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 09:49:03,955 - conference_logger - INFO - Starting application...[0m
+2024-12-17 09:49:11,566 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-17 09:51:10,518 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 09:51:11,346 - conference_logger - INFO - Starting application...[0m
+2024-12-17 09:54:40,357 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 09:54:41,024 - conference_logger - INFO - Starting application...[0m
+2024-12-17 09:54:48,587 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 09:54:49,327 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:10:27,821 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:10:28,811 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:19:28,807 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:19:29,666 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:19:30,605 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:19:30,973 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:19:31,742 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:20:56,905 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:20:58,792 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:21:36,061 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-17 10:22:50,700 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:24:52,447 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:29:58,104 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:29:58,849 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:30:26,556 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:30:27,242 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:30:28,821 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:30:29,525 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:31:18,490 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:31:19,169 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:31:27,124 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:36:39,802 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:37:15,357 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:37:16,109 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:38:32,656 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:39:02,624 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:39:14,383 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:39:31,154 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:43:12,936 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:48:28,973 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:48:29,687 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:48:53,712 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:48:54,413 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:51:02,284 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:51:03,069 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:51:07,535 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:51:08,271 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:56:40,286 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:56:41,208 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:56:47,781 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:56:48,525 - conference_logger - INFO - Starting application...[0m
+2024-12-17 10:59:21,768 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 10:59:22,704 - conference_logger - INFO - Starting application...[0m
+2024-12-17 11:01:20,402 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 11:03:11,984 - conference_logger - INFO - Starting application...[0m
+2024-12-17 11:03:11,984 - conference_logger - INFO - Starting application...[0m
+2024-12-17 11:34:45,473 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 11:35:11,560 - conference_logger - INFO - Starting application...[0m
+2024-12-17 11:35:18,313 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-17 11:35:21,828 - conference_logger - INFO - Root endpoint accessed.[0m
+2024-12-17 11:39:35,321 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 11:39:36,044 - conference_logger - INFO - Starting application...[0m
+2024-12-17 11:39:54,436 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 11:39:57,376 - conference_logger - INFO - Starting application...[0m
+2024-12-17 11:41:12,323 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 11:41:13,083 - conference_logger - INFO - Starting application...[0m
+2024-12-17 11:45:00,155 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 11:45:00,887 - conference_logger - INFO - Starting application...[0m
+2024-12-17 11:46:28,806 - conference_logger - INFO - Shutting down application...[0m
+2024-12-17 11:46:29,541 - conference_logger - INFO - Starting application...[0m
+2024-12-17 11:48:17,008 - conference_logger - INFO - Shutting down application...[0m
