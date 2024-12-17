@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import './Registration.css';
-
+import qr from '../assets/img/speakers/QR code.jpg'
 const Registration = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '' });
-
-  const openModal = () => setIsModalOpen(true);
+  const [paymentEmail, setPaymentEmail] = useState("");
+  const [transactionId, setTransactionId] = useState("");
+  const [paymentResponse, setPaymentResponse] = useState("");
   const closeModal = () => setIsModalOpen(false);
+  const [bankType, setBankType] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,6 +28,13 @@ const Registration = () => {
     closeModal(); // Close the modal
   };
 
+
+
+  const handlePaymentSubmit = (e) => {
+    e.preventDefault();
+    setPaymentResponse("Payment details submitted successfully!");
+  };
+
   return (
     <section id="registration" className="registration-section">
       <div className="container">
@@ -38,8 +47,8 @@ const Registration = () => {
           <div className="col-lg-8">
             <div className="card registration-card">
               <div className="card-body">
-              
-                <h4 className="registration-info">Registration Fees</h4>
+
+                <h4 className="registration-info">Registration Fee</h4><p className='note'>(UPI and IMPS only)</p>
                 <table className="table">
                   <thead>
                     <tr>
@@ -64,24 +73,121 @@ const Registration = () => {
                     </tr>
                   </tbody>
                 </table>
-                <h5>The last date for early bird registration is 20th January 2025.</h5>
-
-                <h6>
+                <div className='note'>The last date for early bird registration is 20th January 2025.</div>
+                <h6 style={{ textAlign: 'center' }}>
                   After registration, please sign up for RCI-CRE points:
                   <a href="https://shorturl.at/xzDI9" className="link" target="_blank" rel="noopener noreferrer">
                     RCI-CRE
                   </a>
                 </h6>
 
-                <div className="text-center">
-                  <button className="btn btn-primary" onClick={openModal}>Register Now</button>
+                {/* Payment Section */}
+                <div className="section-header">
+                  <h3>Payment</h3>
                 </div>
-                <h3>Contact Details</h3>
-                <p >Ms. Rashmi D G: 9448130580</p>
-                <p >Mrs. Amruthavarshini: 9739557938</p>
+                <div className="paper-container">
+                  <table className="paper-table">
+                    <tbody>
+                      <tr>
+                        <td style={{ verticalAlign: "top" }}>
+                          <h5><b>Transaction Details</b></h5>
+                          <form method="POST" action="#" id="payment-form">
+                            <div className="form-group">
+                              Email ID
+                              <input
+                                type="text"
+                                name="emailid"
+                                className="text-input"
+                                placeholder="Email ID"
+                                value={paymentEmail}
+                                onChange={(e) => setPaymentEmail(e.target.value)}
+                              />
+                            </div>
+
+                            <div className="form-group">
+                              Transaction ID<br />
+                              <input
+                                type="text"
+                                name="transactionid"
+                                className="text-input"
+                                placeholder="Transaction ID"
+                                value={transactionId}
+                                onChange={(e) => setTransactionId(e.target.value)}
+                              />
+                            </div>
+
+                            <div className="form-group">
+                              <label>Bank Type</label>
+                              <div className="select-wrapper">
+                                <select
+                                  name="banktype"
+                                  className="text-input"
+                                  value={bankType}
+                                  onChange={(e) => setBankType(e.target.value)}
+                                >
+                                  <option value="">Select Bank Type</option>
+                                  <option value="paytm">Paytm</option>
+                                  <option value="phonepe">PhonePe</option>
+                                  <option value="googlepay">Google Pay</option>
+                                  <option value="imps">IMPS</option>
+                                </select>
+                              </div>
+                            </div>
+
+
+
+                            <div className="form-group">
+                              <label>Attachment</label>
+                              <input type="file" name="file" />
+                            </div>
+
+                            <div className="text-center">
+                              <button
+                                type="button"
+                                id="payment-submit"
+                                className="btn"
+                                onClick={handlePaymentSubmit}
+                              >
+                                Submit
+                              </button>
+                            </div>
+
+                            {paymentResponse && (
+                              <div className="text-center mt-3">{paymentResponse}</div>
+                            )}
+                          </form>
+                        </td>
+                        <td style={{ verticalAlign: "top" }}>
+                          <h5><b>QR Code</b></h5>
+                          <center>
+                            <img
+                              src={qr}
+                              alt="QR Code"
+                              style={{ width: "150px", height: "150px" }}
+                            />
+                          </center>
+                          <br />
+                          <p className='grid-master'>
+                         
+                          <div className='grid-client'> <b>Name:</b> Karnataka Bank Ltd</div>
+                          <div className='grid-client'> <b>Event:</b> National Conference On CBR</div>
+                          <div className='grid-client'>  <b>A/C Number:</b> 6832000100002901</div>
+                          <div className='grid-client'> <b>IFSC Code:</b> KARB0000683</div>
+                          <div className='grid-client'> <b>Branch:</b> Ramanuja Road</div>
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+
+                <h6 style={{ textAlign: 'center' }}>Contact Details</h6>
+                <p style={{ textAlign: 'center' }}>Ms. Rashmi D G: 9448130580</p>
+                <p style={{ textAlign: 'center' }}>Mrs. Amruthavarshini: 9739557938</p>
 
               </div>
-         
+
             </div>
           </div>
         </div>

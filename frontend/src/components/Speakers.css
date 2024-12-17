@@ -1,7 +1,8 @@
 /* Speaker Section */
 #speakers {
-    padding: 60px 0;
+  
     background-color: #f9f9f9;
+    margin-bottom: 40px;
 }
 
 .section-header {
@@ -10,7 +11,7 @@
 }
 
 .section-header h2 {
-    font-size: 36px;
+    font-size: 6px;
     color: #003366;
 }
 

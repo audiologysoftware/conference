@@ -9,15 +9,14 @@
   color: white;
 }
 
-/* Ensure the logo container is only visible within the #hero section */
 #hero .logo-container {
-  position: absolute; /* Position the logo container relative to the hero section */
-  top: 0;  /* Align it at the top of the hero section */
+  position: absolute;
+  top: 0;
   left: 0;
   right: 0;
   margin-top: 60px;
-  z-index: 10;  /* Ensures it stays above other elements in the hero */
-  padding: 10px;  /* Optional padding for the logo container */
+  z-index: 10;
+  padding: 10px;
 }
 
 #hero .logo {
@@ -46,7 +45,8 @@
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   animation: fadeInUp 1s ease-in-out;
 }
-.herova{
+
+.herova {
   font-size: 25px;
   font-weight: 700;
   margin: 10px 0;
@@ -54,7 +54,8 @@
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   animation: fadeInUp 1s ease-in-out;
 }
-.para{
+
+.para {
   font-size: 15px;
   font-weight: 700;
   margin: 10px 0;
@@ -62,6 +63,7 @@
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   animation: fadeInUp 1s ease-in-out;
 }
+
 .hero-container h1 span {
   color: #fff;
 }
@@ -83,7 +85,6 @@
   color: #fff;
 }
 
-/* Countdown Timer Box Styling */
 #countDiv div, .countdown-item {
   display: flex;
   flex-direction: column;
@@ -107,7 +108,7 @@
 #countDiv span, .countdown-number {
   font-size: 48px;
   font-weight: bold;
-  color: #ff5733; /* Bright color for numbers */
+  color: #ff5733;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   margin-bottom: 10px;
 }
@@ -152,92 +153,122 @@
     opacity: 0.8;
   }
 }
-
-/* Responsive Design for Smaller Screens */
+/* Mobile View Adjustments */
 @media (max-width: 768px) {
   #hero {
-    padding: 80px 0;
+    padding: 100px 0;
   }
 
-  /* Adjust logo container */
+  /* Adjusting the Logo Container */
   #hero .logo-container {
-    margin-top: 40px; /* Reduced top margin */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 60px;
+    z-index: 10;
+    padding: 10px;
   }
 
+  /* Adjusting the Logo Container for Mobile */
   #hero .logo {
-    flex-direction: column; /* Stack logos vertically on smaller screens */
-    align-items: center; /* Center logos horizontally */
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 20px;
   }
 
   #hero img {
-    max-height: 60px; /* Reduce logo size on mobile */
+    max-height: 60px; /* Scale logo for smaller screens */
+    width: auto;
   }
 
+  /* Hero Section Content Adjustments */
   .hero-container {
-    padding: 0 20px; /* Add padding to avoid edges on small screens */
-  }
-
-  .hero-container h1 {
-    font-size: 2rem; /* Reduce font size for header */
-    line-height: 1.4;
+    max-width: 100%;
+    padding: 0 15px; /* Add padding for better spacing */
     text-align: center;
   }
 
-  .hero-container p {
-    font-size: 1rem; /* Reduce font size for paragraph */
+  .hero-container h1 {
+    font-size: 30px; /* Scale down heading size */
   }
 
+  .herova {
+    font-size: 20px; /* Adjust subheading for smaller screens */
+  }
+
+  .para {
+    font-size: 14px; /* Adjust paragraph text size */
+  }
+
+  /* Countdown Adjustments for Mobile */
   #countDiv, #countdown {
-    flex-direction: column;
-    gap: 20px;
+    gap: 15px; /* Reduce gap between countdown items */
   }
 
-  .countdown-item, #countDiv div {
-    margin-bottom: 15px;
-    width: 100px; /* Reduce size of countdown timer boxes */
-    padding: 10px; /* Reduce padding */
+  #countDiv div, .countdown-item {
+    width: 70px; /* Adjust countdown box size */
+    padding: 10px;
   }
 
-  .countdown-number {
-    font-size: 36px; /* Reduce font size for countdown numbers */
+  #countDiv span, .countdown-number {
+    font-size: 36px; /* Adjust countdown numbers size */
   }
 
   .countdown-label, #countDiv .smallText {
-    font-size: 14px; /* Reduce font size for labels */
-  }
-
-  .hero-container h1 {
-    font-size: 2.5rem;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
+  /* Further adjustments for very small screens */
   #hero {
-    padding: 60px 0; /* Further reduce padding on very small screens */
+    padding: 80px 0;
+  }
+
+  #hero .logo-container {
+    margin-top: 10px; /* Adjust top margin */
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Logo Adjustments for very small screens */
+  #hero .logo {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #hero img {
+    max-height: 50px; /* Further scale down logo for smaller screens */
   }
 
   .hero-container h1 {
-    font-size: 1.8rem; /* Further reduce the heading font size */
+    font-size: 25px; /* Further adjust heading size */
   }
 
-  .hero-container p {
-    font-size: 0.9rem; /* Further reduce the paragraph font size */
+  .herova {
+    font-size: 18px; /* Adjust subheading */
   }
 
+  .para {
+    font-size: 12px; /* Further adjust paragraph text size */
+  }
+
+  /* Countdown adjustments for very small screens */
   #countDiv {
-    gap: 10px;
+    gap: 10px; /* Reduce gap between countdown items */
   }
 
-  .countdown-item, #countDiv div {
-    width: 80px; /* Make countdown boxes even smaller on very small screens */
+  #countDiv div, .countdown-item {
+    width: 60px; /* Resize countdown boxes */
     padding: 8px;
   }
 
-  .countdown-number {
-    font-size: 30px; /* Reduce countdown number font size further */
+  #countDiv span, .countdown-number {
+    font-size: 28px; /* Further adjust countdown numbers */
   }
 
   .countdown-label, #countDiv .smallText {
-    font-size: 12px; /* Further reduce font size for labels */
+    font-size: 12px;
   }
 }

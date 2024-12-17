@@ -1,0 +1,101 @@
+/* Footer.css */
+
+.footer {
+    background: linear-gradient(45deg, #003366, #0066cc); /* Gradient background */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%; /* Ensure the footer takes up 100% width */
+    position: relative; /* Ensure it stays at the bottom of the page */
+    box-sizing: border-box; /* Ensure padding does not affect width */
+  }
+  
+  .footer-content {
+    max-width: 1200px;  /* Limiting the width for large screens */
+    margin: 0 auto;  /* Center content */
+    padding: 0 20px;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  .footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px; /* Add space between paragraph and links */
+  }
+  
+  .footer-links li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Scroll to Top Button */
+  .scroll-to-top {
+    background-color: #003366; /* Dark background */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px;  /* Distance from the right */
+    transition: background-color 0.3s ease;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #0066cc; /* Lighter color on hover */
+  }
+  
+  /* Make sure the button is visible over the content */
+  .scroll-to-top:focus {
+    outline: none;
+  }
+  
+  /* Mobile View Adjustments */
+  @media screen and (max-width: 600px) {
+    .footer {
+      padding: 15px 0; /* Adjust padding for mobile */
+    }
+  
+    .footer-content {
+      padding: 0 10px; /* Reduce padding for mobile screens */
+      text-align: center; /* Center the content for smaller screens */
+    }
+  
+    .footer-links {
+      margin-top: 10px;
+    }
+  
+    .footer-links li {
+      display: block; /* Stack the links vertically */
+      margin: 5px 0; /* Add margin for spacing between links */
+    }
+  
+    .scroll-to-top {
+      padding: 10px; /* Smaller padding for mobile */
+      font-size: 18px; /* Adjust font size for mobile */
+      bottom: 15px; /* Adjust bottom distance */
+      right: 15px; /* Adjust right distance */
+    }
+  }
+  
+  /* Extra Large Screens */
+  @media screen and (min-width: 1200px) {
+    .footer-content {
+      max-width: 1400px; /* Expand the content width for extra large screens */
+    }
+  }
+  

@@ -1,186 +1,192 @@
-/* General Section Styling */
-.section-with-bg {
-  padding: 50px 0;
-  background-color: #f9f9f9;
+/* General Page Styles */
+.upload-card-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 15px;
 }
 
-.section-header h2 {
-  font-size: 28px;
+.upload-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 1000px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.upload-card-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.upload-card-title {
+  font-size: 2.5rem;
   font-weight: bold;
   color: #333;
   margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
-.paper-container {
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Contact Info Section */
+.contact-info-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 20px;
+  padding: 20px;
 }
 
-.paper-table {
+.input-label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Contact Info Container */
+.contact-info-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Two columns: first column for labels, second for inputs */
+  gap: 10px; /* Space between the grid items */
+  align-items: center; /* Align items vertically */
+  max-width: 600px; /* Limit the container width */
+  margin: 0 auto; /* Center the container horizontally */
+  text-align: center;
+}
+
+/* Input labels */
+.input-label {
+  font-size: 14px;
+  color: #333;
+  text-align: right; /* Align labels to the right */
+  font-weight: bold;
+  padding-right: 10px; /* Add some space between the label and input */
+}
+
+/* Contact input fields */
+.contact-input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Make inputs take up the full available width */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+
+.contact-input:focus {
+  border-color: #417bb2;
+  outline: none;
+}
+
+/* File Upload Section */
+.upload-files-container {
+  margin-top: 40px;
+}
+
+.upload-table {
   width: 100%;
-  border-collapse: separate;
   border-spacing: 20px;
 }
 
-/* Form Elements */
-form {
-  width: 100%;
+.upload-table td {
+  vertical-align: top;
+  width: 50%;
 }
 
-form .form-group {
+.abstract-container,
+.full-paper-container {
+  padding: 20px;
+}
+
+.file-title {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.file-upload-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.upload-files-container input[type="file"] {
+  width: 100%;
+  padding: 12px;
   margin-bottom: 20px;
-}
-
-form input[type="email"],
-form input[type="text"],
-form input[type="file"] {
-  width: 100%;
-  padding: 10px;
-  font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-  transition: all 0.3s ease;
 }
 
-form input[type="email"]:focus,
-form input[type="text"]:focus,
-form input[type="file"]:focus {
+.upload-files-container input[type="file"]:focus {
   border-color: #417bb2;
   outline: none;
-  box-shadow: 0 0 5px rgba(65, 123, 178, 0.5);
 }
 
-.text-input {
-  font-size: 16px;
-}
-
-form label {
-  font-weight: bold;
-  color: #555;
-  display: block;
-  margin-bottom: 5px;
-}
-
-/* Buttons */
-button.btn {
-  background-color: #417bb2;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button.btn:hover {
-  background-color: #345e8a;
-}
-
-button:focus {
-  outline: none;
-}
-
-/* Abstract and Paper Sections */
-td.abstract,
-td.paper {
-  vertical-align: top;
-  text-align: left;
-}
-
-.abstract h2,
-.paper h3 {
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.abstract p,
-.paper p {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.5;
-}
-
-/* Payment Section */
-#payment-form {
+/* Submit Button */
+/* Submit Buttons Container */
+.submit-btn-container {
+  display: flex;
+  justify-content: space-between; /* Align the submit buttons on the same line */
+  gap: 20px; /* Add space between the buttons */
+  margin-top: 20px;
   width: 100%;
 }
 
-.paper-container h5 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.payment-response {
-  color: green;
-  font-size: 14px;
-  margin-top: 10px;
-}
-
-.paper-container p {
-  font-size: 14px;
-  color: #555;
-}
-
-table img {
-  margin-top: 15px;
-  border: 1px solid #ccc;
+/* Submit Button Style */
+.submit-btn {
+  background-color: #417bb2;
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
   border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 48%; /* Ensure the buttons share equal width */
 }
 
-/* QR Code Section */
-img[alt="QR Code"] {
-  border-radius: 8px;
-  margin-bottom: 15px;
+.submit-btn:hover {
+  background-color: #355e8f;
 }
 
-.paper-container td {
-  vertical-align: top;
-  padding: 10px;
+
+.submit-btn:hover {
+  background-color: #355e8f;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .paper-table {
-    display: block;
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .upload-card {
+    width: 90%;
   }
 
-  .paper-table td {
-    display: block;
+  .upload-card-title {
+    font-size: 2rem;
+  }
+
+  .input-label {
+    font-size: 0.9rem;
+  }
+
+  .upload-table td {
     width: 100%;
   }
 
-  td.abstract,
-  td.paper {
-    margin-bottom: 20px;
+  .submit-btn {
+    width: 100%;
+    padding: 12px 25px;
+    max-width: none;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .section-header h2 {
-    font-size: 24px;
-  }
-
-  form input[type="email"],
-  form input[type="text"],
-  form input[type="file"] {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  button.btn {
-    font-size: 14px;
-    padding: 8px 15px;
-  }
-
-  .paper-container {
-    padding: 20px;
+@media (max-width: 480px) {
+  .upload-card-title {
+    font-size: 1.8rem;
   }
 }

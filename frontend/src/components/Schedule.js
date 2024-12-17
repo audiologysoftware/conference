@@ -3,7 +3,13 @@ import './Schedule.css';
 
 const Schedule = () => {
     const [activeTab, setActiveTab] = useState('speech-day1');
+    const [activeAccordion, setActiveAccordion] = useState(null); // To handle active accordion item
+
     const handleTabClick = (tab) => setActiveTab(tab);
+
+    const handleAccordionClick = (index) => {
+        setActiveAccordion(activeAccordion === index ? null : index); // Toggle the active accordion item
+    };
 
     const schedules = {
         speech: {
@@ -41,14 +47,31 @@ const Schedule = () => {
                 "1:00 PM - Pediatric Audiology Tools",
                 "3:00 PM - Break",
                 "3:30 PM - Discussion: Hearing Health Challenges"
-            ],
+            ]
         
         }
     };
-
     const renderSchedule = (category, day) => {
-        return schedules[category][day].map((event, index) => <li key={index}>{event}</li>);
+        return schedules[category][day].map((event, index) => {
+            const [time, session] = event.split(" - ");
+            return (
+                <li key={index} className="accordion-item">
+                    <button
+                        className="accordion-header"
+                        onClick={() => handleAccordionClick(index)}
+                    >
+                        <div className="accordion-time">{time}</div>
+                        <div className="accordion-session">{session}</div>
+                        <span className={`accordion-arrow ${activeAccordion === index ? 'active' : ''}`}>▶</span>
+                    </button>
+                    <div className={`accordion-body ${activeAccordion === index ? 'active' : ''}`}>
+                        <p>{session} - Detailed Info Here</p>
+                    </div>
+                </li>
+            );
+        });
     };
+    
 
     return (
         <section id="schedule">
@@ -87,7 +110,6 @@ const Schedule = () => {
                             Day 2
                         </button>
                     </li>
-               
                 </ul>
 
                 <div className="conference-tab-content">
