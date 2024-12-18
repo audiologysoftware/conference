@@ -1,0 +1,19 @@
+.error-display {
+    background-color: #ffe6e6;
+    color: #cc0000;
+    border: 1px solid #cc0000;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  .error-display h4 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .error-display p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+  }
+  
