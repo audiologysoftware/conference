@@ -325,7 +325,3 @@
 2024-12-17 11:46:28,806 - conference_logger - INFO - Shutting down application...[0m
 2024-12-17 11:46:29,541 - conference_logger - INFO - Starting application...[0m
 2024-12-17 11:48:17,008 - conference_logger - INFO - Shutting down application...[0m
-2024-12-17 15:39:56,119 - conference_logger - INFO - Starting application...[0m
-2024-12-17 15:42:30,700 - conference_logger - INFO - Root endpoint accessed.[0m
-2024-12-17 15:42:30,760 - conference_logger - INFO - Favicon endpoint accessed.[0m
-2024-12-17 15:43:17,838 - conference_logger - INFO - Shutting down application...[0m
