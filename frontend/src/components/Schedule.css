@@ -25,12 +25,12 @@ body {
 
 /* Container */
 .conference-container {
-  max-width: 1100px;
+
   margin: 50px auto;
   padding: 30px;
   background: #FFFFFF; /* White background for content */
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  box-shadow: 0 10px 30px rgba(15, 13, 13, 0.1); /* Soft shadow */
   text-align: center;
   overflow: hidden;
   transition: transform 0.3s ease;

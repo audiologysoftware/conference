@@ -17,20 +17,21 @@ import Footer from '../components/Footer';
 
 function Home() {
     return (
-        <div className="container">
+        // <div className="container">
+        <div>
             <Navbar />
-            <Hero />
-            <About />
-            <Speaker />
-            <Organizers />
-            <Sponsors />
-            <Schedule />
+            <Hero /> 
+            <About/>
+            <Speaker/>
+            <Organizers/>
+            <Sponsors/>
+            <Schedule/>
             <Registration/>
-          <Upload/>
-         <Contact/>
-         <Venue/>
-         <Accommodations/>
-         <Footer/>
+            <Upload/>
+            <Venue/>
+            <Accommodations/>
+            <Footer/>
+       
         </div>
     );
 }

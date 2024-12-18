@@ -24,7 +24,7 @@
 }
 
 .speaker {
-    width: 100%;
+    width: 100vw;
     max-width: 350px; /* Limit max width for each speaker */
     background-color: #fff;
     border-radius: 8px;

@@ -1,22 +1,16 @@
-services: 
- frontend:
-  build: ./frontend
-  ports:
-    - "3000:3000"
-  networks:
-   - jssish_netowrk
- backend:
-  build: ./backend
-  ports:
-   - "8000:8000"
-  networks:
-   - jssish_netowrk
- database: 
-  networks: 
-   - jssish_netowrk
-
-# volumes: 
-#  #database volume
+services:
+  database:
+    image: postgres:latest
+    container_name: database
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=k3sadm
+      - POSTGRES_PASSWORD=jss1234
+      - POSTGRES_DB=conference
+      - POSTGRES_HOST=database   # Change to service name
+    networks:
+      - jssish-network
 
 networks:
-  jssish_netowrk: {}
+  jssish-network: {}

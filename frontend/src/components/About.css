@@ -1,4 +1,4 @@
-/* Base styles - Mobile First (320px and up) */
+/* Base styles for mobile-first design */
 .about-section {
   background: #ffffff;
   padding: 16px;
@@ -16,10 +16,10 @@
 
 .about-section h2 {
   color: #1a73e8;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
-  margin-bottom: 16px;
-  padding-bottom: 8px;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
   border-bottom: 2px solid #1a73e8;
   display: inline-block;
   width: auto;
@@ -27,90 +27,64 @@
 }
 
 .about-section p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 16px;
-  color: #333333;
-}
-
-.about-section ul {
-  padding-left: 20px;
-  margin-bottom: 16px;
-}
-
-.about-section ul li {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
   margin-bottom: 12px;
   color: #333333;
 }
 
+.about-section ul {
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
+.about-section ul li {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  color: #333333;
+}
+
 .about-section .highlight {
-  font-size: 18px;
+  font-size: 16px;
   color: #1a73e8;
-  margin-top: 16px;
+  margin-top: 12px;
   font-weight: 600;
   line-height: 1.4;
 }
 
 .about-section .about-jss,
 .about-section .about-conference {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   background: #f8f9fa;
-  padding: 16px;
-  border-radius: 8px;
+  padding: 12px;
+  border-radius: 6px;
 }
 
-/* Mobile devices (375px and up) */
+/* Larger Mobile Devices (375px and up) */
 @media screen and (min-width: 375px) {
+  .about-section {
+    padding: 18px;
+  }
+
+  .about-section h2 {
+    font-size: 20px;
+  }
+
+  .about-section p,
+  .about-section ul li {
+    font-size: 15px;
+  }
+}
+
+/* Small Tablets (480px and up) */
+@media screen and (min-width: 480px) {
   .about-section {
     padding: 20px;
   }
 
-  .about-section h2 {
-    font-size: 26px;
-  }
-
-  .about-section p,
-  .about-section ul li {
-    font-size: 16px;
-  }
-}
-
-/* Larger Mobile devices (480px and up) */
-@media screen and (min-width: 480px) {
-  .about-section {
-    padding: 24px;
-  }
-
   .about-section .container {
     padding: 12px;
-  }
-
-  .about-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-
-  .about-section p,
-  .about-section ul li {
-    font-size: 17px;
-    line-height: 1.7;
-  }
-
-  .about-section .highlight {
-    font-size: 19px;
-  }
-}
-
-/* Portrait Mode Mobile */
-@media screen and (orientation: portrait) and (max-width: 767px) {
-  .about-section {
-    padding: 16px;
-  }
-
-  .about-section .container {
-    padding: 10px;
   }
 
   .about-section h2 {
@@ -121,24 +95,36 @@
   .about-section p,
   .about-section ul li {
     font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 12px;
-  }
-
-  .about-section ul {
-    margin-bottom: 16px;
+    line-height: 1.7;
   }
 
   .about-section .highlight {
     font-size: 18px;
-    margin-top: 16px;
   }
 }
 
-/* Landscape Mode Mobile */
+/* Portrait Mode Mobile (max-width: 767px) */
+@media screen and (orientation: portrait) and (max-width: 767px) {
+  .about-section {
+    padding: 16px;
+  }
+
+  .about-section h2 {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .about-section p,
+  .about-section ul li {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Landscape Mode Mobile (max-width: 767px) */
 @media screen and (orientation: landscape) and (max-width: 767px) {
   .about-section {
-    padding: 20px;
+    padding: 18px;
   }
 
   .about-section .container {
@@ -147,15 +133,15 @@
   }
 }
 
-/* Safe area insets for notched devices */
-@supports (padding: max(0px)) {
+/* Safe Area Insets for Notched Devices */
+@supports (padding: env(safe-area-inset-left)) {
   .about-section {
     padding-left: max(16px, env(safe-area-inset-left));
     padding-right: max(16px, env(safe-area-inset-right));
   }
 }
 
-/* Accessibility - Reduce Motion */
+/* Accessibility: Reduce Motion */
 @media (prefers-reduced-motion: reduce) {
   .about-section * {
     animation: none !important;
@@ -168,12 +154,12 @@
   .about-section {
     background: #ffffff;
   }
-  
+
   .about-section h2 {
     color: #000000;
     border-bottom-color: #000000;
   }
-  
+
   .about-section p,
   .about-section ul li {
     color: #000000;
@@ -184,7 +170,7 @@
 @media (prefers-color-scheme: dark) {
   .about-section {
     background: #121212;
-    color: #ffffff;
+    color: #e0e0e0;
   }
 
   .about-section h2 {

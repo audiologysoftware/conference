@@ -1,7 +1,9 @@
 /* Navbar Styles */
 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(45deg, #003366, #0066cc); /* Gradient background */
-  padding: 10px 20px; /* Further reduced padding */
   position: fixed; /* Sticky at the top */
   width: 100%; /* Ensure full width */
   top: 0;
@@ -11,6 +13,7 @@
   transition: background-color 0.3s ease-in-out;
   box-sizing: border-box; /* Ensure padding does not affect width */
   max-width: 100%; /* Prevent navbar from stretching */
+  height: 50px;
 }
 
 /* Prevent Horizontal Scrolling */
@@ -35,7 +38,7 @@ body {
   text-decoration: none; /* No underline */
   font-size: 12px; /* Further reduced font size */
   color: #fff; /* White text */
-  padding: 8px 12px; /* Reduced padding */
+  padding: 0px 12px; /* Reduced padding */
   border-radius: 50px; /* Rounded corners */
   font-weight: 500; /* Medium weight */
   transition: all 0.3s ease; /* Smooth transitions */
@@ -46,6 +49,7 @@ body {
 .navbar-link:hover {
   background-color: rgba(255, 255, 255, 0.2); /* Subtle highlight */
   color: #fff; /* Keep white text */
+  padding: 8px;
 }
 
 /* Active Link Styling */
@@ -60,8 +64,9 @@ body {
 .navbar-link.registration {
   background-color: #d76418; /* Orange for emphasis */
   color: #fff;
-  border-radius: 5px; /* Slightly rounded */
+  border-radius: 18px; /* Slightly rounded */
   font-weight: bold;
+  padding: 8px;
 }
 
 .navbar-link.registration.active {
@@ -80,6 +85,7 @@ body {
   top: 20px;
   right: 20px;
 }
+
 /* Mobile Menu Styles */
 @media (max-width: 1024px) {
   .navbar {

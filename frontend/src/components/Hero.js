@@ -35,8 +35,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <div>
-      <section id="hero">
+   
+       <section id="hero">
         <div className='logo-container'>
           <div className="logo">
             <img src={logo} className="topright-jsslogo" alt="Logo" />
@@ -71,7 +71,8 @@ const Hero = () => {
           </div>
         </div>
       </section>
-    </div>
+
+
   );
 };
 

@@ -2,13 +2,10 @@
 .container {
     display: flex;
     flex-direction: column; /* Stack sections vertically */
-    align-items: center; /* Center content horizontally */
     width: 100%; /* Full width of the screen */
     min-height: 100vh; /* Full viewport height */
-    overflow-x: hidden; /* Prevent horizontal scroll */
     background-color: #f9f9f9; /* Neutral background for a clean look */
     box-sizing: border-box; /* Include padding in width and height */
-    gap: 10px; /* Reduce space between sections */
 }
 
 /* Section Styling */
@@ -18,17 +15,7 @@
     padding: 30px 20px; /* Reduced top and bottom padding */
 }
 
-/* Hero Section */
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #1a73e8, #6eb5ff); /* Gradient background */
-    color: #fff; /* White text for contrast */
-    text-align: center;
-    height: 100vh; /* Full viewport height for a striking intro */
-    padding: 30px 20px; /* Adjusted padding */
-}
+
 
 /* About Section */
 .about {
