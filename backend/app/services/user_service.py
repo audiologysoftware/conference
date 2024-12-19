@@ -35,7 +35,7 @@ async def create_user(db: AsyncSession, user: UserCreate) -> bool:
 async def get_user_by_email(db: AsyncSession, email: str):
     try:
         result = await db.execute(select(User).where(User.email == email))
-        user = result.scalar_one_or_none()
+        user = result.scalar()
         return user
     except Exception as e:
         logger.error("Error while fetching user by email: {}", str(e))

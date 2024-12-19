@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from fastapi.requests import Request
+from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 import asyncio
 from app.utils.logger import logger
@@ -14,7 +15,6 @@ from pathlib import Path
 
 from fastapi.responses import PlainTextResponse, JSONResponse
 from starlette.requests import Request
-
 
 
 @asynccontextmanager
@@ -35,6 +35,14 @@ async def lifespan(app: FastAPI):
     
    
 app = FastAPI(lifespan=lifespan)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins = ["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
 app.include_router(user_router, prefix="/api/v1/users", tags=["user"])
 app.include_router(manuscript_router, prefix="/api/v1/manuscripts", tags=["manuscript"])

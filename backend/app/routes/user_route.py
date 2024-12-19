@@ -31,6 +31,7 @@ async def read_user(email: str, db: AsyncSession = Depends(get_db)):
     try:
         logger.info("Fetching user data for email: {}", email)
         user = await get_user_by_email(db, email)
+        logger.info(user)
         if not user:
             logger.warning("User not found for email: {}", email)
             raise HTTPException(status_code=404, detail="User not found")

@@ -34,7 +34,7 @@ async def upload_abstract(db: AsyncSession, data: AbstractUpload) -> bool:
 async def get_author_names(db: AsyncSession, email_id: str) -> str:
     try:
         result = await db.execute(select(Manuscript).where(Manuscript.email_id == email_id))
-        manuscript = result.scalar_one_or_none()
+        manuscript =result.scalar()
         if manuscript:
             logger.info("Author names fetched successfully for email: {}", email_id)
             return manuscript.author_names
@@ -54,7 +54,7 @@ async def upload_manuscript(db: AsyncSession, data: ManuscriptUpload) -> bool:
     try:
         # Check if manuscript exists for the user
         result = await db.execute(select(Manuscript).where(Manuscript.email_id == data.email_id))
-        manuscript = result.scalar_one_or_none()
+        manuscript = result.scalar()
         if not manuscript:
             logger.warning("No existing manuscript found for email: {}", data.email_id)
             return False

@@ -5,7 +5,7 @@ import { logInfo, logError } from "../utils/logger";
 export const uploadAbstract = async (abstractData) => {
   try {
     logInfo("Uploading abstract", abstractData);
-    const response = await apiClient.post("/manuscripts/abstract", abstractData);
+    const response = await apiClient.post("/manuscripts/upload-abstract", abstractData);
     logInfo("Abstract uploaded successfully", response.data);
     return response.data;
   } catch (error) {
@@ -18,7 +18,7 @@ export const uploadAbstract = async (abstractData) => {
 export const getAuthorNames = async (email) => {
   try {
     logInfo(`Fetching author names for email: ${email}`);
-    const response = await apiClient.get(`/manuscripts/author-names/${email}`);
+    const response = await apiClient.get(`/manuscripts/get-author-names/?email_id=${email}`);
     logInfo("Author names fetched successfully", response.data);
     return response.data;
   } catch (error) {
@@ -31,7 +31,7 @@ export const getAuthorNames = async (email) => {
 export const uploadManuscript = async (manuscriptData) => {
   try {
     logInfo("Uploading manuscript", manuscriptData);
-    const response = await apiClient.post("/manuscripts/upload", manuscriptData);
+    const response = await apiClient.put("/manuscripts/upload-manuscript", manuscriptData);
     logInfo("Manuscript uploaded successfully", response.data);
     return response.data;
   } catch (error) {
@@ -39,3 +39,4 @@ export const uploadManuscript = async (manuscriptData) => {
     throw error.response?.data || "Failed to upload manuscript";
   }
 };
+

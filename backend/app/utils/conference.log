@@ -343,3 +343,70 @@
 2024-12-17 16:19:26,672 - conference_logger - INFO - Shutting down application...[0m
 2024-12-17 16:19:27,526 - conference_logger - INFO - Starting application...[0m
 2024-12-17 16:19:46,351 - conference_logger - INFO - Starting application...[0m
+2024-12-18 10:14:22,771 - conference_logger - INFO - Starting application...[0m
+2024-12-19 09:32:53,359 - conference_logger - INFO - Starting application...[0m
+2024-12-19 09:35:27,916 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 09:35:28,675 - conference_logger - INFO - Starting application...[0m
+2024-12-19 09:53:06,589 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 09:53:07,932 - conference_logger - INFO - Starting application...[0m
+2024-12-19 09:53:08,799 - conference_logger - INFO - Starting application...[0m
+2024-12-19 10:35:03,089 - conference_logger - INFO - Starting application...[0m
+2024-12-19 11:44:19,337 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 11:44:20,788 - conference_logger - INFO - Starting application...[0m
+2024-12-19 11:44:45,198 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 11:44:45,943 - conference_logger - INFO - Starting application...[0m
+2024-12-19 11:45:09,869 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 11:45:10,606 - conference_logger - INFO - Starting application...[0m
+2024-12-19 11:47:51,014 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 11:47:51,780 - conference_logger - INFO - Starting application...[0m
+2024-12-19 11:49:09,019 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 11:49:09,769 - conference_logger - INFO - Starting application...[0m
+2024-12-19 14:29:17,500 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 14:29:18,305 - conference_logger - INFO - Starting application...[0m
+2024-12-19 14:29:28,599 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 14:29:29,312 - conference_logger - INFO - Starting application...[0m
+2024-12-19 15:28:23,001 - conference_logger - INFO - Favicon endpoint accessed.[0m
+2024-12-19 15:30:20,941 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 15:30:21,819 - conference_logger - INFO - Starting application...[0m
+2024-12-19 15:30:49,221 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 15:30:50,074 - conference_logger - INFO - Starting application...[0m
+2024-12-19 15:31:47,239 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 15:31:47,990 - conference_logger - INFO - Starting application...[0m
+2024-12-19 15:31:51,731 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 15:31:52,452 - conference_logger - INFO - Starting application...[0m
+2024-12-19 15:32:18,634 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 15:32:19,398 - conference_logger - INFO - Starting application...[0m
+2024-12-19 15:33:26,450 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 15:33:27,247 - conference_logger - INFO - Starting application...[0m
+2024-12-19 15:34:08,591 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 15:34:09,391 - conference_logger - INFO - Starting application...[0m
+2024-12-19 15:35:24,269 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 15:35:25,020 - conference_logger - INFO - Starting application...[0m
+2024-12-19 15:35:33,341 - conference_logger - ERROR - Unhandled error: 3 validation errors:
+  {'type': 'missing', 'loc': ('response', 0, 'plagiarism'), 'msg': 'Field required', 'input': (2, 'Testing the Endpoint', 'Varun,Prashanth', 'varunkumar5715@gmail.com', b'asdflkjasdlkjasdlkj98078908sdlkasjdasd', None, None)}
+  {'type': 'bytes_type', 'loc': ('response', 0, 'manuscript'), 'msg': 'Input should be a valid bytes', 'input': None}
+  {'type': 'missing', 'loc': ('response', 1, 'plagiarism'), 'msg': 'Field required', 'input': (4, 'The title', 'prashanth, Varun', 'prashanth@gmail.com', b'Z2l0IGNvbmZpZyAtLWdldCB1c2VyLm5hbWUKZ2l0IGNvbmZpZyAtLWdldCB1c2VyLm5hbWUgYXVkaW9sb2d5c29mdHdhcmUKZ2l0IGNvbmZpZyAtLWdldCB1c2VyLmVtYWlsIGF1ZGlvbG9neXNv ... (443 characters truncated) ... pb2xvZ3lzb2Z0d2FyZQpnaXQgY29uZmlnIC0tZ2xvYmFsIC0tZ2V0IHVzZXIubmFtZQpnaXQgY29uZmlnIC0tZ2xvYmFsIHVzZXIuZW1haWwgYXVkaW9sb2d5c29mdHdhcmVAZ21haWwuY29tCg==', b'Y29uc3QgZ2V0SnNvbkRhdGEgPSAoYmFzZVBhdGgsIG5vaXNlTGV2ZWwsIHRvcGljTmFtZSkgPT4gew0KICBjb25zdCBmaWxlUGF0aCA9IHBhdGguam9pbihiYXNlUGF0aCwgbm9pc2VMZXZlbCwg ... (1263 characters truncated) ... lIjogInRvcGljb25lIg0KLy99DQoNCi8vUmVzcG9uc2UNCi8vew0KLy8gICJxMSI6ICJPMSxPMixPMyIsDQovLyAgInEyIjogIk8xLE8yLE8zIiwNCi8vICAicTMiOiAiTzEsTzIsTzMiDQovL30=', b'JVBERi0xLjUNCiW1tbW1DQoxIDAgb2JqDQo8PC9UeXBlL0NhdGFsb2cvUGFnZXMgMiAwIFIvTGFuZyhlbi1JTikgL1N0cnVjdFRyZWVSb290IDE3MCAwIFIvTWFya0luZm88PC9NYXJrZWQgdHJ1 ... (1313947 characters truncated) ... 0Qzk0MDE4NjQ0MzE2OUU2QTY+PDk3Q0U1RkU0NDU3MDk2NEM5NDAxODY0NDMxNjlFNkE2Pl0gL1ByZXYgOTU0NTkzL1hSZWZTdG0gOTUxMjQ0Pj4NCnN0YXJ0eHJlZg0KOTg1NDk2DQolJUVPRg==')}
+[0m
+2024-12-19 15:35:45,553 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 15:35:46,292 - conference_logger - INFO - Starting application...[0m
+2024-12-19 15:36:00,026 - conference_logger - ERROR - Unhandled error: 2 validation errors:
+  {'type': 'bytes_type', 'loc': ('response', 0, 'plagarism'), 'msg': 'Input should be a valid bytes', 'input': None}
+  {'type': 'bytes_type', 'loc': ('response', 0, 'manuscript'), 'msg': 'Input should be a valid bytes', 'input': None}
+[0m
+2024-12-19 15:39:40,945 - conference_logger - ERROR - Unhandled error: 2 validation errors:
+  {'type': 'bytes_type', 'loc': ('response', 0, 'plagarism'), 'msg': 'Input should be a valid bytes', 'input': None}
+  {'type': 'bytes_type', 'loc': ('response', 0, 'manuscript'), 'msg': 'Input should be a valid bytes', 'input': None}
+[0m
+2024-12-19 15:41:56,888 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 15:41:57,700 - conference_logger - INFO - Starting application...[0m
+2024-12-19 15:43:36,005 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 15:43:36,769 - conference_logger - INFO - Starting application...[0m
+2024-12-19 15:43:56,437 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 15:43:57,154 - conference_logger - INFO - Starting application...[0m
+2024-12-19 15:43:57,964 - conference_logger - INFO - Starting application...[0m
+2024-12-19 15:44:05,003 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 15:44:05,737 - conference_logger - INFO - Starting application...[0m
+2024-12-19 15:44:54,821 - conference_logger - INFO - Shutting down application...[0m
+2024-12-19 15:44:55,541 - conference_logger - INFO - Starting application...[0m
+2024-12-19 15:44:56,320 - conference_logger - INFO - Starting application...[0m
+2024-12-19 15:46:31,768 - conference_logger - INFO - Shutting down application...[0m

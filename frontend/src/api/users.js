@@ -18,7 +18,7 @@ export const registerUser = async (userData) => {
 export const getUserByEmail = async (email) => {
   try {
     logInfo(`Fetching user data for email: ${email}`);
-    const response = await apiClient.get(`/users/${email}`);
+    const response = await apiClient.get(`/users/user?email=${email}`);
     logInfo("User data fetched successfully", response.data);
     return response.data;
   } catch (error) {
