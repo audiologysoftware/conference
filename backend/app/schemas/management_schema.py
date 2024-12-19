@@ -19,6 +19,10 @@ class ManuscriptRead(BaseModel):
     title: str
     author_names: str
     email_id: EmailStr
+    abstract: Optional[bytes]  # Binary data
+    plagarism: Optional[bytes] # Binary data
+    manuscript: Optional[bytes]  # Binary data
+
 
     class Config:
         orm_mode = True

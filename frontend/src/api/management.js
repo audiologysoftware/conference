@@ -65,3 +65,4 @@ export const listAllQueries = async () => {
     throw error.response?.data || "Failed to fetch queries";
   }
 };
+

@@ -5,7 +5,9 @@ from sqlalchemy.sql import and_, not_
 from app.models.query_model import Query
 from app.models.user_model import User
 from app.models.manuscript_model import Manuscript
+from app.schemas.management_schema import ManuscriptRead
 from loguru import logger
+from sqlalchemy import select
 
 
 # 1. List all registered users
@@ -23,10 +25,37 @@ async def list_all_users(db: AsyncSession):
 # 2. List all manuscripts
 async def list_all_manuscripts(db: AsyncSession):
     try:
-        result = await db.execute(select(Manuscript))
-        manuscripts = result.scalars().all()
-        logger.info("Fetched {} manuscripts.", len(manuscripts))
-        return manuscripts
+        # Execute the query
+        result = await db.execute(
+            select(
+                Manuscript.id,
+                Manuscript.title,
+                Manuscript.author_names,
+                Manuscript.email_id,
+                Manuscript.abstract,
+                Manuscript.plagarism,
+                Manuscript.manuscript,
+            )
+        )
+        manuscripts = result.all()
+
+        # Transform the raw database results into Pydantic models
+        manuscript_list = [
+            ManuscriptRead(
+                id=row.id,
+                title=row.title,
+                author_names=row.author_names,
+                email_id=row.email_id,
+                abstract=row.abstract,
+                plagarism=row.plagarism,
+                manuscript=row.manuscript,
+            )
+            for row in manuscripts
+        ]
+
+        logger.info("Fetched {} manuscripts.", len(manuscript_list))
+        return manuscript_list
+
     except Exception as e:
         logger.error("Error while fetching manuscripts: {}", str(e))
         raise
