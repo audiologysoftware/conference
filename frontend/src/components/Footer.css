@@ -1,17 +1,17 @@
-/* Footer.css */
-
 .footer {
     background: linear-gradient(45deg, #003366, #0066cc); /* Gradient background */
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
-    width: 100%; /* Ensure the footer takes up 100% width */
-    position: relative; /* Ensure it stays at the bottom of the page */
+    width: 100vw; /* Ensure the footer takes up 100% width */
+    position: fixed; /* Ensure it stays at the bottom of the page */
+    bottom: 0px;
+    left: 0px;
     box-sizing: border-box; /* Ensure padding does not affect width */
   }
   
-  .footer-content {
-    max-width: 1200px;  /* Limiting the width for large screens */
+    .footer-content {
+    max-width: 100vw;  /* Limiting the width for large screens */
     margin: 0 auto;  /* Center content */
     padding: 0 20px;
   }
@@ -51,7 +51,7 @@
     cursor: pointer;
     position: fixed;
     bottom: 20px; /* Distance from the bottom */
-    right: 20px;  /* Distance from the right */
+    left: 20px;  /* Distance from the right */
     transition: background-color 0.3s ease;
   }
   
@@ -68,11 +68,13 @@
   @media screen and (max-width: 600px) {
     .footer {
       padding: 15px 0; /* Adjust padding for mobile */
+      width: 100vw;
     }
   
     .footer-content {
       padding: 0 10px; /* Reduce padding for mobile screens */
       text-align: center; /* Center the content for smaller screens */
+      font-size: 8px;
     }
   
     .footer-links {
@@ -95,7 +97,7 @@
   /* Extra Large Screens */
   @media screen and (min-width: 1200px) {
     .footer-content {
-      max-width: 1400px; /* Expand the content width for extra large screens */
+      max-width: 100vw; /* Expand the content width for extra large screens */
     }
   }
   

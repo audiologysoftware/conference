@@ -1,6 +1,6 @@
 /* General Styles */
 #sponsors {
-  padding: 60px 0;
+  padding: 0px;
   background-color: #f0f0f0; /* Light background for better contrast */
   margin: 0; /* Remove any margin */
 }
@@ -52,8 +52,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 230px; /* Fixed width for uniformity */
-  height: 230px; /* Fixed height for uniformity */
+  padding: 5px 5px;
+  width: 210px;
+  height: 210px;
   overflow: hidden; /* Ensures the image doesn't overflow the container */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -79,7 +80,6 @@
 .supporter-logo:hover img {
   transform: scale(1.1); /* Zoom-in effect for image */
 }
-
 /* Layout for larger screens: 4 images in the first row, 1 image in the second row */
 @media (min-width: 992px) {
   .col-lg-3 {
@@ -91,6 +91,11 @@
     flex: 0 0 100%; /* 1 item in the second row */
     max-width: 100%;
   }
+
+  /* Add gap after the last item in larger screens */
+  .col-lg-3:last-child {
+    margin-bottom: 20px; /* Adjust the value as needed */
+  }
 }
 
 /* Layout for medium screens (tablet): 2 items per row */
@@ -98,6 +103,11 @@
   .col-md-4 {
     flex: 0 0 48%;  /* 2 items per row on medium screens */
     max-width: 48%;
+  }
+
+  /* Add gap after the last item in medium screens */
+  .col-md-4:last-child {
+    margin-bottom: 20px; /* Adjust the value as needed */
   }
 }
 
@@ -110,11 +120,16 @@
 
   /* Additional styling for mobile view */
   #sponsors {
-    padding: 30px 0;
+    padding:  0px;
   }
 
   .section-header h2 {
     font-size: 1.8rem; /* Adjust font size for mobile */
+  }
+
+  /* Add gap after the last item in mobile view */
+  .col-xs-6:last-child {
+    margin-bottom: 20px; /* Adjust the value as needed */
   }
 }
 

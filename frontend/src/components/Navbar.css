@@ -84,16 +84,22 @@ body {
   position: absolute;
   top: 20px;
   right: 20px;
-}
-
-/* Mobile Menu Styles */
+}/* Mobile Menu Styles */
 @media (max-width: 1024px) {
   .navbar {
     padding: 8px 15px; /* Smaller padding for mobile */
+    width: 100%; /* Ensure navbar spans full width */
+    margin: 0; /* Remove any default margin */
+    position: fixed; /* Fixed position to stay at the top */
+    top: 0; /* Ensure it's pinned at the top */
+    left: 0; /* Align navbar to the left side */
+    z-index: 1000; /* Ensure navbar stays on top */
+    background-color: #fff; /* Set background color for navbar */
   }
 
   .navbar-list {
     gap: 8px; /* Reduced gap between items */
+    margin: 0; /* Ensure no extra margin */
   }
 
   .navbar-link {
@@ -105,6 +111,13 @@ body {
 @media (max-width: 768px) {
   .navbar {
     padding: 8px 10px; /* Smaller padding for mobile */
+    width: 100vw; /* Ensure navbar spans full width */
+    position: fixed; /* Fix position */
+    top: 0; /* Ensure it stays at the top */
+    left: 0; /* Align navbar to the left side */
+    margin: 0; /* Remove margin */
+    z-index: 1000; /* Keep navbar on top */
+    background-color: #fff; /* Set background color for navbar */
   }
 
   .navbar-list {
@@ -115,10 +128,10 @@ body {
     width: 100%; /* Full-width menu */
     padding: 10px 0;
     position: absolute;
-    top: 70px; /* Below navbar */
-    left: 0;
-    background-color: #003366; /* Dropdown background */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    top: 50px; /* Space below navbar */
+    left: 0; /* Align to the left */
+    background-color: #003366; /* Background color */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow */
   }
 
   /* Show menu when open */
@@ -128,34 +141,35 @@ body {
 
   .navbar-link {
     padding: 8px 20px; /* Touchscreen-friendly padding */
-    width: 100%; /* Full width */
+    width: 100%; /* Full width of the screen */
     text-align: center; /* Center text */
-    font-size: 12px; /* Slightly larger font for better readability */
+    font-size: 12px; /* Slightly larger font */
   }
 
   /* Show toggle button on mobile */
   .navbar-toggle {
-    display: block; /* Visible */
-    font-size: 30px; /* Larger icon */
+    display:flex; /* Visible on mobile */    
+    align-items: center;
+    font-size: 30px; /* Larger toggle icon */
     color: #fff;
     background-color: transparent;
     border: none;
     cursor: pointer;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 0px;
+    right: 20px; /* Position the toggle button at top right */
   }
 }
 
 @media (max-width: 480px) {
   .navbar-link {
     font-size: 10px; /* Even smaller font for small screens */
-    padding: 5px 8px; /* Smaller padding for compact view */
+    padding: 5px 8px; /* Smaller padding */
   }
 
   .navbar-toggle {
-    font-size: 25px; /* Slightly smaller toggle button on very small screens */
-    top: 15px; /* Adjust toggle button position */
-    right: 15px; /* Adjust toggle button position */
+    font-size: 25px; /* Slightly smaller toggle button */
+    top: 15px; /* Adjust position for very small screens */
+    right: 15px; /* Adjust position */
   }
 }

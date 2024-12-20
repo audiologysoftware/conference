@@ -8,15 +8,14 @@ body {
 }
 
 .container {
-
   margin: 0 auto;
   padding: 20px;
 }
 
-.section-title {
+.section-title-org {
   text-align: center;
   margin-bottom: 40px;
-  font-size: 28px;
+  font-size: 20px;
   color: #2c3e50;
   text-transform: uppercase;
 }
@@ -94,39 +93,6 @@ body {
   justify-content: center;
 }
 
-.committee-card {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  width: 280px;
-  margin: 10px;
-  text-align: center;
-}
-
-.committee-card h4 {
-  font-size: 18px;
-  color: #2980b9;
-  margin-bottom: 10px;
-}
-
-.committee-card ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.committee-card li {
-  font-size: 14px;
-  color: #555;
-  margin: 5px 0;
-}
-
-/* Animations for Committee Cards */
-.committees-slider {
-  display: flex;
-  animation: slide-sequential 15s infinite ease-in-out;
-}
 
 @keyframes slide-sequential {
   0%, 100% { transform: translateX(0); }
@@ -152,8 +118,8 @@ body {
 }
 
 @media (max-width: 480px) {
-  .section-title {
-    font-size: 22px;
+  .section-title-org {
+    font-size: 14px;
   }
 
   .organizer-card h4 {
@@ -162,5 +128,113 @@ body {
 
   .organizer-card p {
     font-size: 13px;
+  }
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: row;  /* Change to column so buttons are positioned below */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  margin: auto auto;
+  padding: auto auto;
+  overflow: hidden;
+  gap:10px;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.committee-card {
+  flex: 0 0 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.committee-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.committee-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.committee-card li {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.committee-card b {
+  color: #000;
+}
+
+.carousel-buttons {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 20px;  /* Add some space between the buttons */
+  margin-top: 10px; /* Space between carousel content and buttons */
+}
+
+.carousel-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+  background-color: #0056b3;
+}
+
+.carousel-button.prev,
+.carousel-button.next {
+  padding: 15px;  /* Increase the size of the buttons */
+}
+
+
+/* Mobile View Adjustments */
+@media screen and (max-width: 600px) {
+  /* Committee Card Text */
+  .committee-card h4 {
+    font-size: 1.2rem;  /* Smaller title for mobile */
+  }
+
+  .committee-card li {
+    font-size: 0.9rem;  /* Smaller text for list items */
+  }
+
+  .carousel-button {
+    padding: 8px;  /* Smaller button for mobile */
+  }
+
+  .carousel-button.prev,
+  .carousel-button.next {
+    padding: 12px;  /* Smaller button size */
+  }
+
+  .carousel-buttons {
+    gap: 15px;  /* Reduced space between buttons */
   }
 }

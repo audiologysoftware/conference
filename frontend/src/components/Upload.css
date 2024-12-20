@@ -162,6 +162,7 @@
 
 /* Responsive Styles for Mobile */
 @media (max-width: 768px) {
+ 
   .upload-card {
     width: 90%;
   }
@@ -174,14 +175,74 @@
     font-size: 0.9rem;
   }
 
-  .upload-table td {
-    width: 100%;
+  .contact-info-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 5px;       
+    padding: 0px;
+    margin: 0px;
   }
 
-  .submit-btn {
+  .contact-info-container label {
+    font-size: 10px;
+    font-weight: bold;
+  }
+  .upload-table {
     width: 100%;
-    padding: 12px 25px;
-    max-width: none;
+    display: block;          /* Convert the table to block-level element */
+    margin: 0 auto;          /* Center the table horizontally */
+    padding: 0 10px;         /* Add some padding to avoid edge to edge contact */
+  }
+
+  .upload-table td {
+    width: 100%;             /* Ensure each cell takes full width */
+    display: block;          /* Stack cells vertically */
+    margin-bottom: 20px;     /* Add margin for spacing between rows */
+  }
+
+  /* Reduce font size for better mobile readability */
+  .file-title {
+    font-size: 1.2rem;       /* Adjust the title font size */
+  }
+
+  .file-upload-label,
+  .input-label {
+    font-size: 12px;         /* Reduce font size for labels */
+  }
+
+  .contact-input,
+  .upload-files-container input[type="file"] {
+    width: 100%;             /* Ensure input fields take full width */
+    font-size: 12px;         /* Reduce font size for inputs */
+    padding: 10px;           /* Add padding for better usability */
+  }
+
+  /* Adjust button for mobile */
+  .submit-btn {
+    width: 100%;             /* Make the button take full width */
+    font-size: 14px;         /* Reduced font size for buttons */
+    padding: 12px 20px;      /* Adjust padding for button */
+    max-width: none;         /* Remove any max-width on buttons */
+  }
+
+  .submit-btn-container {
+    display: block;          /* Stack buttons vertically */
+    margin-top: 20px;
+  }
+
+  .upload-table td a {
+    font-size: 14px;         /* Adjust font size of links */
+    text-align: left;        /* Align links to the left for better readability */
+  }
+
+  .upload-table td .text-center {
+    text-align: center;      /* Ensure buttons are centered */
+  }
+
+  .abstract-container, 
+  .full-paper-container {
+    padding: 10px;           /* Reduce padding inside containers for mobile */
   }
 }
 

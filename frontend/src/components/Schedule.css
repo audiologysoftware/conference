@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* Remove default list styling */
 ul {
   list-style: none;
@@ -25,7 +26,6 @@ body {
 
 /* Container */
 .conference-container {
-
   margin: 50px auto;
   padding: 30px;
   background: #FFFFFF; /* White background for content */
@@ -110,7 +110,6 @@ body {
   display: none;
   font-size: 16px;
   color: #333;
-  margin-top: 10px;
   width: 100%;
 }
 
@@ -142,7 +141,6 @@ body {
 .conference-tab-pane h4 {
   font-size: 2rem;
   color: #333;
-  margin-bottom: 15px;
   font-weight: 700;
   text-decoration: underline;
   text-transform: uppercase;
@@ -191,9 +189,7 @@ body {
 
 .conference-nav-link.active {
   background-color: #68B282; /* Slightly brighter green */
-}
-
-/* Mobile Specific Styles */
+}/* Mobile Specific Styles */
 @media (max-width: 600px) {
   body {
     font-size: 14px;
@@ -203,100 +199,92 @@ body {
   }
 
   /* Main Container */
-  .test-screen {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-    padding: 20px;
-    margin: 0 auto;
-    background-color: #FFFFFF; /* White background */
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
+  .conference-container {
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 100%;
+    border-radius: 15px;
   }
 
   /* Title */
-  .test-screen .header span {
-    font-size: 18px;
-    color: #333;
+  .conference-title {
+    font-size: 10px;
+    margin-bottom: 15px;
   }
 
-  .section-header h2 {
-    font-size: 2.5rem;
+  .conference-category-tabs,
+  .conference-nav-tabs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .conference-category,
+  .conference-nav-link {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+  }
+
+  /* Accordion Styles */
+  .accordion-item {
+    width: 100%;
+    display: block; /* Make sure each accordion item takes the full width */
+    margin-bottom: 15px;
+  }
+
+  .accordion-header {
+    font-size: 16px;
+    padding: 12px;
+    width: 100%; /* Make header take up full width */
+    background-color: #A8DADC; /* Light teal background */
+    color: #333;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .accordion-header:hover {
+    background-color: #B8E4E3; /* Lighter teal on hover */
+  }
+
+  
+  .accordion-session {
+    font-size: 0.9rem;
+  
+  }
+  .accordion-time{
+    font-size: 12px;
     font-weight: bold;
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px; /* Reduce space below header */
   }
 
-  /* Content */
-  .test-screen .content h2 {
-    font-size: 18px;
-    margin-top: 20px;
-  }
-
-  .test-screen .content h4 {
-    font-size: 14px;
-    color: #333;
-    font-weight: normal;
-  }
-
-  /* Audio Buttons */
-  .test-screen .audio-buttons {
-    display: flex;
-    flex-direction: row; /* Change to row to make buttons align horizontally */
-    justify-content: space-evenly; /* Space buttons evenly across the row */
-    gap: 12px;
+  /* Accordion Body - Make sure it displays on a new line */
+  .accordion-body {
+    display: none; /* Initially hidden */
     width: 100%;
-    margin-top: 10px;
-  }
-
-  .test-screen .audio-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #B0C4DE; /* Light steel blue */
-    color: #333;
-    border: none;
-    border-radius: 5px;
-    padding: 12px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 30%; /* Set the width of each button to 30% */
+    padding: 10px 15px;
     font-size: 14px;
+    background-color: #F1F3F5; /* Light gray background */
+    border-radius: 8px;
+    margin-top: 10px; /* Add space between header and body */
   }
 
-  .test-screen .audio-button.correct {
-    background-color: #98FB98; /* Pale green */
+  .accordion-body.active {
+    display: block;
+    transition: height 0.3s ease;
   }
 
-  .test-screen .audio-button.wrong {
-    background-color: #FFCCCB; /* Light red */
+  .accordion-arrow {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
   }
 
-  .test-screen .audio-icon {
-    margin-right: 5px;
+  .accordion-arrow.active {
+    transform: rotate(90deg);
   }
 
-  /* Exit Button */
-  .test-screen .exit-button {
-    background-color: #D3D3D3; /* Light gray */
-    color: #333;
-    border: none;
-    border-radius: 30px;
-    width: 100%;
-    padding: 12px 20px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-    font-size: 14px;
-  }
-
-  .test-screen .exit-button:hover {
-    background-color: #C0C0C0; /* Slightly darker gray */
+  /* Schedule List */
+  .conference-tab-pane ul {
+    max-width: 100%;
+    padding: 10px;
   }
 }

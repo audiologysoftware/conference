@@ -36,6 +36,7 @@ const Hero = () => {
 
   return (
    
+      <div className='hero-main-container'>
        <section id="hero">
         <div className='logo-container'>
           <div className="logo">
@@ -47,9 +48,9 @@ const Hero = () => {
           <h1 className="mb-4 pb-0">
             VISHRUTHA 2 : JSS ANNUAL VAK-SHARVANA CONFERENCE 2025
           </h1>
-          <h3 className="herova">Exploring The Best Clinical Practices In Communication Disorders,Dysphagia and Balance Problems among Paediatric Population</h3>
-          <h4 className="para">03-04 April, Sri Rajendra Centenary Auditorium JSS Hospital, Mysuru</h4>
-          <h4 className="para">Organized by JSS Institute of Speech and Hearing, Mysuru</h4>
+          <h4 className="herova">Exploring The Best Clinical Practices In Communication Disorders,Dysphagia and Balance Problems among Paediatric Population</h4>
+          <h5 className="para">03-04 April, Sri Rajendra Centenary Auditorium JSS Hospital, Mysuru</h5>
+          <h5 className="para">Organized by JSS Institute of Speech and Hearing, Mysuru</h5>
 
           <div id="countDiv">
             <div>
@@ -71,8 +72,7 @@ const Hero = () => {
           </div>
         </div>
       </section>
-
-
+    </div>
   );
 };
 

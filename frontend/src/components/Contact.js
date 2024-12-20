@@ -52,7 +52,7 @@ const Contact = () => {
             <div className="contact-phone">
               <i className="bi bi-phone"></i>
               <h3>Phone Number</h3>
-              <p><a href="tel:+919986511550">+91 9986511550</a></p>
+              <p>+91 9986511550</p>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ const Contact = () => {
             <div className="contact-email">
               <i className="bi bi-envelope"></i>
               <h3>Email</h3>
-              <p><a href="mailto:hemanthn.shetty@gmail.com">hemanthn.shetty@jssish.in</a></p>
+              <p>hemanthn.shetty@jssish.in</p>
             </div>
           </div>
         </div>

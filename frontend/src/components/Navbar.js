@@ -104,11 +104,7 @@ const Navbar = () => {
   return (
     <nav id="navbar" className="navbar">
       {/* Mobile menu toggle button */}
-      <button
-        className="navbar-toggle"
-        aria-label="Toggle navigation menu"
-        onClick={handleMobileMenuToggle}
-      >
+      <button className="navbar-toggle" aria-label="Toggle navigation menu"  onClick={handleMobileMenuToggle}>
         ☰
       </button>
 

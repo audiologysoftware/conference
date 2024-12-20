@@ -6,8 +6,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>&copy; Copyright JSS Institute Of Speech And Hearing, Mysuru</p>
-    
+        <p>&copy; Copyright JSS Institute Of Speech And Hearing, Mysuru</p>    
       </div>
     </footer>
   );

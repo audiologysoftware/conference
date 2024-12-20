@@ -6,14 +6,13 @@ body {
   background-color: #f4f4f4;
 }
 
-.container {
+.reg-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
 }
 
 .registration-section {
-  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -21,8 +20,7 @@ body {
 /* Section Header */
 .section-header {
   text-align: center;
-  margin-bottom: 40px;
-  margin-top: 40px;
+
 }
 
 .section-title {
@@ -31,9 +29,10 @@ body {
   margin-bottom: 10px;
 }
 
-.section-subtitle {
+.section-subtitle {  
   font-size: 18px;
   color: #666;
+  text-align: center;  
 }
 
 /* Registration Card */
@@ -42,7 +41,7 @@ body {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
+
 }
 
 .registration-info {
@@ -62,7 +61,7 @@ body {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 20px 0;
+
 }
 
 th, td {
@@ -168,6 +167,7 @@ h5, h6 {
 .modal-close:hover {
   color: #f00;
 }
+
 /* Style for the dropdown */
 .paper-table select {
   width: 100%; /* Increase width to 120% (or any desired value) */
@@ -201,10 +201,7 @@ h5, h6 {
   margin-bottom: 5px;
   display: block; /* Ensures the label is displayed on top */
 }
-.paper-table{
-  display: grid;
-  grid-template-rows: auto auto auto auto;
-}
+
 /* Form Group Flex Layout */
 .paper-table .form-group {
   display: flex;
@@ -296,6 +293,7 @@ input[type="email"]:focus {
   padding: 15px;
   vertical-align: top;
   font-size: 16px;
+  width: 50% ;
 }
 
 .paper-table .form-group {
@@ -331,28 +329,91 @@ input[type="email"]:focus {
 
 .paper-table p b {
   font-weight: bold;
-}
+}/* Responsive Adjustments */
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 28px;
+@media (max-width: 720px) {
+  .reg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .reg-container .section-title {
+    font-size: 18px; /* Smaller font size for titles */
+    text-align: center;
   }
 
   .btn {
-    font-size: 14px;
+    font-size: 12px; /* Smaller font size for buttons */
+    padding: 8px 16px; /* Reduced padding for compact buttons */
   }
 
   .modal-content {
-    width: 80%;
+    width: 85%; /* Further reduce width of modal */
+    padding: 15px; /* Reduced padding */
   }
 
   .paper-table td {
-    display: block;
+    display: block; /* Ensure table data stacks vertically */
     width: 100%;
+    font-size: 12px; /* Reduced font size for table data */
+    padding: 6px; /* Reduced padding */
   }
 
   .paper-table td img {
-    max-width: 100%;
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto;
+  }
+
+  .paper-table select {
+    font-size: 12px; /* Reduced font size for dropdown */
+    padding: 8px; /* Reduced padding for better fit */
+  }
+
+  .table tr th,
+  .table tr td {
+    font-size: 10px; /* Smaller font size for table headers and data */
+    padding: 6px; /* Reduced padding for more compact table */
+  }
+
+  .grid-master {
+    grid-template-rows: auto; /* Adjust layout for vertical stacking */
+  }
+
+  .grid-client {
+    flex-direction: column; /* Stack grid items vertically */
+    text-align: left;
+  }
+
+  input{
+    width:160px;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    font-size: 10px; /* Smaller font size for inputs */
+    padding: 8px; /* Reduced padding */
+  }
+
+  input[type="file"] {
+    font-size: 10px; /* Smaller font size for file inputs */
+  }
+
+  .paper-table .form-group {
+    grid-template-columns: 90px 1fr; /* Adjusted layout for smaller screens */
+  }
+
+  .paper-table .select-wrapper::after {
+    font-size: 10px; /* Reduced arrow size for dropdowns */
+  }
+
+  .paper-table img {
+    max-width: 100px; /* Smaller images */
+    margin: 0 auto; /* Center images */
+  }
+
+  .note {
+    font-size: 12px; /* Smaller font size for notes */
   }
 }

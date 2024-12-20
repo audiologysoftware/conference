@@ -1,13 +1,13 @@
 /* General Contact Section Styles */
 #contact {
   background-color: #f8f9fa;
-  padding: 60px 20px;
+  padding: 60px 0px;
   font-family: 'Arial', sans-serif;
 }
 
 .section-bg {
   background: #f1f1f1;
-  padding: 60px 0;
+  padding: 20px 0;
 }
 
 .section-header {
@@ -43,7 +43,7 @@
   text-align: center;
   margin-bottom: 20px;
   flex: 1 1 30%;
-  padding: 10px;
+  padding: 20px;
   position: relative;
 }
 
@@ -129,43 +129,55 @@
 .contact-info i:hover {
   transform: rotate(0deg) scale(1.1);
   background-color: #0056b3;
+}/* Default Styling */
+
+
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
-/* Responsive Design Adjustments */
+/* Mobile View Adjustments */
 @media (max-width: 768px) {
-  .section-header h2 {
-    font-size: 28px;
-  }
-
   .contact-info {
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Center-align items */
+    gap: 20px
   }
 
-  .contact-info .col-md-4 {
-    margin-bottom: 20px;
-    flex: 1 1 100%;
+  .contact-info .col-md-4 {   
+    flex: 1 1 100%; /* Full width for each column */
+    text-align: center; /* Center-align text */
+    max-width: 300px; /* Optional: Add a max width for consistent appearance */
+    padding: 0px;
+    margin: 0px;
   }
 
-  .form {
-    padding: 20px;
-    margin-top: 20px;
+  .contact-address,
+  .contact-phone,
+  .contact-email {
+    width: 100%; /* Ensure containers take up full width */
   }
 
-  .form .form-control,
-  .form button {
-    font-size: 14px;
+  .contact-info i {
+    font-size: 24px; /* Optional: Adjust icon size for better visibility */ 
   }
 }
 
+/* Smallest Screens (Extra Small) */
 @media (max-width: 576px) {
-  .contact-info .col-md-4 {
-    margin-bottom: 20px;
-    flex: 1 1 100%;
+  .contact-info .col-md-4 {   
+    flex: 1 1 100%; /* Ensure full width */
+    text-align: center; /* Center-align text */
+    padding: 0px;
+    margin: 0px;
   }
 
-  .form {
-    padding: 15px;
-    margin-top: 20px;
+  .contact-info i {
+    font-size: 20px; /* Adjust icon size for extra small screens */  
   }
 }

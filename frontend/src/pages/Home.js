@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import './Home.css'
 import About from '../components/About';
 import Speaker from '../components/Speakers';
 import Hero from '../components/Hero';
@@ -13,26 +12,24 @@ import Contact from '../components/Contact';
 import Venue from '../components/Venue';
 import Accommodations from '../components/Accommodations';
 import Footer from '../components/Footer';
+import Layout from '../components/Layout';
+
 
 
 function Home() {
     return (
-        // <div className="container">
-        <div>
-            <Navbar />
-            <Hero /> 
-            <About/>
-            <Speaker/>
-            <Organizers/>
-            <Sponsors/>
-            <Schedule/>
-            <Registration/>
-            <Upload/>
-            <Venue/>
-            <Accommodations/>
-            <Footer/>
-       
-        </div>
+        <Layout navbar={<Navbar />} hero={<Hero />} footer={<Footer />}>
+            <About />
+            <Speaker />
+            <Sponsors />
+            <Organizers />
+            <Registration />
+            <Schedule />
+            <Upload />
+            <Contact />
+            <Venue />
+            <Accommodations />
+        </Layout>
     );
 }
 
