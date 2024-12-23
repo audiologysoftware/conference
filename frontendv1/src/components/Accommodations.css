@@ -1,0 +1,126 @@
+/* Accommodations Section */
+.accommodations-section {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+}
+
+.accommodations-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.accommodations-header {
+  margin-bottom: 30px;
+}
+
+.accommodations-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.accommodations-contact {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+/* Accommodations Cards Layout */
+.accommodations-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Column settings for various screen sizes */
+.accommodations-col {
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  box-sizing: border-box; /* Ensure proper box sizing */
+}
+
+.accommodations-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.accommodations-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.accommodations-img {
+  width: 100%;
+  height: 200px; /* Increased height for better visibility of images */
+  background-color: #e0e0e0;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accommodations-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+  border-radius: 8px; /* Optional: For rounded corners on images */
+}
+
+/* Name and Link Styling */
+.accommodations-name {
+  font-size: 20px;
+  color: #1a73e8;
+  margin-bottom: 10px;
+}
+
+.accommodations-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.accommodations-stars {
+  color: #ffc107;
+  margin-bottom: 10px;
+}
+
+.accommodations-info {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+
+/* Tablet View: Two columns */
+@media (max-width: 768px) {
+  .accommodations-col {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+
+  .accommodations-img {
+    height: 180px; /* Adjust image height for smaller screens */
+  }
+}
+
+/* Mobile View: Single column */
+@media (max-width: 480px) {
+  .accommodations-col {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .accommodations-img {
+    height: 160px; /* Further adjust image height for smaller mobile screens */
+  }
+}

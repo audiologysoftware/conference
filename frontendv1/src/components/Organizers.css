@@ -1,0 +1,240 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section-title-org {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 20px;
+  color: #2c3e50;
+  text-transform: uppercase;
+}
+
+#organizers {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+.organizers-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Organizer Cards */
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.organizer-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.organizer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.organizer-card h4 {
+  font-size: 20px;
+  color: #2980b9;
+  margin-bottom: 10px;
+}
+
+.organizer-card .name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.organizer-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Committees Section */
+.committees-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.committees-section h3 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.committees-slider {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+}
+
+
+@keyframes slide-sequential {
+  0%, 100% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .organizer-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .committee-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title-org {
+    font-size: 14px;
+  }
+
+  .organizer-card h4 {
+    font-size: 18px;
+  }
+
+  .organizer-card p {
+    font-size: 13px;
+  }
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: row;  /* Change to column so buttons are positioned below */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  margin: auto auto;
+  padding: auto auto;
+  overflow: hidden;
+  gap:10px;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.committee-card {
+  flex: 0 0 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.committee-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.committee-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.committee-card li {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.committee-card b {
+  color: #000;
+}
+
+.carousel-buttons {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 20px;  /* Add some space between the buttons */
+  margin-top: 10px; /* Space between carousel content and buttons */
+}
+
+.carousel-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+  background-color: #0056b3;
+}
+
+.carousel-button.prev,
+.carousel-button.next {
+  padding: 15px;  /* Increase the size of the buttons */
+}
+
+
+/* Mobile View Adjustments */
+@media screen and (max-width: 600px) {
+  /* Committee Card Text */
+  .committee-card h4 {
+    font-size: 1.2rem;  /* Smaller title for mobile */
+  }
+
+  .committee-card li {
+    font-size: 0.9rem;  /* Smaller text for list items */
+  }
+
+  .carousel-button {
+    padding: 8px;  /* Smaller button for mobile */
+  }
+
+  .carousel-button.prev,
+  .carousel-button.next {
+    padding: 12px;  /* Smaller button size */
+  }
+
+  .carousel-buttons {
+    gap: 15px;  /* Reduced space between buttons */
+  }
+}

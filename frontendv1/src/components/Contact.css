@@ -1,0 +1,183 @@
+/* General Contact Section Styles */
+#contact {
+  background-color: #f8f9fa;
+  padding: 60px 0px;
+  font-family: 'Arial', sans-serif;
+}
+
+.section-bg {
+  background: #f1f1f1;
+  padding: 20px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.section-header h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #007bff;
+  margin: 10px auto 0;
+}
+
+/* Contact Info with Sticker Style */
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-info .col-md-4 {
+  text-align: center;
+  margin-bottom: 20px;
+  flex: 1 1 30%;
+  padding: 20px;
+  position: relative;
+}
+
+
+
+.contact-info h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-info address,
+.contact-info p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 0;
+}
+
+/* Form Styling */
+.form {
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.form .form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form .form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.form .form-control:focus {
+  border-color: #007bff;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.form textarea {
+  resize: vertical;
+}
+
+.form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #0056b3;
+}
+
+#feedback-response {
+  font-size: 18px;
+  color: #28a745;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Sticky Sticker Style for Icons */
+.contact-info i {
+  position: relative;
+  transform: rotate(-5deg);
+  border: 2px dashed white;
+  transition: all 0.3s ease;
+}
+
+.contact-info i:hover {
+  transform: rotate(0deg) scale(1.1);
+  background-color: #0056b3;
+}/* Default Styling */
+
+
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align items */
+    gap: 20px
+  }
+
+  .contact-info .col-md-4 {   
+    flex: 1 1 100%; /* Full width for each column */
+    text-align: center; /* Center-align text */
+    max-width: 300px; /* Optional: Add a max width for consistent appearance */
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .contact-address,
+  .contact-phone,
+  .contact-email {
+    width: 100%; /* Ensure containers take up full width */
+  }
+
+  .contact-info i {
+    font-size: 24px; /* Optional: Adjust icon size for better visibility */ 
+  }
+}
+
+/* Smallest Screens (Extra Small) */
+@media (max-width: 576px) {
+  .contact-info .col-md-4 {   
+    flex: 1 1 100%; /* Ensure full width */
+    text-align: center; /* Center-align text */
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .contact-info i {
+    font-size: 20px; /* Adjust icon size for extra small screens */  
+  }
+}
