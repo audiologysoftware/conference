@@ -20,7 +20,8 @@ async def create_user(db: AsyncSession, user: UserCreate) -> bool:
             email=user.email,
             phone=user.phone,
             bank_type=user.bank_type,
-            transaction_id=user.transaction_id
+            transaction_id=user.transaction_id,
+            transaction_screenshot = user.transaction_screenshot
         )
         db.add(new_user)
         await db.commit()

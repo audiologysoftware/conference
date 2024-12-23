@@ -1,0 +1,152 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Venue Section */
+#venue {
+  padding: 60px 15px;
+  background: linear-gradient(180deg, #ffffff 0%, #f0f8ff 100%);
+}
+
+.venue-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.venue-header {
+  margin-bottom: 40px;
+}
+
+.venue-header h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #2c3e50;
+}
+
+.venue-header p {
+  font-size: 18px;
+  margin: 0 auto;
+  max-width: 600px;
+  color: #6c757d;
+}
+
+/* Gallery Section */
+.venue-gallery-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+/* Responsive Design */
+
+/* For larger tablets and small laptops (768px - 1024px) */
+@media (max-width: 1024px) {
+  .venue-map-and-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .venue-map-container,
+  .venue-info {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Reduced card width */
+  }
+}
+
+/* For medium tablets (481px - 768px) */
+@media (max-width: 768px) {
+  .venue-header h2 {
+    font-size: 32px;
+  }
+
+  .venue-header p {
+    font-size: 16px;
+  }
+
+  .venue-info h3 {
+    font-size: 20px;
+  }
+
+  .venue-info p {
+    font-size: 14px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Further reduced card width */
+  }
+}
+
+/* For mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .venue-header h2 {
+    font-size: 28px;
+  }
+
+  .venue-info h3 {
+    font-size: 18px;
+  }
+
+  .venue-info p {
+    font-size: 14px;
+  }
+
+  .venue-map iframe {
+    width: 100%; /* Full width for smaller screens */
+    height: 250px; /* Reduced height */
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Single column layout for small screens */
+  }
+
+  .gallery-item {
+    max-width: 90%; /* Ensure the card width fits within the screen */
+    margin: 0 auto; /* Center the cards */
+  }
+}

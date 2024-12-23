@@ -1,0 +1,139 @@
+/* Layout Styles */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+}
+
+/* Header */
+.layout-header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin: 0; /* Ensure no margin around the header */
+}
+
+/* Body */
+.layout-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0; /* Remove any additional padding */
+}
+
+/* Hero Section */
+.hero-section {
+  width: 100vw; /* Full width of the viewport */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+}
+
+/* Content Section */
+.content-section {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0; /* Remove padding to eliminate any spacing */
+  box-sizing: border-box;
+}
+
+/* Footer */
+.layout-footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .layout {
+    padding: 0 10px; /* Add slight padding on sides for mobile */
+  }
+  
+  .layout-body{
+    margin: 0;
+    padding: 0; /* Remove any additional padding */
+  }
+
+  .layout-header {
+    background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin: 0; /* Ensure no margin around the header */
+  }
+
+  
+
+  .hero-section {
+    width: 100%;
+    padding: 0 10px; /* Slight padding for mobile */
+  }
+
+  .content-section {
+    width: 100%; /* Full width on small screens */
+    padding: 0 10px; /* Add small padding for better spacing */
+  }
+
+  .layout-footer {
+    padding: 10px; /* Reduce padding on footer */
+  }
+}@media screen and (max-width: 480px) {
+  /* Prevent horizontal scrolling */
+  body, html {
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    width: 100%; /* Ensure the body width is 100% of the viewport */
+    margin: 0; /* Remove any default margin */
+  }
+
+  /* Layout Header (Navbar) */
+  .layout-header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin: 0; /* Remove margin around the header */
+    width: 100%; /* Ensure header doesn't cause overflow */
+  }
+
+  /* Layout Body */
+  .layout-body {
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    width: 100%; /* Make sure it doesn't overflow */
+    overflow-x: hidden; /* Ensure no horizontal scroll */
+  }
+
+  /* Hero Section */
+  .hero-section {
+    width: 100%;
+    padding: 0 5px; /* Reduce padding */
+  }
+
+  /* Content Section */
+  .content-section {
+    width: 100%;
+    padding: 0 5px; /* Reduce padding for small screens */
+  }
+
+  /* Layout Footer */
+  .layout-footer {
+    padding: 8px; /* Reduce footer padding */
+  }
+
+  /* Ensure no space around the layout */
+  .layout-container {
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+  }
+}

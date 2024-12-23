@@ -8,6 +8,7 @@ class UserCreate(BaseModel):
     phone: str = Field(..., max_length=20)
     bank_type: str = Field(..., max_length=20)
     transaction_id: str = Field(..., max_length=20)
+    transaction_screenshot: Optional[bytes] = None
 
 # Output schema for reading user data
 class UserRead(BaseModel):
@@ -17,3 +18,4 @@ class UserRead(BaseModel):
     phone: str
     bank_type: str
     transaction_id: str
+    transaction_screenshot: Optional[bytes] = None

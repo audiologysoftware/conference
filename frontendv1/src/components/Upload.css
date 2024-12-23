@@ -1,0 +1,253 @@
+/* General Page Styles */
+.upload-card-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 15px;
+}
+
+.upload-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 1000px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.upload-card-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.upload-card-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Contact Info Section */
+.contact-info-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 20px;
+  padding: 20px;
+}
+
+.input-label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Contact Info Container */
+.contact-info-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Two columns: first column for labels, second for inputs */
+  gap: 10px; /* Space between the grid items */
+  align-items: center; /* Align items vertically */
+  max-width: 600px; /* Limit the container width */
+  margin: 0 auto; /* Center the container horizontally */
+  text-align: center;
+}
+
+/* Input labels */
+.input-label {
+  font-size: 14px;
+  color: #333;
+  text-align: right; /* Align labels to the right */
+  font-weight: bold;
+  padding-right: 10px; /* Add some space between the label and input */
+}
+
+/* Contact input fields */
+.contact-input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Make inputs take up the full available width */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+
+.contact-input:focus {
+  border-color: #417bb2;
+  outline: none;
+}
+
+/* File Upload Section */
+.upload-files-container {
+  margin-top: 40px;
+}
+
+.upload-table {
+  width: 100%;
+  border-spacing: 20px;
+}
+
+.upload-table td {
+  vertical-align: top;
+  width: 50%;
+}
+
+.abstract-container,
+.full-paper-container {
+  padding: 20px;
+}
+
+.file-title {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.file-upload-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.upload-files-container input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.upload-files-container input[type="file"]:focus {
+  border-color: #417bb2;
+  outline: none;
+}
+
+/* Submit Button */
+/* Submit Buttons Container */
+.submit-btn-container {
+  display: flex;
+  justify-content: space-between; /* Align the submit buttons on the same line */
+  gap: 20px; /* Add space between the buttons */
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Submit Button Style */
+.submit-btn {
+  background-color: #417bb2;
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 48%; /* Ensure the buttons share equal width */
+}
+
+.submit-btn:hover {
+  background-color: #355e8f;
+}
+
+
+.submit-btn:hover {
+  background-color: #355e8f;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+ 
+  .upload-card {
+    width: 90%;
+  }
+
+  .upload-card-title {
+    font-size: 2rem;
+  }
+
+  .input-label {
+    font-size: 0.9rem;
+  }
+
+  .contact-info-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 5px;       
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .contact-info-container label {
+    font-size: 10px;
+    font-weight: bold;
+  }
+  .upload-table {
+    width: 100%;
+    display: block;          /* Convert the table to block-level element */
+    margin: 0 auto;          /* Center the table horizontally */
+    padding: 0 10px;         /* Add some padding to avoid edge to edge contact */
+  }
+
+  .upload-table td {
+    width: 100%;             /* Ensure each cell takes full width */
+    display: block;          /* Stack cells vertically */
+    margin-bottom: 20px;     /* Add margin for spacing between rows */
+  }
+
+  /* Reduce font size for better mobile readability */
+  .file-title {
+    font-size: 1.2rem;       /* Adjust the title font size */
+  }
+
+  .file-upload-label,
+  .input-label {
+    font-size: 12px;         /* Reduce font size for labels */
+  }
+
+  .contact-input,
+  .upload-files-container input[type="file"] {
+    width: 100%;             /* Ensure input fields take full width */
+    font-size: 12px;         /* Reduce font size for inputs */
+    padding: 10px;           /* Add padding for better usability */
+  }
+
+  /* Adjust button for mobile */
+  .submit-btn {
+    width: 100%;             /* Make the button take full width */
+    font-size: 14px;         /* Reduced font size for buttons */
+    padding: 12px 20px;      /* Adjust padding for button */
+    max-width: none;         /* Remove any max-width on buttons */
+  }
+
+  .submit-btn-container {
+    display: block;          /* Stack buttons vertically */
+    margin-top: 20px;
+  }
+
+  .upload-table td a {
+    font-size: 14px;         /* Adjust font size of links */
+    text-align: left;        /* Align links to the left for better readability */
+  }
+
+  .upload-table td .text-center {
+    text-align: center;      /* Ensure buttons are centered */
+  }
+
+  .abstract-container, 
+  .full-paper-container {
+    padding: 10px;           /* Reduce padding inside containers for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .upload-card-title {
+    font-size: 1.8rem;
+  }
+}
