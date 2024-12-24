@@ -33,3 +33,6 @@ services:
 
 networks:
   jssish-network: {}
+
+
+#docker run -d --name database -e POSTGRES_USER=k3sadm -e POSTGRES_PASSWORD=jss1234 -e POSTGRES_DB=conference -p 5432:5432 -v postgres_data:/var/lib/postgresql/data --restart unless-stopped postgres:latest

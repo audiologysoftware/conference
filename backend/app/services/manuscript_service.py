@@ -14,6 +14,7 @@ async def upload_abstract(db: AsyncSession, data: AbstractUpload) -> bool:
         new_manuscript = Manuscript(
             title=data.title,
             author_names=data.author_names,
+            presentation=data.presentation,
             email_id=data.email_id,
             abstract=data.abstract
         )

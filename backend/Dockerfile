@@ -21,3 +21,10 @@ EXPOSE 3014
 
 # Set the default command to run the FastAPI app
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "3014"]
+
+# docker build . -t prashanthshivanna/organizer:23122024
+# docker run -d --name="organizer" -p="3014:3014" prashanthshivanna/organizer:23122024
+# docker push prashanthshivanna/organizer:23122024
+# docker run -d --name=organizer -p="3014:3014" -e "POSTGRES_USER=k3sadm" -e "POSTGRES_PASSWORD=jss1234" -e "POSTGRES_HOST=localhost" -e "POSTGRES_PORT=5432" -e "POSTGRES_DB=conference" -e "VIRTUAL_HOST=organizer.jssish.com" -e "VIRTUAL_PORT=3014" -e "LETSENCRYPT_HOST=organizer.jssish.com" --restart unless-stopped prashanthshivanna/organizer:23122024
+
+
