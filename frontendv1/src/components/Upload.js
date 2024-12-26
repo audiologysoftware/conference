@@ -1,94 +1,153 @@
-
 import React, { useState } from "react";
 import "./Upload.css";
-import { uploadAbstract, uploadManuscript } from "../api/manuscripts";
-
+import { uploadAbstract, uploadManuscript, getTitles, getAuthorNames } from "../api/manuscripts";
 
 const Upload = () => {
   const [form, setForm] = useState({
     title: "",
     author_names: "",
-    email_id: "",
+    email_id: "",    
     abstract: null,
     manuscript: null,
     plagiarism: null,
+    presentation: "",
   });
 
   const [error, setError] = useState(null);
-
-
-  const [correspondingEmail, setCorrespondingEmail] = useState();
-  const [paperTitle, setPaperTitle] = useState();
-  const [authorNames, setAuthorNames] = useState();
-  const [abstractFile, setAbstractFile] = useState(null);
-  const [plagiarismFile, setPlagiarismFile] = useState(null);
-  const [manuscriptFile, setManuscriptFile] = useState(null);
-
+  const [titles, setTitles] = useState([]);
+  const [showTitleDropdown, setShowTitleDropdown] = useState(true);
+  const [presentationOptions] = useState(["Oral", "Poster"]);
+  const [titleId, setTitleId] = useState(0)
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value })
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleFileChange = async (e) => {
+    e.preventDefault()    
     const file = e.target.files[0];
-    console.log(1)
+    console.log("File selected:", file);
     if (file) {
-      console.log(3)
-      const base64 = await convertToBase64(file);    
-      setForm({ ...form, [e.target.name]: base64 });      
-      console.log([e.target.name], base64 )
+      const base64 = await convertToBase64(file);
+      console.log("File converted to base64:", base64);
+      setForm({ ...form, [e.target.name]: base64 });
     }
   };
 
-    // Function to convert a file to Base64
-    const convertToBase64 = (file) => {
-      return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = () => resolve(reader.result);
-        reader.onerror = (error) => reject(error);
-      });
-    };
+  const convertToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+    });
+  };
 
-    const clearForm = () =>{
-      setForm({
-        title: "",
-        author_names: "",
-        email_id: "",
-        abstract: null,
-        manuscript: null,
-        plagiarism: null,
-      });
+  const handleEmailChange = (e) => {
+    const email = e.target.value;
+    setForm({ ...form, email_id: email });
+  };
+  
+  const handleEmailBlur = async (e) => {
+    const email = e.target.value;
+    console.log("Email on blur:", email);
+    if (email) {
+      try {
+        const res = await getTitles(email);
+        if (res.titles && res.titles.length > 0) {
+          setTitles([...res.titles]);
+        } else {
+          setTitles([]);
+        }
+      } catch (err) {
+        setError("Failed to fetch titles");
+      }
     }
+  };
+  
 
+  const handleTitleChange = async (e) => {    
+    e.preventDefault();
+    console.log("Selected title:", e.target.value);
+    const selectedTitle = e.target.value;    
+    const selectedId = e.target.options[e.target.selectedIndex].dataset.id; // Get the data-id attribute
+    setTitleId(selectedId)
+    if (selectedTitle === "New") {
+      setShowTitleDropdown(false);
+    } else {
+      const author_names= await getAuthorNames(selectedId)      
+      setForm({ ...form, author_names: author_names.author_names, presentation:author_names.presentation, title: selectedTitle });
+      console.log(selectedTitle)      
+    }
+  };
+
+  const revertToDropdown = () => {
+    setForm({ ...form, title: "" });
+    setShowTitleDropdown(true);
+  };
 
   const handleSubmit = async (e, type) => {
     e.preventDefault();
-
+    console.log("Form submitted:", form);         
     try {
-      if (type === "Abstract" && !abstractFile) {
-        const res = await uploadAbstract({
-          title: form.title,
-          author_names: form.author_names,
-          email_id: form.email_id,
-          abstract: form.abstract,
-        });
-        alert("Abstract uploaded successfully!")
-        clearForm();
-        return;
+      if (type === "Abstract") { 
+        if(!form.abstract=="")       
+        {
+          if(!showTitleDropdown)
+          {
+            console.log("title-textbox:", showTitleDropdown, type)
+            await uploadAbstract({
+              title: form.title,
+              author_names: form.author_names,
+              email_id: form.email_id,
+              abstract: form.abstract,
+              presentation: form.presentation,
+            });
+            alert("Abstract uploaded successfully!");
+            clearForm();
+            return;
+          }else
+          {
+            alert("Abstract is already submitted, you can submit the full-length manuscript")        
+            setShowTitleDropdown(true);
+          }
+        }else
+          alert("Upload the abstract");
       }
-      if (type === "Full-Length Paper" && (!plagiarismFile || !manuscriptFile)) {
-        const res = await uploadManuscript({
-          email_id: form.email_id,
-          plagiarism: form.plagiarism,
-          manuscript: form.manuscript,          
-        });       
-        alert("Manuscript and Plagiarism uploaded successfully!")
-        clearForm();
-        return;
+      if (type === "Full-Length Paper") {
+        if(!form.plagiarism=="" || !form.manuscript=="")
+        {
+          await uploadManuscript({
+            id: parseInt(titleId),
+            plagiarism: form.plagiarism,
+            manuscript: form.manuscript,
+          });
+          alert("Manuscript and Plagiarism uploaded successfully!");
+          setShowTitleDropdown(true);
+          clearForm();
+          return;
+        }else
+        {
+          if(!form.plagiarism)
+            alert("Upload the plagiarism report");
+          else if(!form.manuscript)
+            alert("Upload the full-length manuscript");
+        }
       }
-    } catch (err) {      
-      alert(err.message)
+    } catch (err) {
+      alert(err.message);
     }
+  };
+
+  const clearForm = () => {
+    setForm({
+      title: "",
+      author_names: "",
+      email_id: "",
+      abstract: null,
+      manuscript: null,
+      plagiarism: null,
+      presentation: "",
+    });
   };
 
   return (
@@ -99,33 +158,59 @@ const Upload = () => {
         </div>
 
         <div className="upload-card-content">
-          {/* Contact Info Section - Text Boxes */}
+          {/* Contact Info Section */}
           <div className="contact-info-container">
             <label htmlFor="correspondingEmail" className="input-label">
               <strong>Corresponding Author's Email ID:</strong>
             </label>
             <input
-              type="text"
-              id="correspondingEmail"
-              name="email_id"
-              value={form.email_id}
-              onChange={handleChange}
-              className="contact-input"
-              placeholder="Enter corresponding author's email"
+            type="text"
+            id="correspondingEmail"
+            name="email_id"
+            value={form.email_id}
+            onChange={handleEmailChange}
+            onBlur={(e) => handleEmailBlur(e)}
+            className="contact-input"
+            placeholder="Enter corresponding author's email"
             />
 
             <label htmlFor="paperTitle" className="input-label">
               <strong>Paper Title:</strong>
             </label>
-            <input
-              type="text"
-              id="paperTitle"
-              name="title"
-              value={form.title}
-              onChange={handleChange}
-              className="contact-input"
-              placeholder="Enter the title of your paper"
-            />
+            {showTitleDropdown ? (
+               <div className="title-dropdown-container">
+               <select
+                 id="paperTitle"
+                 name="title"
+                 value={form.title}                 
+                 onChange={(e)=>handleTitleChange(e)}                 
+                 className="contact-input"
+               >
+                 <option value="">Select a title</option>
+                 {titles.map(([id, title]) => (
+                   <option key={id} value={title} data-id={id}>
+                     {title}
+                   </option>
+                 ))}
+                 <option value="New">New</option>
+               </select>
+             </div>
+            ) : (
+              <div className="new-title-container">
+                <input
+                  type="text"
+                  id="newTitle"
+                  name="title"
+                  value={form.title}
+                  onChange={handleChange}
+                  className="contact-input"
+                  placeholder="Enter a new title"
+                />
+                <button type="button" onClick={revertToDropdown} className="revert-btn btn">
+                  Cancel
+                </button>
+              </div>
+            )}
 
             <label htmlFor="authorNames" className="input-label">
               <strong>Author Names:</strong>
@@ -137,8 +222,26 @@ const Upload = () => {
               value={form.author_names}
               onChange={handleChange}
               className="contact-input"
-              placeholder="Example: Hemanth N,Varun S,Prashanth S S"
+              placeholder="Example: Hemanth N, Varun S, Prashanth S S"
             />
+
+            <label htmlFor="presentation" className="input-label">
+              <strong>Presentation Type:</strong>
+            </label>
+            <select
+              id="presentation"
+              name="presentation"
+              value={form.presentation}
+              onChange={handleChange}
+              className="contact-input"
+            >
+              <option value="">Select presentation type</option>
+              {presentationOptions.map((option, index) => (
+                <option key={index} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
           </div>
 
           {/* Paper Upload Section */}
@@ -151,90 +254,59 @@ const Upload = () => {
                       <h3 className="file-title">
                         <b>Abstract</b>
                       </h3>
-                      <p>
-                        <a
-                          href="https://docs.google.com/document/d/1uf_wllM4xaO1sz856e943OizSHsQztgW/edit?usp=sharing"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <u>Download template</u>
-                        </a>
-                        <br />
-                        <a
-                          href="https://docs.google.com/document/d/1eosrShnBkmhTXX1LqphqTcR15PJgxNCp/edit?usp=sharing"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <u>Download Submission Guideline</u>
-                        </a>
-                      </p>
-                      <label className="file-upload-label">Abstract Upload</label>                     
-                      <input type="file" name="abstract" onChange={handleFileChange} accept=".pdf,.doc,.docx,.txt" required />
-
+                      <label className="file-upload-label">Abstract Upload</label>
+                      <input
+                        type="file"
+                        name="abstract"
+                        onChange={handleFileChange}
+                        accept=".pdf,.doc,.docx,.txt"
+                        required
+                      />
                       <br />
-                      <div className="text-center">
-                        <button
-                          type="button"
-                          id="abstract-submit"
-                          className="submit-btn"                          
-                          onClick={(e) => handleSubmit(e, "Abstract")}
-                        >
-                          Submit
-                        </button>
-                      </div>                     
+                      <button
+                        type="button"
+                        className="submit-btn"
+                        onClick={(e) => handleSubmit(e, "Abstract")}
+                      >
+                        Submit
+                      </button>
                     </td>
 
                     <td className="full-paper-container">
                       <h3 className="file-title">
                         <b>Full-Length Paper</b>
                       </h3>
-                      <p>
-                        <a
-                          href="https://docs.google.com/document/d/1q9rT7fRW2cJ_2LbxbmFRg1XQUGJXAouU/edit?usp=sharing"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <u>Download template</u>
-                        </a>
-                        <br />
-                        <a
-                          href="https://docs.google.com/document/d/1mzCue_s_ClAt0EVG_EHL-GVgocd0exWL/edit?usp=sharing"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <u>Download Submission Guideline</u>
-                        </a>
-                        <br />
-                        <a
-                          href="https://shorturl.at/oxJPQ"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <u>Plagiarism website</u>
-                        </a>
-                      </p>
                       <label className="file-upload-label">Plagiarism Upload</label>
-                      <input type="file" name="manuscript" onChange={handleFileChange} accept=".pdf,.doc,.docx,.txt" required />
+                      <input
+                        type="file"
+                        name="plagiarism"
+                        onChange={handleFileChange}
+                        accept=".pdf,.doc,.docx,.txt"
+                        required
+                      />
                       <br />
                       <label className="file-upload-label">Manuscript Upload</label>
-                      <input type="file" name="plagiarism" onChange={handleFileChange} accept=".pdf,.doc,.docx,.txt" required />
+                      <input
+                        type="file"
+                        name="manuscript"
+                        onChange={handleFileChange}
+                        accept=".pdf,.doc,.docx,.txt"
+                        required
+                      />
                       <br />
-                      <div className="text-center">
-                        <button
-                          type="button"
-                          id="fullpaper-submit"
-                          className="submit-btn"
-                          onClick={(e) => handleSubmit(e, "Full-Length Paper")}
-                        >
-                          Submit
-                        </button>
-                      </div>
+                      <button
+                        type="button"
+                        className="submit-btn"
+                        onClick={(e) => handleSubmit(e, "Full-Length Paper")}
+                      >
+                        Submit
+                      </button>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </form>
-          </div>        
+          </div>
         </div>
       </div>
     </section>

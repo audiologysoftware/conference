@@ -14,6 +14,7 @@ async def upload_abstract(db: AsyncSession, data: AbstractUpload) -> bool:
         new_manuscript = Manuscript(
             title=data.title,
             author_names=data.author_names,
+            presentation=data.presentation,
             email_id=data.email_id,
             abstract=data.abstract
         )
@@ -29,17 +30,41 @@ async def upload_abstract(db: AsyncSession, data: AbstractUpload) -> bool:
         logger.error("Unexpected error while uploading abstract: {}", str(e))
         raise
 
+async def get_title_list(db: AsyncSession, email_id: str) -> list[tuple]:
+    try:
+        result = await db.execute(select(Manuscript.id, Manuscript.title).where(Manuscript.email_id == email_id))
+        titles = result.fetchall()  
+        print(titles)      
+        if titles:
+            logger.info("Titles fetched successfully for email: {}", email_id)
+            return titles
+        else:
+            logger.warning("No manuscripts found for email: {}", email_id)
+            return []
+    except SQLAlchemyError as e:
+        logger.error("Database error while fetching titles: {}", str(e))
+        raise
+    except Exception as e:
+        logger.error("Unexpected error while fetching titles: {}", str(e))
+        raise
+
 
 # Service: Read Author Names
-async def get_author_names(db: AsyncSession, email_id: str) -> str:
+async def get_author_names(db: AsyncSession, id: int) -> str:
     try:
-        result = await db.execute(select(Manuscript).where(Manuscript.email_id == email_id))
-        manuscript =result.scalar()
-        if manuscript:
-            logger.info("Author names fetched successfully for email: {}", email_id)
-            return manuscript.author_names
+        result = await db.execute(select(Manuscript.author_names, Manuscript.presentation).where(Manuscript.id == id))
+        rows =result.fetchall()
+        # Convert to the desired format
+        author_names = [
+            {"author_names": row[0], "presentation": row[1]} for row in rows
+        ]
+        print(author_names)
+       
+        if author_names:
+            logger.info("Author names fetched successfully for id: {}", id)
+            return author_names
         else:
-            logger.warning("Manuscript not found for email: {}", email_id)
+            logger.warning("Author names not found for id: {}", id)
             return None
     except SQLAlchemyError as e:
         logger.error("Database error while fetching author names: {}", str(e))
@@ -53,17 +78,17 @@ async def get_author_names(db: AsyncSession, email_id: str) -> str:
 async def upload_manuscript(db: AsyncSession, data: ManuscriptUpload) -> bool:
     try:
         # Check if manuscript exists for the user
-        result = await db.execute(select(Manuscript).where(Manuscript.email_id == data.email_id))
+        result = await db.execute(select(Manuscript).where(Manuscript.id == data.id))
         manuscript = result.scalar()
         if not manuscript:
-            logger.warning("No existing manuscript found for email: {}", data.email_id)
+            logger.warning("No existing manuscript found for id: {}", data.id)
             return False
 
         # Update manuscript and plagiarism
         manuscript.manuscript = data.manuscript
-        manuscript.plagarism = data.plagiarism        
+        manuscript.plagiarism = data.plagiarism        
         await db.commit()
-        logger.info("Manuscript uploaded successfully for email: {}", data.email_id)
+        logger.info("Manuscript uploaded successfully for id: {}", data.id)
         return True
     except SQLAlchemyError as e:
         logger.error("Database error while uploading manuscript: {}", str(e))

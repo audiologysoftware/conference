@@ -97,12 +97,7 @@ const Organizers = () => {
               &#9664;
             </button>
             <div className="carousel-wrapper">
-              <div
-                className="carousel-content"
-                style={{
-                  transform: `translateX(-${currentIndex * 100}%)`,
-                }}
-              >
+              <div className="carousel-content"   style={{transform: `translateX(-${currentIndex * 100}%)`,}}>
                 {committeeData.map((committee, index) => (
                   <div className="committee-card" key={index}>
                     <h4>{committee.title}</h4>

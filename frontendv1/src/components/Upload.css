@@ -128,6 +128,18 @@
   outline: none;
 }
 
+.new-title-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.revert-btn{
+  font-size: 8px;
+  height: 40px;
+  margin-block: auto;
+  border-radius: 3px;
+}
+
 /* Submit Button */
 /* Submit Buttons Container */
 .submit-btn-container {

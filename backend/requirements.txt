@@ -7,3 +7,4 @@ python-dotenv
 colorlog
 loguru
 alembic
+psycopg2-binary

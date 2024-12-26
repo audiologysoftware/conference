@@ -33,7 +33,7 @@ async def list_all_manuscripts(db: AsyncSession):
                 Manuscript.author_names,
                 Manuscript.email_id,
                 Manuscript.abstract,
-                Manuscript.plagarism,
+                Manuscript.plagiarism,
                 Manuscript.manuscript,
             )
         )
@@ -47,7 +47,7 @@ async def list_all_manuscripts(db: AsyncSession):
                 author_names=row.author_names,
                 email_id=row.email_id,
                 abstract=row.abstract,
-                plagarism=row.plagarism,
+                plagiarism=row.plagiarism,
                 manuscript=row.manuscript,
             )
             for row in manuscripts

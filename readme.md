@@ -20,5 +20,11 @@
 
 # To run the backend
 * move inside the backend folder
+* Run Command python -m venv .venv
+* .venv\script\activate
 * Run command "pip install -r requirements.txt"
 * Run command "uvicorn main:app --reload --port 3014"
+
+# To run frontend
+* move inside frontend folder
+* npm start
