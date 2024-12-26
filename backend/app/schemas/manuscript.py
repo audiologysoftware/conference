@@ -13,12 +13,15 @@ class AbstractUpload(BaseModel):
 
 # Schema for uploading a manuscript
 class ManuscriptUpload(BaseModel):
-    email_id: EmailStr
+    id: int
     plagiarism: bytes # Binary data
     manuscript: bytes  # Binary data
 
 
 # Schema for reading author names
-class AuthorRead(BaseModel):
-    email_id: EmailStr
+class AuthorRead(BaseModel):    
     author_names: str
+    presentation: str
+
+class GetTitles(BaseModel):    
+    titles: list[tuple]    

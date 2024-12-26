@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.config.database import get_db
-from app.schemas.manuscript import AbstractUpload, AuthorRead, ManuscriptUpload
-from app.services.manuscript_service import upload_abstract, get_author_names, upload_manuscript
+from app.schemas.manuscript import AbstractUpload, AuthorRead, ManuscriptUpload, GetTitles
+from app.services.manuscript_service import upload_abstract, get_author_names, upload_manuscript, get_title_list
 from loguru import logger
 
 router = APIRouter()
@@ -22,21 +22,34 @@ async def upload_abstract_endpoint(data: AbstractUpload, db: AsyncSession = Depe
     except Exception as e:
         logger.error("Unexpected error during abstract upload: {}", str(e))
         raise HTTPException(status_code=500, detail="Internal Server Error")
-
-
-# Endpoint: Read Author Names
-@router.get("/get-author-names", response_model=AuthorRead)
-async def read_author_names(email_id: str, db: AsyncSession = Depends(get_db)):
+    
+@router.get("/get-titles", response_model=GetTitles)
+async def get_titles(email_id: str, db: AsyncSession = Depends(get_db)):
     try:
-        author_names = await get_author_names(db, email_id)
-        if not author_names:
-            raise HTTPException(status_code=404, detail="Manuscript not found")
-        return {"email_id": email_id, "author_names": author_names}
+        titles = await get_title_list(db, email_id)
+        if not titles:
+            raise HTTPException(status_code=404, detail="Titles not found")      
+        print(titles)     
+        return {"titles": titles}    
     except HTTPException as e:
-        logger.error("HTTP error during fetching author names: {}", e.detail)
+        logger.error("HTTP error during fetching titles and Authors: {}", e.detail)
         raise e
     except Exception as e:
-        logger.error("Unexpected error during fetching author names: {}", str(e))
+        logger.error("Unexpected error during fetching titles: {}", str(e))
+        raise HTTPException(status_code=500, detail="Internal Server Error")
+
+@router.get("/get-authors", response_model=AuthorRead)
+async def get_authors(id: int, db: AsyncSession = Depends(get_db)):
+    try:
+        authors = await get_author_names(db, id)
+        if not authors:
+            raise HTTPException(status_code=404, detail="Authors not found")
+        return authors[0]
+    except HTTPException as e:
+        logger.error("HTTP error during fetching authors: {}", e.detail)
+        raise e
+    except Exception as e:
+        logger.error("Unexpected error during fetching authors: {}", str(e))
         raise HTTPException(status_code=500, detail="Internal Server Error")
 
 

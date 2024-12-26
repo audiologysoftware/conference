@@ -7,15 +7,15 @@ services:
 #   networks:
 #    - "jssish-network"
 
- backend:
-  build: ./backend/
-  container_name: backend
-  ports: 
-   - "3014:3014"
-  networks:
-   - "jssish-network"
-  depends_on:
-   - Database
+#  backend:
+#   build: ./backend/
+#   container_name: backend
+#   ports: 
+#    - "3014:3014"
+#   networks:
+#    - "jssish-network"
+#   depends_on:
+#    - Database
     
  
  Database: 

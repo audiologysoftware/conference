@@ -14,15 +14,27 @@ export const uploadAbstract = async (abstractData) => {
   }
 };
 
-// Get Author Names by Email
-export const getAuthorNames = async (email) => {
+export const getTitles = async (emailId) => {
   try {
-    logInfo(`Fetching author names for email: ${email}`);
-    const response = await apiClient.get(`/manuscripts/get-author-names/?email_id=${email}`);
+    logInfo("Fetching titles");
+    const response = await apiClient.get(`/manuscripts/get-titles?email_id=${emailId}`);
+    logInfo("Titles fetched successfully", response.data);
+    return response.data;
+  } catch (error) {
+    logError("Failed to fetch titles", error);
+    throw error.response?.data || "Failed to fetch titles";
+  }
+};
+
+// Get Author Names by Email
+export const getAuthorNames = async (id) => {
+  try {
+    logInfo(`Fetching author names for ID: ${id}`);
+    const response = await apiClient.get(`/manuscripts/get-authors/?id=${id}`);
     logInfo("Author names fetched successfully", response.data);
     return response.data;
   } catch (error) {
-    logError(`Failed to fetch author names for email: ${email}`, error);
+    logError(`Failed to fetch author names for ID: ${id}`, error);
     throw error.response?.data || "Failed to fetch author names";
   }
 };

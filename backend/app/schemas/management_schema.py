@@ -20,7 +20,7 @@ class ManuscriptRead(BaseModel):
     author_names: str
     email_id: EmailStr
     abstract: Optional[bytes]  # Binary data
-    plagarism: Optional[bytes] # Binary data
+    plagiarism: Optional[bytes] # Binary data
     manuscript: Optional[bytes]  # Binary data
 
 

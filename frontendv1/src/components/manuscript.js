@@ -23,6 +23,7 @@ const Manuscript = () => {
     const loadManuscripts = async () => {
       try {
         const data = await listAllManuscripts();
+        console.log(data);
         setManuscripts(data);
       } catch (err) {
         setError(err.message);
