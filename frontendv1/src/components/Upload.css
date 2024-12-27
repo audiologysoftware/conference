@@ -72,6 +72,7 @@
   border-radius: 4px;
   width: 100%; /* Make inputs take up the full available width */
   box-sizing: border-box; /* Ensure padding is included in the width */
+  text-transform: lowercase;
 }
 
 
