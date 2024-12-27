@@ -9,7 +9,7 @@ export const registerUser = async (userData) => {
     logInfo("User registration successful", response.data);
     return response.data;
   } catch (error) {
-    logError("User registration failed", error);
+    logError("User registration failed (Check EmailID and TransactionId)", error);
     throw error.response?.data || "Registration failed";
   }
 };

@@ -22,7 +22,7 @@ export const getTitles = async (emailId) => {
     return response.data;
   } catch (error) {
     logError("Failed to fetch titles", error);
-    throw error.response?.data || "Failed to fetch titles";
+    return { titles: [] };
   }
 };
 
@@ -35,7 +35,7 @@ export const getAuthorNames = async (id) => {
     return response.data;
   } catch (error) {
     logError(`Failed to fetch author names for ID: ${id}`, error);
-    throw error.response?.data || "Failed to fetch author names";
+    return "";
   }
 };
 

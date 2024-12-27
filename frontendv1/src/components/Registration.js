@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, createRef } from 'react';
 import './Registration.css';
 import qr from '../assets/img/speakers/QR code.jpg'
 import { registerUser } from '../api/users';
@@ -12,6 +12,8 @@ const Registration = () => {
     bank_type: "",
     transaction_id: "",
   });
+
+  const filehandler = useRef();
 
 
   const handleChange = (e) => {
@@ -52,6 +54,7 @@ const Registration = () => {
         bank_type: "",
         transaction_id: "",
       });
+      filehandler.current.value = "";
     } catch (err) {
       console.error("Error registering user:", err);
       alert("Payment details failed to submit");
@@ -180,7 +183,7 @@ const Registration = () => {
 
                       <div className="form-group">
                         <label>Attachment</label>
-                        <input type="file" name="transaction_screenshot" onChange={handleFileChange} accept=".pdf,.doc,.docx,.txt" required />
+                        <input type="file" ref={filehandler} name="transaction_screenshot" onChange={handleFileChange} accept=".pdf,.doc,.docx,.txt" required />
                       </div>
 
                       

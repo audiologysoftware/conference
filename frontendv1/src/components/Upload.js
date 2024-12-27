@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, createRef } from "react";
 import "./Upload.css";
 import { uploadAbstract, uploadManuscript, getTitles, getAuthorNames } from "../api/manuscripts";
 
@@ -17,10 +17,15 @@ const Upload = () => {
   const [titles, setTitles] = useState([]);
   const [showTitleDropdown, setShowTitleDropdown] = useState(true);
   const [presentationOptions] = useState(["Oral", "Poster"]);
-  const [titleId, setTitleId] = useState(0)
+  const [titleId, setTitleId] = useState(0) 
+  const abstractFileHandler = useRef();
+  const plagFileHandler = useRef();
+  const manFileHandler = useRef();
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
+
 
   const handleFileChange = async (e) => {
     e.preventDefault()    
@@ -53,9 +58,12 @@ const Upload = () => {
     if (email) {
       try {
         const res = await getTitles(email);
+        console.log("Titles fetched:", res.titles);
         if (res.titles && res.titles.length > 0) {
+          console.log("titles available")
           setTitles([...res.titles]);
         } else {
+          console.log("titles not available")
           setTitles([]);
         }
       } catch (err) {
@@ -103,12 +111,12 @@ const Upload = () => {
               presentation: form.presentation,
             });
             alert("Abstract uploaded successfully!");
+            setShowTitleDropdown(true);
             clearForm();
             return;
           }else
           {
-            alert("Abstract is already submitted, you can submit the full-length manuscript")        
-            setShowTitleDropdown(true);
+            alert("Abstract is already submitted, you can submit the full-length manuscript")                    
           }
         }else
           alert("Upload the abstract");
@@ -134,7 +142,7 @@ const Upload = () => {
         }
       }
     } catch (err) {
-      alert(err.message);
+      alert("Uploading failed");
     }
   };
 
@@ -148,7 +156,11 @@ const Upload = () => {
       plagiarism: null,
       presentation: "",
     });
-  };
+    setTitles([]);   
+      abstractFileHandler.current.value = "";
+      plagFileHandler.current.value = "";
+      manFileHandler.current.value = "";
+  } 
 
   return (
     <section className="upload-card-container">
@@ -171,7 +183,7 @@ const Upload = () => {
             onChange={handleEmailChange}
             onBlur={(e) => handleEmailBlur(e)}
             className="contact-input"
-            placeholder="Enter corresponding author's email"
+            placeholder="Enter corresponding author's email"            
             />
 
             <label htmlFor="paperTitle" className="input-label">
@@ -260,6 +272,7 @@ const Upload = () => {
                         name="abstract"
                         onChange={handleFileChange}
                         accept=".pdf,.doc,.docx,.txt"
+                        ref={abstractFileHandler}
                         required
                       />
                       <br />
@@ -282,6 +295,7 @@ const Upload = () => {
                         name="plagiarism"
                         onChange={handleFileChange}
                         accept=".pdf,.doc,.docx,.txt"
+                        ref={plagFileHandler}
                         required
                       />
                       <br />
@@ -291,6 +305,7 @@ const Upload = () => {
                         name="manuscript"
                         onChange={handleFileChange}
                         accept=".pdf,.doc,.docx,.txt"
+                        ref={manFileHandler}
                         required
                       />
                       <br />
