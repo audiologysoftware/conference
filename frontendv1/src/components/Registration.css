@@ -334,6 +334,17 @@ input[type="email"]:focus {
   font-weight: bold;
 }/* Responsive Adjustments */
 
+.error{
+  color:red
+}
+
+.bank-photo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 720px) {
   .reg-container {
     display: flex;
@@ -350,6 +361,7 @@ input[type="email"]:focus {
   .btn {
     font-size: 12px; /* Smaller font size for buttons */
     padding: 8px 16px; /* Reduced padding for compact buttons */
+    background-color: #007bff;
   }
 
   .modal-content {

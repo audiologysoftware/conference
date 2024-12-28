@@ -21,7 +21,7 @@ function Home() {
         <Layout navbar={<Navbar />} hero={<Hero />} footer={<Footer />}>
             <About />
             <Speaker />
-            <Sponsors />
+            {/* <Sponsors /> */}
             <Organizers />
             <Schedule />
             <Registration />            

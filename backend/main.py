@@ -9,6 +9,7 @@ from app.routes.user_route import router as user_router
 from app.routes.manuscript_route import router as manuscript_router
 from app.routes.query_route import router as query_router
 from app.routes.managment_route import router as management_router
+from app.routes.counter_route import router as counter_router
 from app.config.database import check_database, create_tables, close_connection
 import os
 from pathlib import Path
@@ -48,6 +49,7 @@ app.include_router(user_router, prefix="/api/v1/users", tags=["user"])
 app.include_router(manuscript_router, prefix="/api/v1/manuscripts", tags=["manuscript"])
 app.include_router(query_router, prefix="/api/v1/query", tags=["query"])
 app.include_router(management_router, prefix="/api/v1/management", tags=["management"])
+app.include_router(counter_router, prefix="/api/v1/counter", tags=["counter"])
 
 @app.get("/")
 async def root():

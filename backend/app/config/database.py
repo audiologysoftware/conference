@@ -32,7 +32,7 @@ async def check_database() -> bool:
         # Try to connect to the database to check if it's running
         async with engine.connect() as conn:
             from app.models import manuscript_model
-            from app.models import user_model
+            from app.models import user_model, counter_model
             # Use text() to create an executable SQL statement
             await conn.execute(text("SELECT 1"))
         logger.info("Database is running.")

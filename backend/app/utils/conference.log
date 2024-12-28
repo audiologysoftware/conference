@@ -658,3 +658,36 @@
 2024-12-26 16:13:57,060 - conference_logger - INFO - Starting application...[0m
 2024-12-27 09:22:58,828 - conference_logger - INFO - Starting application...[0m
 2024-12-27 09:48:33,899 - conference_logger - INFO - Shutting down application...[0m
+2024-12-27 10:33:33,565 - conference_logger - INFO - Starting application...[0m
+2024-12-27 11:24:44,375 - conference_logger - INFO - Shutting down application...[0m
+2024-12-27 11:42:17,163 - conference_logger - INFO - Starting application...[0m
+2024-12-27 11:42:39,129 - conference_logger - ERROR - Unhandled error: 'coroutine' object has no attribute 'fetchone'[0m
+2024-12-27 11:43:20,681 - conference_logger - INFO - Shutting down application...[0m
+2024-12-27 11:43:21,446 - conference_logger - INFO - Starting application...[0m
+2024-12-27 11:43:21,729 - conference_logger - INFO - Shutting down application...[0m
+2024-12-27 11:43:22,452 - conference_logger - INFO - Starting application...[0m
+2024-12-27 11:43:26,471 - conference_logger - ERROR - Unhandled error: 'coroutine' object is not subscriptable[0m
+2024-12-27 11:44:43,684 - conference_logger - INFO - Shutting down application...[0m
+2024-12-27 11:44:44,455 - conference_logger - INFO - Starting application...[0m
+2024-12-27 11:44:53,777 - conference_logger - INFO - Shutting down application...[0m
+2024-12-27 11:44:54,563 - conference_logger - INFO - Starting application...[0m
+2024-12-27 11:44:58,558 - conference_logger - INFO - Shutting down application...[0m
+2024-12-27 11:44:59,344 - conference_logger - INFO - Starting application...[0m
+2024-12-27 11:45:01,281 - conference_logger - ERROR - Unhandled error: Textual SQL expression 'update counter set count ...' should be explicitly declared as text('update counter set count ...')[0m
+2024-12-27 11:45:58,617 - conference_logger - INFO - Shutting down application...[0m
+2024-12-27 11:45:59,386 - conference_logger - INFO - Starting application...[0m
+2024-12-27 11:46:03,495 - conference_logger - INFO - Shutting down application...[0m
+2024-12-27 11:46:04,338 - conference_logger - INFO - Starting application...[0m
+2024-12-27 11:46:05,412 - conference_logger - ERROR - Unhandled error: Textual SQL expression 'update counter set count ...' should be explicitly declared as text('update counter set count ...')[0m
+2024-12-27 11:46:29,997 - conference_logger - INFO - Shutting down application...[0m
+2024-12-27 11:46:30,784 - conference_logger - INFO - Starting application...[0m
+2024-12-27 11:46:33,323 - conference_logger - ERROR - Unhandled error: 'coroutine' object has no attribute 'fetchone'[0m
+2024-12-27 11:48:07,976 - conference_logger - ERROR - Unhandled error: 'coroutine' object has no attribute 'fetchone'[0m
+2024-12-27 11:48:36,682 - conference_logger - INFO - Shutting down application...[0m
+2024-12-27 11:48:42,721 - conference_logger - INFO - Starting application...[0m
+2024-12-27 11:48:46,061 - conference_logger - ERROR - Unhandled error: Textual SQL expression 'UPDATE counter SET count ...' should be explicitly declared as text('UPDATE counter SET count ...')[0m
+2024-12-27 11:49:09,446 - conference_logger - INFO - Shutting down application...[0m
+2024-12-27 11:49:10,178 - conference_logger - INFO - Starting application...[0m
+2024-12-27 11:56:27,664 - conference_logger - INFO - Shutting down application...[0m
+2024-12-27 11:56:28,428 - conference_logger - INFO - Starting application...[0m
+2024-12-27 12:02:37,998 - conference_logger - INFO - Shutting down application...[0m

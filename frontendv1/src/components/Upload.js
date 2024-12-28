@@ -29,11 +29,9 @@ const Upload = () => {
 
   const handleFileChange = async (e) => {
     e.preventDefault()    
-    const file = e.target.files[0];
-    console.log("File selected:", file);
+    const file = e.target.files[0];    
     if (file) {
-      const base64 = await convertToBase64(file);
-      console.log("File converted to base64:", base64);
+      const base64 = await convertToBase64(file);      
       setForm({ ...form, [e.target.name]: base64 });
     }
   };
@@ -53,17 +51,13 @@ const Upload = () => {
   };
   
   const handleEmailBlur = async (e) => {
-    const email = e.target.value;
-    console.log("Email on blur:", email);
+    const email = e.target.value;    
     if (email) {
       try {
-        const res = await getTitles(email);
-        console.log("Titles fetched:", res.titles);
-        if (res.titles && res.titles.length > 0) {
-          console.log("titles available")
+        const res = await getTitles(email);        
+        if (res.titles && res.titles.length > 0) {          
           setTitles([...res.titles]);
-        } else {
-          console.log("titles not available")
+        } else {          
           setTitles([]);
         }
       } catch (err) {
@@ -74,8 +68,7 @@ const Upload = () => {
   
 
   const handleTitleChange = async (e) => {    
-    e.preventDefault();
-    console.log("Selected title:", e.target.value);
+    e.preventDefault();    
     const selectedTitle = e.target.value;    
     const selectedId = e.target.options[e.target.selectedIndex].dataset.id; // Get the data-id attribute
     setTitleId(selectedId)
@@ -83,8 +76,7 @@ const Upload = () => {
       setShowTitleDropdown(false);
     } else {
       const author_names= await getAuthorNames(selectedId)      
-      setForm({ ...form, author_names: author_names.author_names, presentation:author_names.presentation, title: selectedTitle });
-      console.log(selectedTitle)      
+      setForm({ ...form, author_names: author_names.author_names, presentation:author_names.presentation, title: selectedTitle });      
     }
   };
 
@@ -94,15 +86,13 @@ const Upload = () => {
   };
 
   const handleSubmit = async (e, type) => {
-    e.preventDefault();
-    console.log("Form submitted:", form);         
+    e.preventDefault();           
     try {
       if (type === "Abstract") { 
         if(!form.abstract=="")       
         {
           if(!showTitleDropdown)
-          {
-            console.log("title-textbox:", showTitleDropdown, type)
+          {            
             await uploadAbstract({
               title: form.title,
               author_names: form.author_names,
