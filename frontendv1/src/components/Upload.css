@@ -75,6 +75,11 @@
   text-transform: lowercase;
 }
 
+select,
+select option {
+  text-transform: none; /* or capitalize */
+}
+
 
 .contact-input:focus {
   border-color: #417bb2;

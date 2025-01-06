@@ -5,12 +5,12 @@ import { logInfo, logError } from "../utils/logger";
 export const addQuery = async (queryData) => {
   try {
     logInfo("Adding query", queryData);
-    const response = await apiClient.post("/queries/add", queryData);
-    logInfo("Query added successfully", response.data);
+    const response = await apiClient.post("/query/add-query", queryData);
+    logInfo("Query submitted successfully", response.data);
     return response.data;
   } catch (error) {
-    logError("Failed to add query", error);
-    throw error.response?.data || "Failed to add query";
+    logError("Failed to submit the query", error);
+    throw error.response?.data || "Failed to submit the query";
   }
 };
 

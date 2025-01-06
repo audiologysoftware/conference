@@ -1,4 +1,4 @@
-import React, { useState, useRef, createRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./Upload.css";
 import { uploadAbstract, uploadManuscript, getTitles, getAuthorNames } from "../api/manuscripts";
 
@@ -13,22 +13,29 @@ const Upload = () => {
     presentation: "",
   });
 
-  const [error, setError] = useState(null);
+  const [error, setError] = useState({
+    email_id: false,
+    title: false,
+    author_names: false,
+    presentation: false,
+  });
+
   const [titles, setTitles] = useState([]);
   const [showTitleDropdown, setShowTitleDropdown] = useState(true);
   const [presentationOptions] = useState(["Oral", "Poster"]);
-  const [titleId, setTitleId] = useState(0) 
+  const [titleId, setTitleId] = useState(0); 
   const abstractFileHandler = useRef();
   const plagFileHandler = useRef();
   const manFileHandler = useRef();
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+    setError({ ...error, [name]: !value });
   };
 
-
   const handleFileChange = async (e) => {
-    e.preventDefault()    
+    e.preventDefault();    
     const file = e.target.files[0];    
     if (file) {
       const base64 = await convertToBase64(file);      
@@ -48,8 +55,9 @@ const Upload = () => {
   const handleEmailChange = (e) => {
     const email = e.target.value;
     setForm({ ...form, email_id: email });
+    setError({ ...error, email_id: !email });
   };
-  
+
   const handleEmailBlur = async (e) => {
     const email = e.target.value;    
     if (email) {
@@ -61,22 +69,22 @@ const Upload = () => {
           setTitles([]);
         }
       } catch (err) {
-        setError("Failed to fetch titles");
+        setError({ ...error, email_id: true });
       }
     }
   };
-  
 
   const handleTitleChange = async (e) => {    
     e.preventDefault();    
     const selectedTitle = e.target.value;    
     const selectedId = e.target.options[e.target.selectedIndex].dataset.id; // Get the data-id attribute
-    setTitleId(selectedId)
+    setTitleId(selectedId);
+    setError({ ...error, title: !selectedTitle });
     if (selectedTitle === "New") {
       setShowTitleDropdown(false);
     } else {
-      const author_names= await getAuthorNames(selectedId)      
-      setForm({ ...form, author_names: author_names.author_names, presentation:author_names.presentation, title: selectedTitle });      
+      const author_names = await getAuthorNames(selectedId);      
+      setForm({ ...form, author_names: author_names.author_names, presentation: author_names.presentation, title: selectedTitle });      
     }
   };
 
@@ -85,14 +93,27 @@ const Upload = () => {
     setShowTitleDropdown(true);
   };
 
+  const validateForm = () => {
+    const newErrors = {
+      email_id: !form.email_id,
+      title: !form.title,
+      author_names: !form.author_names,
+      presentation: !form.presentation,
+    };
+    setError(newErrors);
+    return !Object.values(newErrors).some((err) => err);
+  };
+
   const handleSubmit = async (e, type) => {
     e.preventDefault();           
+    if (!validateForm()) {
+      alert("Please fill in all required fields.");
+      return;
+    }
     try {
       if (type === "Abstract") { 
-        if(!form.abstract=="")       
-        {
-          if(!showTitleDropdown)
-          {            
+        if (!form.abstract == "") {       
+          if (!showTitleDropdown) {            
             await uploadAbstract({
               title: form.title,
               author_names: form.author_names,
@@ -104,16 +125,15 @@ const Upload = () => {
             setShowTitleDropdown(true);
             clearForm();
             return;
-          }else
-          {
-            alert("Abstract is already submitted, you can submit the full-length manuscript")                    
+          } else {
+            alert("Abstract is already submitted, you can submit the full-length manuscript");                    
           }
-        }else
+        } else {
           alert("Upload the abstract");
+        }
       }
       if (type === "Full-Length Paper") {
-        if(!form.plagiarism=="" || !form.manuscript=="")
-        {
+        if (!form.plagiarism == "" || !form.manuscript == "") {
           await uploadManuscript({
             id: parseInt(titleId),
             plagiarism: form.plagiarism,
@@ -123,12 +143,12 @@ const Upload = () => {
           setShowTitleDropdown(true);
           clearForm();
           return;
-        }else
-        {
-          if(!form.plagiarism)
+        } else {
+          if (!form.plagiarism) {
             alert("Upload the plagiarism report");
-          else if(!form.manuscript)
+          } else if (!form.manuscript) {
             alert("Upload the full-length manuscript");
+          }
         }
       }
     } catch (err) {
@@ -146,10 +166,16 @@ const Upload = () => {
       plagiarism: null,
       presentation: "",
     });
+    setError({
+      email_id: false,
+      title: false,
+      author_names: false,
+      presentation: false,
+    });
     setTitles([]);   
-      abstractFileHandler.current.value = "";
-      plagFileHandler.current.value = "";
-      manFileHandler.current.value = "";
+    abstractFileHandler.current.value = "";
+    plagFileHandler.current.value = "";
+    manFileHandler.current.value = "";
   } 
 
   return (
@@ -163,40 +189,40 @@ const Upload = () => {
           {/* Contact Info Section */}
           <div className="contact-info-container">
             <label htmlFor="correspondingEmail" className="input-label">
-              <strong>Corresponding Author's Email ID:</strong>
+              <strong>Corresponding Author's Email ID:</strong> <span className="error">{error.email_id && "*"}</span>
             </label>
             <input
-            type="text"
-            id="correspondingEmail"
-            name="email_id"
-            value={form.email_id}
-            onChange={handleEmailChange}
-            onBlur={(e) => handleEmailBlur(e)}
-            className="contact-input"
-            placeholder="Enter corresponding author's email"            
+              type="text"
+              id="correspondingEmail"
+              name="email_id"
+              value={form.email_id}
+              onChange={handleEmailChange}
+              onBlur={(e) => handleEmailBlur(e)}
+              className="contact-input"
+              placeholder="Enter corresponding author's email"            
             />
 
             <label htmlFor="paperTitle" className="input-label">
-              <strong>Paper Title:</strong>
+              <strong>Paper Title:</strong> <span className="error">{error.title && "*"}</span>
             </label>
             {showTitleDropdown ? (
-               <div className="title-dropdown-container">
-               <select
-                 id="paperTitle"
-                 name="title"
-                 value={form.title}                 
-                 onChange={(e)=>handleTitleChange(e)}                 
-                 className="contact-input"
-               >
-                 <option value="">Select a title</option>
-                 {titles.map(([id, title]) => (
-                   <option key={id} value={title} data-id={id}>
-                     {title}
-                   </option>
-                 ))}
-                 <option value="New">New</option>
-               </select>
-             </div>
+              <div className="title-dropdown-container">
+                <select
+                  id="paperTitle"
+                  name="title"
+                  value={form.title}                 
+                  onChange={(e) => handleTitleChange(e)}                 
+                  className="contact-input"
+                >
+                  <option value="">Select a title</option>
+                  {titles.map(([id, title]) => (
+                    <option key={id} value={title} data-id={id}>
+                      {title}
+                    </option>
+                  ))}
+                  <option value="New">New</option>
+                </select>
+              </div>
             ) : (
               <div className="new-title-container">
                 <input
@@ -215,7 +241,7 @@ const Upload = () => {
             )}
 
             <label htmlFor="authorNames" className="input-label">
-              <strong>Author Names:</strong>
+              <strong>Author Names:</strong> <span className="error">{error.author_names && "*"}</span>
             </label>
             <input
               type="text"
@@ -228,7 +254,7 @@ const Upload = () => {
             />
 
             <label htmlFor="presentation" className="input-label">
-              <strong>Presentation Type:</strong>
+              <strong>Presentation Type:</strong> <span className="error">{error.presentation && "*"}</span>
             </label>
             <select
               id="presentation"
@@ -239,9 +265,9 @@ const Upload = () => {
             >
               <option value="">Select presentation type</option>
               {presentationOptions.map((option, index) => (
-                <option key={index} value={option}>
+                <option key={index} value={option}>                  
                   {option}
-                </option>
+                </option>                
               ))}
             </select>
           </div>

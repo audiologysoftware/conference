@@ -1,7 +1,10 @@
+from fastapi import BackgroundTasks
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from app.models.user_model import User
 from app.schemas.user import UserCreate
+from app.services.email_service import send_email
+from app.schemas.email_schema import Email_Format
 from loguru import logger
 
 # Service to create a new user
@@ -25,6 +28,21 @@ async def create_user(db: AsyncSession, user: UserCreate) -> bool:
         )
         db.add(new_user)
         await db.commit()
+
+        email = Email_Format(
+            email_to=user.email,
+            email_subject="Registration Successful",
+            emaill_body=f"Dear {user.fullname},\n\nThank you for registering to Vishrutha Conference. \n\nRegards,\n Vishrutha Team"
+        )
+
+        try:
+            logger.info("Sending email to: {}", user.email)
+            # background_tasks = BackgroundTasks()    
+            # background_tasks.add_task(send_email, email)
+            await send_email(email)
+        except Exception as e:
+            logger.error("Error while sending email: {}", str(e))
+
         logger.info("User created successfully: {}", user.email)
         return True
     except Exception as e:
@@ -41,3 +59,11 @@ async def get_user_by_email(db: AsyncSession, email: str):
     except Exception as e:
         logger.error("Error while fetching user by email: {}", str(e))
         raise
+
+async def send_test_email(email:Email_Format):
+    try:
+        print("Sending test email")
+        return await send_email(email)        
+    except Exception as e:
+        logger.error("Error while sending email: {}", str(e))
+        

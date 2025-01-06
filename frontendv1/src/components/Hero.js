@@ -35,9 +35,9 @@ const Hero = () => {
   }, []);
 
   return (
-   
-      <div className='hero-main-container'>
-       <section id="hero">
+
+    <div className='hero-main-container'>
+      <section id="hero">
         <div className='logo-container'>
           <div className="logo">
             <img src={logo} className="topright-jsslogo" alt="Logo" />
@@ -48,8 +48,9 @@ const Hero = () => {
           <h1 className="mb-4 pb-0">
             VISHRUTHA 2 : JSS ANNUAL VAK-SHARVANA CONFERENCE 2025
           </h1>
-          <h4 className="herova">Exploring The Best Clinical Practices In Communication Disorders,Dysphagia and Balance Problems among Paediatric Population</h4>
-          <h5 className="para">03-04 April, Sri Rajendra Centenary Auditorium JSS Hospital, Mysuru</h5>
+          <p className='herovas'>Vibes of Speech and Hearing Research Uniting Technology Advancements </p>
+          <h4 className="herova">Theme : Exploring The Best Clinical Practices In Communication Disorders,Dysphagia and Balance Problems among Paediatric Population</h4>
+          <h5 className="paras"><h2 className='hedd'>03-04 April 2025</h2>Sri Rajendra Centenary Auditorium JSS Hospital, Mysuru</h5>
           <h5 className="para">Organized by JSS Institute of Speech and Hearing, Mysuru</h5>
 
           <div id="countDiv">

@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from fastapi.requests import Request
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.middleware.base import BaseHTTPMiddleware
 from contextlib import asynccontextmanager
 import asyncio
 from app.utils.logger import logger
@@ -10,13 +11,14 @@ from app.routes.manuscript_route import router as manuscript_router
 from app.routes.query_route import router as query_router
 from app.routes.managment_route import router as management_router
 from app.routes.counter_route import router as counter_router
+from app.routes.auth_route import router as auth_router
 from app.config.database import check_database, create_tables, close_connection
 import os
 from pathlib import Path
 
 from fastapi.responses import PlainTextResponse, JSONResponse
 from starlette.requests import Request
-
+from app.middlewares.auth_middleware import auth_middleware
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -39,12 +41,18 @@ app = FastAPI(lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = ["*"],
+    allow_origins = ["*", "https://conference.jssish.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]
 )
 
+async def auth_middleware(request: Request, call_next):
+    auth_middleware
+        
+app.add_middleware(BaseHTTPMiddleware, dispatch=auth_middleware)
+
+app.include_router(auth_router, prefix="/api/v1/auth", tags=["authentication"])
 app.include_router(user_router, prefix="/api/v1/users", tags=["user"])
 app.include_router(manuscript_router, prefix="/api/v1/manuscripts", tags=["manuscript"])
 app.include_router(query_router, prefix="/api/v1/query", tags=["query"])
