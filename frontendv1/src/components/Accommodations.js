@@ -66,7 +66,7 @@ const Accommodations = () => {
       <div className="accommodations-container" data-aos="fade-up">
         <div className="accommodations-header">
           <h2 className="accommodations-title">Accommodations</h2>
-          <h4 className="accommodations-contact">Mr.Gunasagar 9777120130</h4>
+          <h4 className="accommodations-contact">Mr.Gunasagar 9999999999</h4>
           <h4 className="accommodations-contact">Mr.Jeevan 9611028215</h4>
         </div>
 

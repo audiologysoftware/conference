@@ -228,8 +228,7 @@ h5, h6 {
   font-size: 16px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  box-sizing: border-box; /* Ensures padding doesn't affect width */
-  text-transform: lowercase;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */  
 }
 
 /* Styling for the select dropdown container */

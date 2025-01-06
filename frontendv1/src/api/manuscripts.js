@@ -44,7 +44,7 @@ export const uploadManuscript = async (manuscriptData) => {
   try {
     logInfo("Uploading manuscript", manuscriptData);
     const response = await apiClient.put("/manuscripts/upload-manuscript", manuscriptData);
-    logInfo("Manuscript uploaded successfully", response.data);
+    logInfo(response.data);
     return response.data;
   } catch (error) {
     logError("Failed to upload manuscript", error);

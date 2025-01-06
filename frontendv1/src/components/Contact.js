@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import {addQuery} from '../api/queries'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
-    emailid: '',
+    email: '',
     subject: '',
     message: ''
   });
@@ -19,10 +20,10 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    // Handle form submission logic (e.g., send to server)
-    setResponseMessage('Message sent successfully!');
+    const response = await addQuery(formData)
+    setResponseMessage(response);
     // Clear form after submission
     setFormData({
       name: '',
@@ -87,11 +88,11 @@ const Contact = () => {
               <div className="form-group col-md-6 mt-3 mt-md-0">
                 <input
                   type="email"
-                  name="emailid"
+                  name="email"
                   className="form-control"
                   id="emailid"
                   placeholder="Your Email"
-                  value={formData.emailid}
+                  value={formData.email}
                   onChange={handleInputChange}
                   required
                 />

@@ -184,7 +184,7 @@ const Registration = () => {
                             value={form.fullname}
                             onChange={handleChange}
                           />
-                          {errors.fullname && <span className="error"> <i className="required-icon">*</i> This field is required</span>}
+                          {errors.fullname && <span className="error"> <i className="required-icon">*</i></span>}
                         </div>
 
                         <div className="form-group">
@@ -197,7 +197,7 @@ const Registration = () => {
                             value={form.email}
                             onChange={handleChange}
                           />
-                          {errors.email && <span className="error"> <i className="required-icon">*</i> This field is required</span>}
+                          {errors.email && <span className="error"> <i className="required-icon">*</i></span>}
                         </div>
 
                         <div className="form-group">
@@ -210,7 +210,7 @@ const Registration = () => {
                             value={form.phone}
                             onChange={handleChange}
                           />
-                          {errors.phone && <span className="error"> <i className="required-icon">*</i> This field is required</span>}
+                          {errors.phone && <span className="error"> <i className="required-icon">*</i></span>}
                         </div>
 
                         <div className="form-group">
@@ -229,7 +229,7 @@ const Registration = () => {
                               <option value="imps">IMPS</option>
                             </select>
                           </div>
-                          {errors.bank_type && <span className="error"> <i className="required-icon">*</i> This field is required</span>}
+                          {errors.bank_type && <span className="error"> <i className="required-icon">*</i> </span>}
                         </div>
 
                         <div className="form-group">
@@ -258,7 +258,7 @@ const Registration = () => {
                           </div>
                           {errors.transaction_id && (
                             <span className="error">
-                              <i className="required-icon">*</i> This field is required
+                              <i className="required-icon">*</i> 
                             </span>
                           )}
                         </div>

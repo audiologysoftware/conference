@@ -1,34 +1,36 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import About from '../components/About';
-import Speaker from '../components/Speakers';
-import Hero from '../components/Hero';
-import Organizers from '../components/Organizers';
-import Sponsors from '../components/Sponsors';
-import Schedule from '../components/Schedule';
-import Registration from '../components/Registration';
-import Upload from '../components/Upload';
-import Contact from '../components/Contact';
-import Venue from '../components/Venue';
-import Accommodations from '../components/Accommodations';
-import Footer from '../components/Footer';
-import Layout from '../components/Layout';
-
+import { Suspense, lazy } from 'react';
+const Navbar = lazy(() => import('../components/Navbar'));
+const About = lazy(() => import('../components/About'));
+const Speaker = lazy(() => import('../components/Speakers'));
+const Hero = lazy(() => import('../components/Hero'));
+const Organizers = lazy(() => import('../components/Organizers'));
+const Sponsors = lazy(() => import('../components/Sponsors'));
+const Schedule = lazy(() => import('../components/Schedule'));
+const Registration = lazy(() => import('../components/Registration'));
+const Upload = lazy(() => import('../components/Upload'));
+const Contact = lazy(() => import('../components/Contact'));
+const Venue = lazy(() => import('../components/Venue'));
+const Accommodations = lazy(() => import('../components/Accommodations'));
+const Footer = lazy(() => import('../components/Footer'));
+const Layout = lazy(() => import('../components/Layout'));
 
 
 function Home() {
     return (
         <Layout navbar={<Navbar />} hero={<Hero />} footer={<Footer />}>
-            <About />
-            <Speaker />
-            {/* <Sponsors /> */}
-            <Organizers />
-            <Schedule />
-            <Registration />            
-            <Upload />
-            <Contact />
-            <Venue />
-            <Accommodations />
+            <Suspense fallback={<div>Loading...</div>}>                                                
+                <About />
+                <Speaker />
+                {/* <Sponsors /> */}
+                <Organizers />
+                <Schedule />
+                <Registration />
+                <Upload />
+                <Contact />
+                <Venue />
+                <Accommodations />
+            </Suspense>
         </Layout>
     );
 }

@@ -69,17 +69,43 @@ section {
 .herova {
   font-size: 25px;
   font-weight: 700;
+  margin-bottom: 15px; 
   color: #0026ff;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   animation: fadeInUp 1s ease-in-out;
-}
+} 
 
+.herovas {
+  font-size: 15px;
+  margin-bottom: 15px; 
+  font-weight: 700;
+  color: #000000;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  animation: fadeInUp 1s ease-in-out;
+}
 .para {
   font-size: 15px;
   font-weight: 700;
-  color: #fff;
+  color: #434141;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   animation: fadeInUp 1s ease-in-out;
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  margin-bottom: 5px; /* Adjust to the desired space */
+ 
+}
+.hedd{
+  color: #c22a0f;
+}
+.paras {
+  font-size: 15px;
+  font-weight: 700;
+  color: #434141;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  animation: fadeInUp 1s ease-in-out;
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  margin-top: 0; /* Remove top margin */
 }
 
 /* Countdown Timer Styling */
@@ -108,7 +134,7 @@ section {
 #countDiv span, .countdown-number {
   font-size: 48px;
   font-weight: bold;
-  color: #ff5733;
+  color: #c22a0f;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   margin-bottom: 10px;
 }
@@ -142,10 +168,31 @@ section {
   }
 
 
-  .logo-container{
-    display: none;
+  .logo {
+    display: flex;
+    justify-content: center; /* Center the visible logo */
+    align-items: center;    /* Vertically align */
+    margin: 0 auto;         /* Center the container horizontally */
+    height: auto;           /* Adjust container height if necessary */
   }
-
+  
+  .topright-jsslogo {
+    position: absolute; /* Ensure it is absolutely positioned */
+    top: -50px; /* Move it up beyond the container */
+    right: 5px; /* Keep it slightly away from the right edge */
+    max-width: 40px; /* Maintain the reduced size */
+    height: auto; /* Preserve aspect ratio */
+    display: block; /* Show the logo */
+  }
+  
+  .topleft-jsslogo {
+    position: absolute; /* Ensure it is absolutely positioned */
+    top: -50px; /* Use a negative value to move it up beyond the container */
+    left: 5px; /* Keep it slightly away from the left edge */
+    max-width: 40px; /* Maintain the reduced size */
+    height: auto; /* Preserve aspect ratio */
+  }
+  
   .hero-container h1 {
     font-size: 100px;
   }
@@ -172,7 +219,7 @@ section {
   #countDiv span, .countdown-number {
     font-size: 24px;
     font-weight: bold;
-    color: #ff5733;
+    color: #c22a0f;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
     margin-bottom: 10px;
   }
@@ -207,7 +254,7 @@ section {
   #countDiv span, .countdown-number {
     font-size: 18px;
     font-weight: bold;
-    color: #ff5733;
+    color: #c22a0f;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
     margin-bottom: 10px;
   }

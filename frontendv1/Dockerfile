@@ -26,7 +26,7 @@ EXPOSE 3013
 CMD ["npm", "start"]
 
 
-# docker build . -t prashanthshivanna/conference:23122024
-# docker run --name="conference" -p="3013:3013" prashanthshivanna/conference:23122024
-# docker push prashanthshivanna/conference:23122024
-# docker run  -d --name=conference -e="REACT_APP_BASE_URL=http://localhost:3014/api/v1" -e "VIRTUAL_HOST=conference.jssish.com" -e "VIRTUAL_PORT=3013" -e "LETSENCRYPT_HOST=conference.jssish.com" -p 3013:3013 --restart unless-stopped prashanthshivanna/conference:23122024
+# docker build . -t prashanthshivanna/conference:03012025
+# docker run --name conference -e "REACT_APP_BASE_URL=https://conference-be.jssish.com/api/v1" "REACT_APP_LOGGING_LEVEL=DEBUG" -p "3013:3013" prashanthshivanna/conference:03012025# 
+# docker push prashanthshivanna/conference:03012025
+# docker run  -d --name conference -e="REACT_APP_BASE_URL=https://conference-be.jssish.com/api/v1" -e "REACT_APP_LOGGING_LEVEL=DEBUG" -e "VIRTUAL_HOST=conference.jssish.com" -e "VIRTUAL_PORT=3013" -e "LETSENCRYPT_HOST=conference.jssish.com" -p 3013:3013 --restart unless-stopped prashanthshivanna/conference:03012025
