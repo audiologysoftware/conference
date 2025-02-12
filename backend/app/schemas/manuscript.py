@@ -5,9 +5,9 @@ from typing import Optional
 # Schema for uploading an abstract
 class AbstractUpload(BaseModel):
     email_id: EmailStr
-    title: str = Field(..., max_length=100)
-    author_names: str = Field(..., max_length=250)    
-    presentation: str = Field(..., max_length=250)
+    title: str
+    author_names: str 
+    presentation: str 
     abstract: bytes  # Binary data
 
 

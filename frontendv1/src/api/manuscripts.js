@@ -10,7 +10,7 @@ export const uploadAbstract = async (abstractData) => {
     return response.data;
   } catch (error) {
     logError("Failed to upload abstract", error);
-    throw error.response?.data || "Failed to upload abstract";
+    throw error.response?.data || "Failed to upload abstract";    
   }
 };
 
@@ -49,6 +49,7 @@ export const uploadManuscript = async (manuscriptData) => {
   } catch (error) {
     logError("Failed to upload manuscript", error);
     throw error.response?.data || "Failed to upload manuscript";
+    return
   }
 };
 

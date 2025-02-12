@@ -18,7 +18,7 @@ export const addQuery = async (queryData) => {
 export const getAllQueries = async () => {
   try {
     logInfo("Fetching all queries");
-    const response = await apiClient.get("/queries");
+    const response = await apiClient.get("/query/list-queries");
     logInfo("Queries fetched successfully", response.data);
     return response.data;
   } catch (error) {

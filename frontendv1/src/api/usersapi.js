@@ -1,6 +1,22 @@
 import apiClient from "./apiClient";
 import { logInfo, logError } from "../utils/logger";
 
+class UserData{
+  constructor( fullname="",  email="",  phone="",  bank_type="",  transaction_id="", transaction_screenshot="", extension="", content_type="",  file_size=0, email_type="")
+  {
+    this.fullname = fullname;
+    this.email = email;
+    this.phone = phone;
+    this.bank_type = bank_type;
+    this.transaction_id = transaction_id;
+    this.transaction_screenshot = transaction_screenshot;  
+    this.extension = extension;
+    this.content_type = content_type;
+    this.file_size = file_size;    
+    this.email_type = email_type; 
+  }
+}
+
 // Register User
 export const registerUser = async (userData) => {
   try {

@@ -1,6 +1,4 @@
 import jwt
-
-
 SECRET = "JSS_SECRET"
 
 def create_token(payload):

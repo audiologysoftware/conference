@@ -65,6 +65,8 @@
 // Navbar.js
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
+import logo from '../assets/img/logo.png';
+import jsslogo from '../assets/img/jsslogo.png';
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState('hero');
@@ -103,6 +105,11 @@ const Navbar = () => {
 
   return (
     <nav id="navbar" className="navbar">
+       <div className='mobile-logo-container'>
+          <div className="logo">            
+            <img src={jsslogo} alt="jsslogo" className="topleft-jsslogo" />
+          </div>
+        </div>
       {/* Mobile menu toggle button */}
       <button className="navbar-toggle" aria-label="Toggle navigation menu"  onClick={handleMobileMenuToggle}>
         ☰
@@ -163,16 +170,15 @@ const Navbar = () => {
           >
             SCHEDULE
           </a>
-        </li>
+        </li>     
         <li>
           <a
             className={`navbar-link ${activeLink === 'manuscript' ? 'active' : ''}`}
-            href="#manuscript"
-            onClick={handleLinkClick}
-          >
-            MANUSCRIPT
+            href="#upload"
+            onClick={handleLinkClick}          >
+            ABSTRACT
           </a>
-        </li>
+        </li>  
         <li>
           <a
             className={`navbar-link ${activeLink === 'contact' ? 'active' : ''}`}
@@ -194,10 +200,10 @@ const Navbar = () => {
         <li>
           <a
             className={`navbar-link ${activeLink === 'hotels' ? 'active' : ''}`}
-            href="#hotels"
+            href="#accommodations"
             onClick={handleLinkClick}
           >
-            ACCOMMODATIONS
+            ACCOMMODATION
           </a>
         </li>
         <li>
@@ -208,7 +214,7 @@ const Navbar = () => {
           >
             REGISTRATION
           </a>
-        </li>
+        </li>        
       </ul>
     </nav>
   );

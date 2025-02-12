@@ -130,7 +130,7 @@ body {
     font-size: 13px;
   }
 }
-
+/* Web View */
 .carousel-container {
   display: flex;
   flex-direction: row;  /* Change to column so buttons are positioned below */
@@ -138,11 +138,11 @@ body {
   justify-content: center;
   position: relative;
   width: 100%;
-  max-width: 420px;
+  max-width: 320px;
   margin: auto auto;
   padding: auto auto;
   overflow: hidden;
-  gap:10px;  
+  gap:10px;
 }
 
 .carousel-wrapper {
@@ -163,6 +163,8 @@ body {
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
   padding: 10px;
   text-align: center;
+  width: 100%;
+  height: auto;
   box-sizing: border-box;
 }
 
@@ -237,5 +239,9 @@ body {
 
   .carousel-buttons {
     gap: 15px;  /* Reduced space between buttons */
+  }
+
+  .carousel-container {
+    max-width: 320px;  /* Set the max width for mobile view */
   }
 }

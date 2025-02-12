@@ -61,30 +61,20 @@
   border-radius: 6px;
 }
 
-/* Larger Mobile Devices (375px and up) */
-@media screen and (min-width: 375px) {
-  .about-section {
-    padding: 18px;
-  }
-
-  .about-section h2 {
-    font-size: 20px;
-  }
-
-  .about-section p,
-  .about-section ul li {
-    font-size: 15px;
-  }
+/* Default view (mobile) */
+.about-jss .web-view {
+  display: none;
 }
 
-/* Small Tablets (480px and up) */
-@media screen and (min-width: 480px) {
-  .about-section {
-    padding: 20px;
-  }
+.about-jss .mobile-view {
+  display: block; 
+}
 
-  .about-section .container {
-    padding: 12px;
+/* Larger screens (tablet and desktop) */
+@media screen and (min-width: 768px) {
+  .about-section {
+    padding: 24px;
+    margin-top: 100px;
   }
 
   .about-section h2 {
@@ -92,103 +82,15 @@
     margin-bottom: 16px;
   }
 
-  .about-section p,
-  .about-section ul li {
+  .about-section p {
     font-size: 16px;
-    line-height: 1.7;
   }
 
-  .about-section .highlight {
-    font-size: 18px;
-  }
-}
-
-/* Portrait Mode Mobile (max-width: 767px) */
-@media screen and (orientation: portrait) and (max-width: 767px) {
-  .about-section {
-    padding: 16px;
+  .about-jss .web-view {
+    display: block;
   }
 
-  .about-section h2 {
-    font-size: 16px;
-    margin-bottom: 14px;
-  }
-
-  .about-section p,
-  .about-section ul li {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-}
-
-/* Landscape Mode Mobile (max-width: 767px) */
-@media screen and (orientation: landscape) and (max-width: 767px) {
-  .about-section {
-    padding: 18px;
-  }
-
-  .about-section .container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-}
-
-/* Safe Area Insets for Notched Devices */
-@supports (padding: env(safe-area-inset-left)) {
-  .about-section {
-    padding-left: max(16px, env(safe-area-inset-left));
-    padding-right: max(16px, env(safe-area-inset-right));
-  }
-}
-
-/* Accessibility: Reduce Motion */
-@media (prefers-reduced-motion: reduce) {
-  .about-section * {
-    animation: none !important;
-    transition: none !important;
-  }
-}
-
-/* High Contrast Mode */
-@media (prefers-contrast: high) {
-  .about-section {
-    background: #ffffff;
-  }
-
-  .about-section h2 {
-    color: #000000;
-    border-bottom-color: #000000;
-  }
-
-  .about-section p,
-  .about-section ul li {
-    color: #000000;
-  }
-}
-
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-  .about-section {
-    background: #121212;
-    color: #e0e0e0;
-  }
-
-  .about-section h2 {
-    color: #82b1ff;
-    border-bottom-color: #82b1ff;
-  }
-
-  .about-section p,
-  .about-section ul li {
-    color: #e0e0e0;
-  }
-
-  .about-section .about-jss,
-  .about-section .about-conference {
-    background: #1e1e1e;
-  }
-
-  .about-section .highlight {
-    color: #82b1ff;
+  .about-jss .mobile-view {
+    display: none;
   }
 }

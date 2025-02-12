@@ -131,6 +131,7 @@ const Manuscript = () => {
 
   // Handle file download
   const handleDownload = (fileData, fileName) => {
+    console.log("File Data:", fileData);
     const blob = new Blob([fileData], { type: "application/octet-stream" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -138,7 +139,7 @@ const Manuscript = () => {
     a.download = fileName;
     a.click();
     URL.revokeObjectURL(url);
-  };
+};
 
   // DataGrid Columns
   const columns = [

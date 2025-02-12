@@ -2,7 +2,7 @@
 .upload-card-container {
   display: flex;
   justify-content: center;
-  padding: 50px 15px;
+  padding: 10px 15px;
 }
 
 .upload-card {
@@ -72,23 +72,13 @@
   border-radius: 4px;
   width: 100%; /* Make inputs take up the full available width */
   box-sizing: border-box; /* Ensure padding is included in the width */
-  text-transform: lowercase;
-}
-
-select,
-select option {
-  text-transform: none; /* or capitalize */
+ 
 }
 
 
 .contact-input:focus {
   border-color: #417bb2;
   outline: none;
-}
-
-/* File Upload Section */
-.upload-files-container {
-  margin-top: 40px;
 }
 
 .upload-table {
@@ -120,16 +110,17 @@ select option {
   margin-bottom: 8px;
 }
 
-.upload-files-container input[type="file"] {
+.upload-files-container {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  padding: 12px; 
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
 }
 
-.upload-files-container input[type="file"]:focus {
+.upload-files-container {
   border-color: #417bb2;
   outline: none;
 }
@@ -152,8 +143,7 @@ select option {
   display: flex;
   justify-content: space-between; /* Align the submit buttons on the same line */
   gap: 20px; /* Add space between the buttons */
-  margin-top: 20px;
-  width: 100%;
+  margin-top: 20px;  
 }
 
 /* Submit Button Style */
@@ -164,9 +154,36 @@ select option {
   font-size: 1rem;
   border: none;
   border-radius: 5px;
+  margin-top: 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 48%; /* Ensure the buttons share equal width */
+  transition: background-color 0.3s ease;  
+}
+.guidelines-link{
+  text-align: center;
+  display: flex;
+  color: red;
+  justify-content: center;
+  font-size: 13px;
+}
+/* Dropdown Input Styling */
+.dropdown-input {
+  padding: 8px; /* Space inside the dropdown */
+  font-size: 14px; /* Match the font size of other inputs */
+  border: 1px solid #ccc; /* Match the border style of inputs */
+  border-radius: 4px; /* Rounded corners for consistency */
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding and border in width */
+  background-color: #fff; /* White background for dropdown */
+  color: #333; /* Text color */
+  cursor: pointer; /* Show pointer cursor */
+  transition: border-color 0.3s ease; /* Smooth border color change */
+}
+
+
+
+.dropdown-input option {
+  font-size: 14px; /* Match dropdown item font size */
+  padding: 5px; /* Add padding for dropdown items */
 }
 
 .submit-btn:hover {
@@ -177,6 +194,57 @@ select option {
 .submit-btn:hover {
   background-color: #355e8f;
 }
+
+.colorful-sparkle-link {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+  overflow: hidden;
+}
+
+.colorful-sparkle-link:hover {
+  color: #0056b3;
+}
+
+.colorful-sparkle-link::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1);
+  animation: colorful-sparkle 1.5s infinite ease-in-out;
+}
+
+@keyframes colorful-sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+    background: radial-gradient(circle, rgba(255, 0, 0, 1), rgba(255, 255, 255, 0));
+  }
+  25% {
+    opacity: 1;
+    background: radial-gradient(circle, rgba(0, 255, 0, 1), rgba(255, 255, 255, 0));
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+    background: radial-gradient(circle, rgba(0, 0, 255, 1), rgba(255, 255, 255, 0));
+  }
+  75% {
+    opacity: 1;
+    background: radial-gradient(circle, rgba(255, 255, 0, 1), rgba(255, 255, 255, 0));
+  }
+}
+
+
 
 /* Responsive Styles for Mobile */
 @media (max-width: 768px) {
@@ -206,6 +274,10 @@ select option {
     font-size: 10px;
     font-weight: bold;
   }
+  .dropdown-input {
+    font-size: 8px; /* Slightly smaller text on mobile */
+    padding: 6px; /* Reduce padding */
+  }
   .upload-table {
     width: 100%;
     display: block;          /* Convert the table to block-level element */
@@ -227,6 +299,11 @@ select option {
   .file-upload-label,
   .input-label {
     font-size: 12px;         /* Reduce font size for labels */
+  }
+
+  .upload-files-container{
+    display: flex;
+    flex-direction: column;
   }
 
   .contact-input,
@@ -267,5 +344,65 @@ select option {
 @media (max-width: 480px) {
   .upload-card-title {
     font-size: 1.8rem;
+  }
+
+  .colorful-sparkle-link::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+    animation: colorful-sparkle 1.5s infinite ease-in-out;
+  }
+}
+
+@media (max-width: 360) {
+  .upload-card-title {
+    font-size: 1.8rem;
+  }
+
+  .colorful-sparkle-link{
+    font-size: 10px
+  }
+  .colorful-sparkle-link::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 100%;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+    animation: colorful-sparkle 1.5s infinite ease-in-out;    
+  }
+}
+
+
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  border-top: 4px solid yellow;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  color: yellow;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

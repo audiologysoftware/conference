@@ -11,14 +11,15 @@ from app.routes.manuscript_route import router as manuscript_router
 from app.routes.query_route import router as query_router
 from app.routes.managment_route import router as management_router
 from app.routes.counter_route import router as counter_router
-from app.routes.auth_route import router as auth_router
+from app.routes.login_route import router as auth_router
+from app.routes.base_route import router as base_router
 from app.config.database import check_database, create_tables, close_connection
 import os
 from pathlib import Path
 
-from fastapi.responses import PlainTextResponse, JSONResponse
+from fastapi.responses import JSONResponse
 from starlette.requests import Request
-from app.middlewares.auth_middleware import auth_middleware
+# from app.middlewares.auth_middleware import auth_middleware
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -47,10 +48,10 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
-async def auth_middleware(request: Request, call_next):
-    auth_middleware
+# async def auth_middleware(request: Request, call_next):
+#     auth_middleware(request, call_next)
         
-app.add_middleware(BaseHTTPMiddleware, dispatch=auth_middleware)
+# app.add_middleware(BaseHTTPMiddleware, dispatch=auth_middleware)
 
 app.include_router(auth_router, prefix="/api/v1/auth", tags=["authentication"])
 app.include_router(user_router, prefix="/api/v1/users", tags=["user"])
@@ -58,27 +59,11 @@ app.include_router(manuscript_router, prefix="/api/v1/manuscripts", tags=["manus
 app.include_router(query_router, prefix="/api/v1/query", tags=["query"])
 app.include_router(management_router, prefix="/api/v1/management", tags=["management"])
 app.include_router(counter_router, prefix="/api/v1/counter", tags=["counter"])
-
-@app.get("/")
-async def root():
-    logger.info("Root endpoint accessed.")
-    try:
-        return {
-            "Server": "conference backend",
-            "status": "OK",
-            "message": "Welcome to the conference backend API!",
-            "docs": "/docs"  # Static path
-        }
-    except Exception as e:
-        logger.error(f"Error at root endpoint: {e}")
-        raise HTTPException(status_code=500, detail="Internal Server Error")
+app.include_router(base_router, tags=["base"])
 
 
 @app.get("/favicon.ico")
-async def favicon():
-    """
-    Serve the favicon for the website.
-    """
+async def favicon(): 
     logger.info("Favicon endpoint accessed.")
     static_dir = Path(__file__).parent / "static"
     favicon_path = static_dir / "favicon.ico"
@@ -91,7 +76,7 @@ async def favicon():
 
 @app.exception_handler(Exception)
 async def custom_exception_handler(request: Request, exc: Exception):
-    logger.error(f"Unhandled error: {exc}")
+    logger.error(f"Unhandled error: {exc}")    
     return JSONResponse(
         status_code=500,
         content={"detail": "Internal Server Error"},

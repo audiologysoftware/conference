@@ -66,3 +66,84 @@ export const listAllQueries = async () => {
   }
 };
 
+export const sendReviewerEmail = async (emailData) => {
+  try {
+    logInfo("Sending reviewer email");
+    logInfo(JSON.stringify(emailData))
+    const response = await apiClient.post("/management/send-email-reviewer", emailData);
+    logInfo("Reviewer email sent successfully", response.data);
+    return response.data;
+  } catch (error) {
+    if (error.response){
+      alert("response error")
+
+    }else if(error.request){
+      alert("request error")
+    }
+    
+  }
+};
+
+export const getAbstract = async(id) =>{
+    try{
+      logInfo("Fetching abstract")
+      const response = await apiClient.get(`/management/get-abstract/${id}`)
+      logInfo("Abstract fetched successfully", response.data);
+      return response.data
+    }catch(error){
+      if(error.response){
+        alert("response error")
+      }else if(error.request){
+        alert("request error")
+      }    
+    }
+}
+
+export const saveScore = async(data) =>{
+  try{
+    logInfo(`Saving score ${JSON.stringify(data)}`)
+    const response = await apiClient.post(`/management/save-score`,data)
+    logInfo("Score saved successfully", response.data);
+    return response.data
+  }catch(error){
+    if(error.response){
+      alert("response error")
+    }else if(error.request){
+      alert("request error")
+    }
+  }
+}
+
+export const getScore = async(id) =>{
+  try{
+    logInfo(`Fetching score for ${id}`)
+    const response = await apiClient.get(`/management/get-score/${id}`)
+    logInfo("Score fetched successfully", response.data);
+    return response.data
+  }catch(error){
+    if(error.response){
+      alert("response error")
+    }else if(error.request){
+      alert("request error")
+    }
+  }
+}
+
+export const updateStatus = async(id, status) =>{
+  try{
+    logInfo(`Updating status for ${id} to ${status}`)
+    const response = await apiClient.put(`/management/update-status/${id}`, {status: status})
+    logInfo("Status updated successfully", response.data);
+    return response.data
+  }catch(error){
+    if(error.response){
+      alert("response error")
+    }else if(error.request){
+      alert("request error")
+    }
+  }
+
+}
+
+
+

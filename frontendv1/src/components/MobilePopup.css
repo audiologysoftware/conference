@@ -1,0 +1,51 @@
+.mobile-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Spacing between the circles */
+  }
+  
+  .mobile-popup a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 60px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #fce043);
+    box-shadow: 0px 4px 10px rgba(255, 117, 140, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: float 3s infinite; /* Floating animation */
+  }
+  
+  .mobile-popup a:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    box-shadow: 0px 8px 20px rgba(255, 117, 140, 0.6), 0px 0px 30px rgba(252, 224, 67, 0.5);
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0); /* Neutral position */
+    }
+    50% {
+      transform: translateY(-10px); /* Slight upward float */
+    }
+  }
+  
+  .mobile-popup a.registration {
+    background: linear-gradient(135deg, #6a5acd, #836fff, #87cefa);
+  }
+  
+  .mobile-popup a.abstract {
+    background: linear-gradient(135deg, #ff4500, #ff6347, #ff7f50);
+  }
+  

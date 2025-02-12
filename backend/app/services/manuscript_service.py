@@ -5,6 +5,8 @@ from app.models.user_model import User
 from app.models.manuscript_model import Manuscript
 from loguru import logger
 from app.schemas.manuscript import AbstractUpload, ManuscriptUpload
+from app.services.user_service import send_email_to_user
+from app.schemas.email_schema import UserEmailDetails
 
 
 # Service: Upload Abstract
@@ -20,6 +22,16 @@ async def upload_abstract(db: AsyncSession, data: AbstractUpload) -> bool:
         )
         db.add(new_manuscript)
         await db.commit()
+
+        # send email to user
+        user_email = UserEmailDetails(
+            email = data.email_id,
+            fullname = data.author_names,
+            email_type = "upload-abstract"
+        )       
+        print("@service", user_email)
+        await send_email_to_user(user_email)
+
         logger.info("Abstract uploaded successfully for email: {}", data.email_id)
         return True
     except SQLAlchemyError as e:
@@ -89,6 +101,16 @@ async def upload_manuscript(db: AsyncSession, data: ManuscriptUpload) -> bool:
         manuscript.plagiarism = data.plagiarism        
         await db.commit()
         logger.info("Manuscript uploaded successfully for id: {}", data.id)
+
+        # send email to user
+        user_email = UserEmailDetails(
+            email = manuscript.email_id,
+            fullname = manuscript.author_names,
+            email_type = "upload-fullpaper"
+        )       
+        print("@service", user_email)
+        await send_email_to_user(user_email)
+
         return True
     except SQLAlchemyError as e:
         logger.error("Database error while uploading manuscript: {}", str(e))
@@ -97,3 +119,5 @@ async def upload_manuscript(db: AsyncSession, data: ManuscriptUpload) -> bool:
     except Exception as e:
         logger.error("Unexpected error while uploading manuscript: {}", str(e))
         raise
+
+

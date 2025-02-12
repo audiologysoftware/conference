@@ -6,8 +6,8 @@ from typing import List
 class QueryCreate(BaseModel):
     name: str = Field(..., max_length=50)
     email: EmailStr
-    subject: str = Field(..., max_length=100)
-    message: str = Field(..., max_length=500)
+    subject: str
+    message: str
 
 
 # Schema for returning a query

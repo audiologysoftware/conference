@@ -1314,3 +1314,1033 @@
 2025-01-06 10:52:35,113 - conference_logger - INFO - Shutting down application...[0m
 2025-01-06 10:52:35,869 - conference_logger - INFO - Starting application...[0m
 2025-01-06 10:52:38,317 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 14:24:00,015 - conference_logger - INFO - Starting application...[0m
+2025-01-06 14:24:08,127 - conference_logger - ERROR - Unhandled error: 'NoneType' object is not callable[0m
+2025-01-06 14:24:08,209 - conference_logger - ERROR - Unhandled error: 'NoneType' object is not callable[0m
+2025-01-06 14:24:10,429 - conference_logger - ERROR - Unhandled error: 'NoneType' object is not callable[0m
+2025-01-06 14:24:10,743 - conference_logger - ERROR - Unhandled error: 'NoneType' object is not callable[0m
+2025-01-06 14:24:14,382 - conference_logger - ERROR - Unhandled error: 'NoneType' object is not callable[0m
+2025-01-06 14:24:14,654 - conference_logger - ERROR - Unhandled error: 'NoneType' object is not callable[0m
+2025-01-06 14:24:14,957 - conference_logger - ERROR - Unhandled error: 'NoneType' object is not callable[0m
+2025-01-06 14:24:39,744 - conference_logger - ERROR - Unhandled error: 'NoneType' object is not callable[0m
+2025-01-06 14:25:01,983 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 14:25:47,841 - conference_logger - INFO - Starting application...[0m
+2025-01-06 14:25:51,232 - conference_logger - ERROR - Unhandled error: auth_middleware() missing 2 required positional arguments: 'request' and 'call_next'[0m
+2025-01-06 14:25:51,245 - conference_logger - ERROR - Unhandled error: auth_middleware() missing 2 required positional arguments: 'request' and 'call_next'[0m
+2025-01-06 14:26:10,610 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 14:26:22,956 - conference_logger - INFO - Starting application...[0m
+2025-01-06 14:26:32,024 - conference_logger - ERROR - Unhandled error: 'NoneType' object is not callable[0m
+2025-01-06 14:26:32,033 - conference_logger - ERROR - Unhandled error: 'NoneType' object is not callable[0m
+2025-01-06 14:26:52,337 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 14:26:53,067 - conference_logger - INFO - Starting application...[0m
+2025-01-06 14:26:55,536 - conference_logger - ERROR - Unhandled error: 401: Authorization_error: Missing Authorization in Header[0m
+2025-01-06 14:26:55,549 - conference_logger - INFO - Favicon endpoint accessed.[0m
+2025-01-06 14:27:05,084 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 14:27:18,579 - conference_logger - INFO - Starting application...[0m
+2025-01-06 14:27:21,852 - conference_logger - ERROR - Unhandled error: 401: Authorization_error: Missing Authorization in Header[0m
+2025-01-06 14:27:41,695 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 14:27:52,885 - conference_logger - INFO - Starting application...[0m
+2025-01-06 14:27:55,828 - conference_logger - INFO - Root endpoint accessed.[0m
+2025-01-06 14:30:25,064 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 14:30:25,880 - conference_logger - INFO - Starting application...[0m
+2025-01-06 14:30:34,260 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 14:30:35,072 - conference_logger - INFO - Starting application...[0m
+2025-01-06 14:31:04,302 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 14:31:05,076 - conference_logger - INFO - Starting application...[0m
+2025-01-06 14:35:14,379 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 14:35:15,191 - conference_logger - INFO - Starting application...[0m
+2025-01-06 14:41:41,949 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 14:41:42,746 - conference_logger - INFO - Starting application...[0m
+2025-01-06 14:43:59,095 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 14:43:59,904 - conference_logger - INFO - Starting application...[0m
+2025-01-06 14:44:07,153 - conference_logger - ERROR - Unhandled error: 1 validation error for HTTPResponseFormat
+data
+  Input should be a valid dictionary [type=dict_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type[0m
+2025-01-06 14:44:53,617 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 14:44:54,377 - conference_logger - INFO - Starting application...[0m
+2025-01-06 14:45:05,292 - conference_logger - ERROR - Unhandled error: 1 validation error for HTTPResponseFormat
+data
+  Input should be a valid dictionary [type=dict_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type[0m
+2025-01-06 14:45:15,776 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 14:45:21,246 - conference_logger - INFO - Starting application...[0m
+2025-01-06 14:45:26,572 - conference_logger - ERROR - Unhandled error: 1 validation error for HTTPResponseFormat
+data
+  Input should be a valid dictionary [type=dict_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type[0m
+2025-01-06 14:49:31,901 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 14:49:32,710 - conference_logger - INFO - Starting application...[0m
+2025-01-06 14:49:43,897 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 14:49:44,640 - conference_logger - INFO - Starting application...[0m
+2025-01-06 14:59:35,683 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 14:59:36,504 - conference_logger - INFO - Starting application...[0m
+2025-01-06 14:59:51,615 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 14:59:52,363 - conference_logger - INFO - Starting application...[0m
+2025-01-06 15:28:21,666 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 15:28:22,465 - conference_logger - INFO - Starting application...[0m
+2025-01-06 15:32:43,742 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 15:32:53,814 - conference_logger - INFO - Starting application...[0m
+2025-01-06 15:33:42,896 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 15:33:43,702 - conference_logger - INFO - Starting application...[0m
+2025-01-06 15:34:31,412 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 15:34:32,223 - conference_logger - INFO - Starting application...[0m
+2025-01-06 15:40:52,149 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 15:41:08,171 - conference_logger - INFO - Starting application...[0m
+2025-01-06 15:41:53,467 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 15:41:54,315 - conference_logger - INFO - Starting application...[0m
+2025-01-06 15:42:36,497 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 15:42:37,339 - conference_logger - INFO - Starting application...[0m
+2025-01-06 15:43:37,726 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 15:43:44,672 - conference_logger - INFO - Starting application...[0m
+2025-01-06 15:43:53,313 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 15:43:54,067 - conference_logger - INFO - Starting application...[0m
+2025-01-06 15:44:05,046 - conference_logger - ERROR - Unhandled error: Object of type HTTPResponseFormat is not JSON serializable[0m
+2025-01-06 15:48:41,811 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 15:48:42,770 - conference_logger - INFO - Starting application...[0m
+2025-01-06 15:48:44,348 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 15:48:45,119 - conference_logger - INFO - Starting application...[0m
+2025-01-06 15:48:49,886 - conference_logger - ERROR - Unhandled error: Object of type HTTPResponseFormat is not JSON serializable[0m
+2025-01-06 15:49:26,125 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 15:49:26,882 - conference_logger - INFO - Starting application...[0m
+2025-01-06 15:49:33,577 - conference_logger - ERROR - Unhandled error: Object of type HTTPResponseFormat is not JSON serializable[0m
+2025-01-06 15:50:39,345 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 15:50:40,104 - conference_logger - INFO - Starting application...[0m
+2025-01-06 15:50:42,291 - conference_logger - ERROR - Unhandled error: Object of type HTTPResponseFormat is not JSON serializable[0m
+2025-01-06 16:01:00,059 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 16:01:00,882 - conference_logger - INFO - Starting application...[0m
+2025-01-06 16:05:06,329 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 16:05:07,111 - conference_logger - INFO - Starting application...[0m
+2025-01-06 16:08:47,765 - conference_logger - INFO - Shutting down application...[0m
+2025-01-06 16:08:48,586 - conference_logger - INFO - Starting application...[0m
+2025-01-06 16:09:15,547 - conference_logger - INFO - Shutting down application...[0m
+2025-01-09 15:11:07,514 - conference_logger - INFO - Starting application...[0m
+2025-01-09 15:52:55,855 - conference_logger - INFO - Shutting down application...[0m
+2025-01-15 15:29:44,314 - conference_logger - INFO - Starting application...[0m
+2025-01-15 15:29:53,089 - conference_logger - INFO - Shutting down application...[0m
+2025-01-15 15:30:00,455 - conference_logger - INFO - Starting application...[0m
+2025-01-15 15:30:06,510 - conference_logger - INFO - Shutting down application...[0m
+2025-01-15 15:30:48,313 - conference_logger - INFO - Starting application...[0m
+2025-01-15 15:35:08,128 - conference_logger - INFO - Shutting down application...[0m
+2025-01-15 15:35:09,034 - conference_logger - INFO - Starting application...[0m
+2025-01-15 15:39:26,490 - conference_logger - INFO - Shutting down application...[0m
+2025-01-15 15:39:27,534 - conference_logger - INFO - Starting application...[0m
+2025-01-15 15:39:46,059 - conference_logger - ERROR - Unhandled error: 1 validation errors:
+  {'type': 'string_type', 'loc': ('response',), 'msg': 'Input should be a valid string', 'input': HTTPResponseFormat(status='success', data=None, message='User registered successfully')}
+[0m
+2025-01-15 15:43:06,003 - conference_logger - INFO - Shutting down application...[0m
+2025-01-15 15:43:06,977 - conference_logger - INFO - Starting application...[0m
+2025-01-15 15:43:33,684 - conference_logger - ERROR - Unhandled error: 1 validation errors:
+  {'type': 'string_type', 'loc': ('response',), 'msg': 'Input should be a valid string', 'input': HTTPResponseFormat(status='success', data=None, message='User registered successfully')}
+[0m
+2025-01-15 15:44:55,839 - conference_logger - ERROR - Unhandled error: 1 validation errors:
+  {'type': 'string_type', 'loc': ('response',), 'msg': 'Input should be a valid string', 'input': HTTPResponseFormat(status='success', data=None, message='User registered successfully')}
+[0m
+2025-01-15 15:46:11,702 - conference_logger - INFO - Shutting down application...[0m
+2025-01-15 15:46:12,581 - conference_logger - INFO - Starting application...[0m
+2025-01-15 15:47:21,436 - conference_logger - INFO - Shutting down application...[0m
+2025-01-15 15:47:32,036 - conference_logger - INFO - Starting application...[0m
+2025-01-15 15:47:53,749 - conference_logger - ERROR - Unhandled error: 1 validation errors:
+  {'type': 'string_type', 'loc': ('response',), 'msg': 'Input should be a valid string', 'input': HTTPResponseFormat(status='success', data=None, message='User registered successfully')}
+[0m
+2025-01-15 15:50:41,739 - conference_logger - INFO - Shutting down application...[0m
+2025-01-15 15:50:42,581 - conference_logger - INFO - Starting application...[0m
+2025-01-15 15:56:59,835 - conference_logger - INFO - Root endpoint accessed.[0m
+2025-01-15 15:56:59,868 - conference_logger - INFO - Favicon endpoint accessed.[0m
+2025-01-15 15:57:53,235 - conference_logger - INFO - Root endpoint accessed.[0m
+2025-01-15 16:03:43,863 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 09:33:14,553 - conference_logger - INFO - Starting application...[0m
+2025-01-16 09:37:29,809 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 09:37:30,621 - conference_logger - INFO - Starting application...[0m
+2025-01-16 09:37:49,962 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 09:37:50,716 - conference_logger - INFO - Starting application...[0m
+2025-01-16 09:37:53,568 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 09:38:17,496 - conference_logger - INFO - Starting application...[0m
+2025-01-16 09:40:13,164 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 09:40:14,094 - conference_logger - INFO - Starting application...[0m
+2025-01-16 09:40:51,551 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 09:40:52,337 - conference_logger - INFO - Starting application...[0m
+2025-01-16 09:41:05,138 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 09:41:05,890 - conference_logger - INFO - Starting application...[0m
+2025-01-16 09:41:18,687 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 09:41:19,489 - conference_logger - INFO - Starting application...[0m
+2025-01-16 09:41:44,460 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 09:41:45,254 - conference_logger - INFO - Starting application...[0m
+2025-01-16 09:42:05,174 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 09:42:06,054 - conference_logger - INFO - Starting application...[0m
+2025-01-16 09:45:56,043 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 09:45:57,430 - conference_logger - INFO - Starting application...[0m
+2025-01-16 09:48:34,441 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 09:48:35,315 - conference_logger - INFO - Starting application...[0m
+2025-01-16 09:53:00,690 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 09:53:01,538 - conference_logger - INFO - Starting application...[0m
+2025-01-16 09:53:13,365 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 09:53:14,131 - conference_logger - INFO - Starting application...[0m
+2025-01-16 09:55:34,147 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 09:55:35,115 - conference_logger - INFO - Starting application...[0m
+2025-01-16 09:55:44,342 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 09:56:33,648 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:15:11,355 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:15:12,290 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:20:49,411 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:20:50,304 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:22:56,167 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:33:09,931 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:33:39,441 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:34:08,188 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:36:05,562 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:36:06,510 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:36:20,620 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:36:30,850 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:38:04,177 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:38:19,355 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:38:49,514 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:38:50,382 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:39:06,019 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:39:06,774 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:39:28,569 - conference_logger - ERROR - Unhandled error: 'LoginCredentials' object is not subscriptable[0m
+2025-01-16 10:40:03,908 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:40:04,670 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:40:32,534 - conference_logger - ERROR - Unhandled error: 'LoginCredentials' object is not subscriptable[0m
+2025-01-16 10:42:22,384 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:42:23,218 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:42:29,059 - conference_logger - ERROR - Unhandled error: unsupported operand type(s) for &: 'str' and 'str'[0m
+2025-01-16 10:42:43,749 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:42:44,530 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:43:13,159 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:43:13,908 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:43:16,266 - conference_logger - ERROR - Unhandled error: cannot access local variable 'response' where it is not associated with a value[0m
+2025-01-16 10:45:01,846 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:45:02,640 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:45:05,094 - conference_logger - ERROR - Unhandled error: login_process() missing 1 required positional argument: 'response'[0m
+2025-01-16 10:45:47,912 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:45:48,692 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:45:51,347 - conference_logger - ERROR - Unhandled error: login_process() missing 1 required positional argument: 'response'[0m
+2025-01-16 10:46:24,251 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:46:25,060 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:46:57,549 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:46:58,330 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:47:00,157 - conference_logger - ERROR - Unhandled error: name 'token' is not defined[0m
+2025-01-16 10:47:22,778 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:47:23,543 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:48:39,002 - conference_logger - ERROR - Unhandled error: Object of type StandardResponse is not JSON serializable[0m
+2025-01-16 10:51:05,435 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:51:06,360 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:51:11,396 - conference_logger - ERROR - Unhandled error: Object of type StandardResponse is not JSON serializable[0m
+2025-01-16 10:52:02,627 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 10:52:03,380 - conference_logger - INFO - Starting application...[0m
+2025-01-16 10:52:10,448 - conference_logger - ERROR - Unhandled error: Object of type StandardResponse is not JSON serializable[0m
+2025-01-16 11:36:28,623 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 11:36:54,398 - conference_logger - INFO - Starting application...[0m
+2025-01-16 11:38:07,663 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 11:38:08,497 - conference_logger - INFO - Starting application...[0m
+2025-01-16 11:39:28,342 - conference_logger - ERROR - Unhandled error: Object of type StandardResponse is not JSON serializable[0m
+2025-01-16 11:39:56,563 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 11:39:57,382 - conference_logger - INFO - Starting application...[0m
+2025-01-16 11:40:49,956 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 11:40:50,709 - conference_logger - INFO - Starting application...[0m
+2025-01-16 11:40:57,083 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 11:40:57,854 - conference_logger - INFO - Starting application...[0m
+2025-01-16 11:41:02,493 - conference_logger - ERROR - Unhandled error: Object of type StandardResponse is not JSON serializable[0m
+2025-01-16 11:41:54,112 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 11:41:54,895 - conference_logger - INFO - Starting application...[0m
+2025-01-16 11:42:08,449 - conference_logger - ERROR - Unhandled error: Object of type StandardResponse is not JSON serializable[0m
+2025-01-16 11:42:54,146 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 11:42:54,953 - conference_logger - INFO - Starting application...[0m
+2025-01-16 11:42:58,662 - conference_logger - ERROR - Unhandled error: Object of type StandardResponse is not JSON serializable[0m
+2025-01-16 11:45:56,734 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 11:45:57,533 - conference_logger - INFO - Starting application...[0m
+2025-01-16 11:45:59,003 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 11:45:59,779 - conference_logger - INFO - Starting application...[0m
+2025-01-16 11:50:02,154 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 11:50:02,942 - conference_logger - INFO - Starting application...[0m
+2025-01-16 12:06:17,492 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 12:06:18,363 - conference_logger - INFO - Starting application...[0m
+2025-01-16 12:06:27,150 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 12:06:27,983 - conference_logger - INFO - Starting application...[0m
+2025-01-16 12:13:11,226 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 12:13:12,005 - conference_logger - INFO - Starting application...[0m
+2025-01-16 12:13:31,899 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 12:13:32,644 - conference_logger - INFO - Starting application...[0m
+2025-01-16 12:14:20,425 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 12:14:21,214 - conference_logger - INFO - Starting application...[0m
+2025-01-16 12:14:22,589 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 12:14:23,354 - conference_logger - INFO - Starting application...[0m
+2025-01-16 12:15:08,667 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 12:15:09,466 - conference_logger - INFO - Starting application...[0m
+2025-01-16 12:15:40,364 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 12:15:41,115 - conference_logger - INFO - Starting application...[0m
+2025-01-16 12:21:14,087 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 12:21:14,880 - conference_logger - INFO - Starting application...[0m
+2025-01-16 12:21:20,278 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 12:21:21,043 - conference_logger - INFO - Starting application...[0m
+2025-01-16 12:22:33,184 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 12:22:34,017 - conference_logger - INFO - Starting application...[0m
+2025-01-16 12:36:55,892 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 12:36:56,798 - conference_logger - INFO - Starting application...[0m
+2025-01-16 12:47:30,263 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 12:47:31,094 - conference_logger - INFO - Starting application...[0m
+2025-01-16 12:50:57,696 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 14:08:11,528 - conference_logger - INFO - Starting application...[0m
+2025-01-16 14:51:10,062 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 15:14:54,147 - conference_logger - INFO - Starting application...[0m
+2025-01-16 15:15:01,978 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 15:46:55,783 - conference_logger - INFO - Starting application...[0m
+2025-01-16 16:09:55,402 - conference_logger - INFO - Shutting down application...[0m
+2025-01-16 16:09:58,168 - conference_logger - INFO - Starting application...[0m
+2025-01-16 16:24:08,689 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 11:34:17,629 - conference_logger - INFO - Starting application...[0m
+2025-01-17 11:52:50,071 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 11:53:05,836 - conference_logger - INFO - Starting application...[0m
+2025-01-17 11:53:11,802 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 11:53:13,722 - conference_logger - INFO - Starting application...[0m
+2025-01-17 12:07:42,710 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 12:07:43,501 - conference_logger - INFO - Starting application...[0m
+2025-01-17 12:08:05,988 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 12:08:06,731 - conference_logger - INFO - Starting application...[0m
+2025-01-17 12:08:10,495 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 12:08:11,365 - conference_logger - INFO - Starting application...[0m
+2025-01-17 12:15:58,111 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 12:15:59,106 - conference_logger - INFO - Starting application...[0m
+2025-01-17 12:20:05,276 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 12:20:06,066 - conference_logger - INFO - Starting application...[0m
+2025-01-17 12:22:14,841 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 12:22:15,639 - conference_logger - INFO - Starting application...[0m
+2025-01-17 12:22:59,387 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 12:23:00,158 - conference_logger - INFO - Starting application...[0m
+2025-01-17 12:33:10,589 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 12:33:11,432 - conference_logger - INFO - Starting application...[0m
+2025-01-17 12:37:18,591 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 12:37:19,459 - conference_logger - INFO - Starting application...[0m
+2025-01-17 12:38:35,840 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 12:38:36,618 - conference_logger - INFO - Starting application...[0m
+2025-01-17 12:38:56,361 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 12:38:57,111 - conference_logger - INFO - Starting application...[0m
+2025-01-17 12:52:22,872 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 12:52:23,658 - conference_logger - INFO - Starting application...[0m
+2025-01-17 12:52:39,357 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 12:52:40,203 - conference_logger - INFO - Starting application...[0m
+2025-01-17 12:54:02,523 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 12:54:03,316 - conference_logger - INFO - Starting application...[0m
+2025-01-17 12:54:56,289 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 12:54:57,032 - conference_logger - INFO - Starting application...[0m
+2025-01-17 12:56:30,267 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 12:56:31,068 - conference_logger - INFO - Starting application...[0m
+2025-01-17 12:58:08,040 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 12:58:08,822 - conference_logger - INFO - Starting application...[0m
+2025-01-17 13:00:45,573 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 13:00:46,352 - conference_logger - INFO - Starting application...[0m
+2025-01-17 13:00:54,069 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 13:00:54,833 - conference_logger - INFO - Starting application...[0m
+2025-01-17 13:02:02,424 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 13:02:35,720 - conference_logger - INFO - Starting application...[0m
+2025-01-17 13:02:39,393 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 13:02:40,175 - conference_logger - INFO - Starting application...[0m
+2025-01-17 13:05:36,288 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 13:05:37,103 - conference_logger - INFO - Starting application...[0m
+2025-01-17 13:06:41,860 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 13:06:42,645 - conference_logger - INFO - Starting application...[0m
+2025-01-17 13:07:32,310 - conference_logger - INFO - Shutting down application...[0m
+2025-01-17 13:07:33,089 - conference_logger - INFO - Starting application...[0m
+2025-01-20 09:13:26,081 - conference_logger - INFO - Starting application...[0m
+2025-01-20 09:14:23,780 - conference_logger - INFO - Shutting down application...[0m
+2025-01-20 09:14:25,827 - conference_logger - INFO - Starting application...[0m
+2025-01-20 10:48:02,445 - conference_logger - INFO - Shutting down application...[0m
+2025-01-20 10:48:04,296 - conference_logger - INFO - Starting application...[0m
+2025-01-20 10:48:07,532 - conference_logger - INFO - Shutting down application...[0m
+2025-01-20 10:48:08,423 - conference_logger - INFO - Starting application...[0m
+2025-01-20 10:55:22,974 - conference_logger - INFO - Shutting down application...[0m
+2025-01-20 10:55:23,772 - conference_logger - INFO - Starting application...[0m
+2025-01-20 10:58:24,321 - conference_logger - INFO - Shutting down application...[0m
+2025-01-20 11:38:20,455 - conference_logger - INFO - Starting application...[0m
+2025-01-20 14:24:21,368 - conference_logger - INFO - Shutting down application...[0m
+2025-01-23 10:27:03,420 - conference_logger - INFO - Starting application...[0m
+2025-01-23 10:27:59,418 - conference_logger - INFO - Shutting down application...[0m
+2025-01-23 10:28:00,991 - conference_logger - INFO - Starting application...[0m
+2025-01-23 10:33:15,308 - conference_logger - INFO - Shutting down application...[0m
+2025-01-23 10:33:16,180 - conference_logger - INFO - Starting application...[0m
+2025-01-23 10:43:34,739 - conference_logger - INFO - Shutting down application...[0m
+2025-01-23 10:43:35,545 - conference_logger - INFO - Starting application...[0m
+2025-01-23 10:43:39,074 - conference_logger - INFO - Shutting down application...[0m
+2025-01-23 10:43:39,865 - conference_logger - INFO - Starting application...[0m
+2025-01-23 14:18:25,018 - conference_logger - INFO - Starting application...[0m
+2025-01-23 14:19:19,552 - conference_logger - INFO - Shutting down application...[0m
+2025-01-23 14:19:26,274 - conference_logger - INFO - Starting application...[0m
+2025-01-23 14:19:43,366 - conference_logger - INFO - Shutting down application...[0m
+2025-01-23 14:20:07,009 - conference_logger - INFO - Starting application...[0m
+2025-01-23 14:20:16,186 - conference_logger - INFO - Shutting down application...[0m
+2025-01-23 14:20:19,909 - conference_logger - INFO - Starting application...[0m
+2025-01-24 10:23:31,696 - conference_logger - INFO - Starting application...[0m
+2025-01-24 10:23:51,932 - conference_logger - ERROR - Unhandled error: Multiple exceptions: [Errno 10061] Connect call failed ('::1', 5432, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 5432)[0m
+2025-01-24 10:25:04,046 - conference_logger - INFO - Shutting down application...[0m
+2025-01-24 10:25:10,252 - conference_logger - INFO - Starting application...[0m
+2025-01-24 10:25:13,816 - conference_logger - INFO - Shutting down application...[0m
+2025-01-24 10:25:15,656 - conference_logger - INFO - Starting application...[0m
+2025-01-24 10:34:13,219 - conference_logger - INFO - Shutting down application...[0m
+2025-01-24 10:34:14,020 - conference_logger - INFO - Starting application...[0m
+2025-01-24 10:34:46,786 - conference_logger - INFO - Shutting down application...[0m
+2025-01-24 10:34:47,539 - conference_logger - INFO - Starting application...[0m
+2025-01-24 10:35:14,855 - conference_logger - INFO - Shutting down application...[0m
+2025-01-24 10:35:17,021 - conference_logger - INFO - Starting application...[0m
+2025-01-25 09:11:36,161 - conference_logger - INFO - Starting application...[0m
+2025-01-25 09:40:45,622 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 09:40:46,972 - conference_logger - INFO - Starting application...[0m
+2025-01-25 09:40:59,382 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 09:41:01,212 - conference_logger - INFO - Starting application...[0m
+2025-01-25 09:41:59,432 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 09:42:00,205 - conference_logger - INFO - Starting application...[0m
+2025-01-25 09:42:18,937 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 09:42:25,768 - conference_logger - INFO - Starting application...[0m
+2025-01-25 09:43:38,655 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 09:43:39,436 - conference_logger - INFO - Starting application...[0m
+2025-01-25 09:44:26,293 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 09:44:27,083 - conference_logger - INFO - Starting application...[0m
+2025-01-25 09:45:47,041 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 09:45:47,843 - conference_logger - INFO - Starting application...[0m
+2025-01-25 09:46:00,795 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 09:46:01,556 - conference_logger - INFO - Starting application...[0m
+2025-01-25 09:46:19,451 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 09:46:20,216 - conference_logger - INFO - Starting application...[0m
+2025-01-25 09:50:27,972 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 09:50:28,758 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:06:42,244 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:17:27,919 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:17:28,781 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:19:09,090 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:19:09,961 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:19:14,607 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:19:15,406 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:21:14,137 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:21:14,962 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:24:13,733 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:24:14,520 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:26:23,459 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:26:24,246 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:26:25,393 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:26:26,140 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:28:49,246 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:28:50,094 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:33:10,251 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:33:11,090 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:33:42,599 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:33:43,467 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:34:04,717 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:34:05,499 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:35:07,601 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:35:08,379 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:35:21,955 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:35:56,655 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:38:08,241 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:38:09,073 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:38:48,041 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:38:48,801 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:39:21,663 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:39:22,469 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:41:07,569 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:41:08,380 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:50:31,149 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:50:32,014 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:51:50,676 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:51:52,006 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:51:53,500 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:51:54,237 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:52:39,822 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:52:40,622 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:53:12,951 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:53:13,709 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:54:07,371 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:54:08,287 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:54:45,354 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:54:46,095 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:55:01,372 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:55:02,128 - conference_logger - INFO - Starting application...[0m
+2025-01-25 10:56:38,022 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 10:56:38,956 - conference_logger - INFO - Starting application...[0m
+2025-01-25 11:02:15,299 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 11:02:16,090 - conference_logger - INFO - Starting application...[0m
+2025-01-25 11:03:04,366 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 11:03:05,116 - conference_logger - INFO - Starting application...[0m
+2025-01-25 11:04:14,107 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 11:04:14,871 - conference_logger - INFO - Starting application...[0m
+2025-01-25 11:05:31,899 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 11:05:57,541 - conference_logger - INFO - Starting application...[0m
+2025-01-25 11:29:18,530 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 11:29:19,339 - conference_logger - INFO - Starting application...[0m
+2025-01-25 11:39:47,682 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 11:39:48,466 - conference_logger - INFO - Starting application...[0m
+2025-01-25 11:42:31,003 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 11:42:31,876 - conference_logger - INFO - Starting application...[0m
+2025-01-25 11:43:06,574 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 11:43:07,332 - conference_logger - INFO - Starting application...[0m
+2025-01-25 11:43:51,093 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 11:43:51,841 - conference_logger - INFO - Starting application...[0m
+2025-01-25 11:44:03,007 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 11:44:03,767 - conference_logger - INFO - Starting application...[0m
+2025-01-25 11:44:26,212 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 11:44:26,966 - conference_logger - INFO - Starting application...[0m
+2025-01-25 12:28:14,516 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 12:28:15,427 - conference_logger - INFO - Starting application...[0m
+2025-01-25 12:28:43,704 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 12:28:44,637 - conference_logger - INFO - Starting application...[0m
+2025-01-25 12:30:00,793 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 12:30:01,685 - conference_logger - INFO - Starting application...[0m
+2025-01-25 12:31:44,492 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 12:31:45,362 - conference_logger - INFO - Starting application...[0m
+2025-01-25 12:44:25,355 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 12:44:26,252 - conference_logger - INFO - Starting application...[0m
+2025-01-25 12:45:32,846 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 12:45:33,737 - conference_logger - INFO - Starting application...[0m
+2025-01-25 12:47:09,701 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 12:47:20,337 - conference_logger - INFO - Starting application...[0m
+2025-01-25 12:47:38,758 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 12:47:39,512 - conference_logger - INFO - Starting application...[0m
+2025-01-25 12:48:45,561 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 12:48:46,439 - conference_logger - INFO - Starting application...[0m
+2025-01-25 12:59:53,273 - conference_logger - INFO - Shutting down application...[0m
+2025-01-25 12:59:54,183 - conference_logger - INFO - Starting application...[0m
+2025-01-27 09:39:19,534 - conference_logger - INFO - Starting application...[0m
+2025-01-27 10:51:46,940 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 10:51:48,000 - conference_logger - INFO - Starting application...[0m
+2025-01-27 10:51:49,365 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 10:51:50,184 - conference_logger - INFO - Starting application...[0m
+2025-01-27 11:49:44,271 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 11:49:46,943 - conference_logger - INFO - Starting application...[0m
+2025-01-27 11:53:32,005 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 11:53:32,837 - conference_logger - INFO - Starting application...[0m
+2025-01-27 11:55:34,368 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 11:55:35,267 - conference_logger - INFO - Starting application...[0m
+2025-01-27 11:55:47,544 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 11:55:48,369 - conference_logger - INFO - Starting application...[0m
+2025-01-27 11:56:29,860 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 11:56:30,677 - conference_logger - INFO - Starting application...[0m
+2025-01-27 12:08:53,419 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 12:08:54,208 - conference_logger - INFO - Starting application...[0m
+2025-01-27 12:10:20,268 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 12:40:25,740 - conference_logger - INFO - Starting application...[0m
+2025-01-27 12:41:52,002 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 12:41:52,823 - conference_logger - INFO - Starting application...[0m
+2025-01-27 12:42:03,081 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 12:47:03,749 - conference_logger - INFO - Starting application...[0m
+2025-01-27 12:50:34,097 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 12:50:34,928 - conference_logger - INFO - Starting application...[0m
+2025-01-27 12:52:10,144 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 12:52:10,974 - conference_logger - INFO - Starting application...[0m
+2025-01-27 14:12:40,389 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 14:13:39,417 - conference_logger - INFO - Starting application...[0m
+2025-01-27 14:35:09,354 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 14:35:10,184 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:01:16,133 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:03:51,297 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:03:52,162 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:03:54,507 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:03:55,334 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:03:56,191 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:03:59,647 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:04:00,415 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:04:54,498 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:04:55,435 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:04:58,477 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:04:59,267 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:05:01,094 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:05:16,318 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:05:17,039 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:05:17,808 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:05:22,215 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:05:23,134 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:05:23,406 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:05:24,236 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:06:13,717 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:06:14,482 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:06:30,247 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:06:30,999 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:07:34,636 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:07:35,533 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:10:16,062 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:10:17,084 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:10:21,188 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:10:22,448 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:10:22,937 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:10:23,814 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:10:27,780 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:10:28,617 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:10:34,447 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:10:35,248 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:10:36,616 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:10:37,435 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:10:40,447 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:10:41,233 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:10:47,221 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:10:47,988 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:11:31,165 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:11:31,925 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:12:10,883 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:12:14,881 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:12:15,748 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:13:40,614 - conference_logger - INFO - Shutting down application...[0m
+2025-01-27 15:13:41,411 - conference_logger - INFO - Starting application...[0m
+2025-01-27 15:13:42,224 - conference_logger - INFO - Starting application...[0m
+2025-01-27 16:02:55,358 - conference_logger - INFO - Starting application...[0m
+2025-01-27 16:27:25,620 - conference_logger - INFO - Shutting down application...[0m
+2025-01-29 10:37:40,381 - conference_logger - INFO - Starting application...[0m
+2025-01-29 14:15:37,379 - conference_logger - INFO - Shutting down application...[0m
+2025-01-29 14:15:40,481 - conference_logger - INFO - Starting application...[0m
+2025-01-29 14:15:41,403 - conference_logger - INFO - Shutting down application...[0m
+2025-01-29 14:15:42,201 - conference_logger - INFO - Starting application...[0m
+2025-01-29 14:15:43,330 - conference_logger - INFO - Shutting down application...[0m
+2025-01-29 14:15:44,161 - conference_logger - INFO - Starting application...[0m
+2025-01-30 09:18:06,955 - conference_logger - INFO - Starting application...[0m
+2025-01-30 09:18:24,129 - conference_logger - ERROR - Unhandled error: Multiple exceptions: [Errno 10061] Connect call failed ('::1', 5432, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 5432)[0m
+2025-01-30 09:19:13,789 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 09:19:15,916 - conference_logger - INFO - Starting application...[0m
+2025-01-30 10:36:10,271 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 10:36:11,728 - conference_logger - INFO - Starting application...[0m
+2025-01-30 10:36:12,996 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 10:36:13,744 - conference_logger - INFO - Starting application...[0m
+2025-01-30 10:36:14,591 - conference_logger - INFO - Starting application...[0m
+2025-01-30 10:47:30,431 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 10:47:31,295 - conference_logger - INFO - Starting application...[0m
+2025-01-30 10:47:35,962 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 10:47:36,750 - conference_logger - INFO - Starting application...[0m
+2025-01-30 10:48:08,234 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 10:48:09,041 - conference_logger - INFO - Starting application...[0m
+2025-01-30 10:48:11,710 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 10:48:13,340 - conference_logger - INFO - Starting application...[0m
+2025-01-30 10:49:33,321 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 10:49:34,457 - conference_logger - INFO - Starting application...[0m
+2025-01-30 10:49:41,962 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 10:49:58,639 - conference_logger - INFO - Starting application...[0m
+2025-01-30 10:49:59,695 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 10:50:00,494 - conference_logger - INFO - Starting application...[0m
+2025-01-30 10:50:01,955 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 10:50:02,813 - conference_logger - INFO - Starting application...[0m
+2025-01-30 10:51:23,893 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 10:51:24,681 - conference_logger - INFO - Starting application...[0m
+2025-01-30 10:51:27,544 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 10:51:28,298 - conference_logger - INFO - Starting application...[0m
+2025-01-30 10:51:29,006 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 10:51:29,791 - conference_logger - INFO - Starting application...[0m
+2025-01-30 11:06:39,315 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 11:06:40,123 - conference_logger - INFO - Starting application...[0m
+2025-01-30 11:06:40,964 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 11:06:41,720 - conference_logger - INFO - Starting application...[0m
+2025-01-30 11:56:55,754 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 11:58:07,025 - conference_logger - INFO - Starting application...[0m
+2025-01-30 11:58:40,745 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 11:58:41,480 - conference_logger - INFO - Starting application...[0m
+2025-01-30 11:58:57,573 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 11:58:58,367 - conference_logger - INFO - Starting application...[0m
+2025-01-30 11:59:01,014 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 11:59:01,805 - conference_logger - INFO - Starting application...[0m
+2025-01-30 11:59:05,012 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 11:59:07,685 - conference_logger - INFO - Starting application...[0m
+2025-01-30 11:59:11,992 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 11:59:12,733 - conference_logger - INFO - Starting application...[0m
+2025-01-30 11:59:46,631 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 11:59:47,361 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:00:04,748 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:00:26,780 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:00:51,142 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:00:51,935 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:01:03,034 - conference_logger - INFO - Favicon endpoint accessed.[0m
+2025-01-30 12:05:43,783 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:05:54,420 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:06:13,228 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:06:14,018 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:13:20,307 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:18:32,670 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:19:17,163 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:19:24,503 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:19:25,109 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:19:25,959 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:19:27,214 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:19:28,141 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:19:31,190 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:19:31,971 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:19:33,445 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:19:34,260 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:19:35,496 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:19:36,270 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:19:39,459 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:19:40,247 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:19:41,179 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:19:41,942 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:19:55,862 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:19:56,651 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:20:00,230 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:20:00,994 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:20:07,064 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:20:13,198 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:20:18,608 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:20:31,689 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:20:37,582 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:20:38,359 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:20:52,395 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:21:10,267 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:21:14,093 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:21:54,620 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:22:02,946 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:22:03,709 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:22:05,393 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:22:06,125 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:25:21,764 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:25:22,556 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:25:32,026 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:26:58,886 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:26:59,728 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:27:17,895 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:27:30,151 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:27:31,713 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:27:32,464 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:27:38,361 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:27:39,157 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:27:42,308 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:27:46,306 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:27:54,192 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:27:58,234 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:33:31,961 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:33:32,746 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:33:33,461 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:33:34,208 - conference_logger - INFO - Starting application...[0m
+2025-01-30 12:33:46,379 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 12:33:57,058 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:15:28,313 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 14:15:29,250 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:15:30,164 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 14:15:31,041 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:15:32,544 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 14:15:33,331 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:17:29,881 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 14:17:30,963 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:17:31,563 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 14:17:32,381 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:17:32,965 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 14:17:33,747 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:18:06,950 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 14:18:18,012 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:18:18,816 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:19:45,733 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 14:19:46,595 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:19:56,688 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 14:20:11,436 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:34:18,919 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:39:24,996 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 14:39:28,094 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:41:09,833 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 14:41:10,686 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:41:35,481 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 14:41:51,186 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:42:08,195 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 14:42:08,953 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:42:09,780 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:51:26,177 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:52:56,980 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 14:52:59,167 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:53:08,930 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 14:53:36,240 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:57:52,315 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 14:57:53,134 - conference_logger - INFO - Starting application...[0m
+2025-01-30 14:58:03,859 - conference_logger - INFO - Shutting down application...[0m
+2025-01-30 14:58:04,641 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:32:21,346 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:32:24,405 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:32:28,904 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:37:21,532 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:37:40,422 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:37:48,506 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:37:49,286 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:37:49,880 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:37:50,656 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:37:54,251 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:38:19,234 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:38:25,450 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:38:26,190 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:38:28,411 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:38:29,353 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:38:31,447 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:38:32,314 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:38:33,335 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:38:34,126 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:38:34,699 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:38:35,498 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:38:36,087 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:38:39,762 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:38:41,128 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:38:41,877 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:38:46,469 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:38:47,210 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:39:28,299 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:42:39,116 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:42:49,435 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:42:50,232 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:42:50,950 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:42:51,754 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:42:52,363 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:42:53,213 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:42:56,198 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:42:56,988 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:43:01,370 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:43:05,545 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:43:11,104 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:43:11,880 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:43:15,230 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:43:16,025 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:43:16,622 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:43:17,419 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:43:18,018 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:43:18,834 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:43:19,428 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:43:20,383 - conference_logger - INFO - Starting application...[0m
+2025-01-31 09:43:22,060 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 09:43:26,894 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:16:57,482 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:16:58,351 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:17:24,585 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:17:25,336 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:17:29,243 - conference_logger - ERROR - Unhandled error: 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': None}
+[0m
+2025-01-31 10:18:06,631 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:18:08,476 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:18:12,564 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:18:14,192 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:28:27,097 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:28:27,914 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:30:28,866 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:30:29,821 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:30:34,320 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:30:35,111 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:31:02,083 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:31:03,032 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:31:03,615 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:31:45,163 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:31:52,866 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:31:53,721 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:32:04,564 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:32:15,349 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:32:26,666 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:32:56,308 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:35:06,747 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:35:07,584 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:35:13,467 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:35:14,294 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:35:18,218 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:35:20,719 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:35:21,869 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:35:22,789 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:35:23,387 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:35:25,692 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:35:32,555 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:36:01,838 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:36:07,418 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:36:08,179 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:36:09,318 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:36:10,089 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:36:24,049 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:36:24,995 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:36:26,985 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:36:27,800 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:36:31,687 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:36:32,556 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:36:33,146 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:36:33,943 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:36:34,782 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:36:40,487 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:36:41,254 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:38:38,553 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:38:39,432 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:39:09,544 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:39:10,505 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:39:12,269 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:39:16,446 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:39:18,030 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:39:18,840 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:39:21,065 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:39:21,830 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:39:22,637 - conference_logger - INFO - Starting application...[0m
+2025-01-31 10:39:32,232 - conference_logger - ERROR - Unhandled error: 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': None}
+[0m
+2025-01-31 10:41:01,882 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 10:41:02,682 - conference_logger - INFO - Starting application...[0m
+2025-01-31 11:00:59,648 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 11:01:00,969 - conference_logger - INFO - Starting application...[0m
+2025-01-31 11:40:36,618 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 11:40:37,455 - conference_logger - INFO - Starting application...[0m
+2025-01-31 11:40:38,726 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 11:40:39,494 - conference_logger - INFO - Starting application...[0m
+2025-01-31 11:40:50,704 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 11:40:51,473 - conference_logger - INFO - Starting application...[0m
+2025-01-31 11:40:53,048 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 11:40:53,889 - conference_logger - INFO - Starting application...[0m
+2025-01-31 11:40:57,498 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 11:40:58,334 - conference_logger - INFO - Starting application...[0m
+2025-01-31 11:41:00,665 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 11:41:01,422 - conference_logger - INFO - Starting application...[0m
+2025-01-31 11:46:41,619 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 11:46:42,456 - conference_logger - INFO - Starting application...[0m
+2025-01-31 11:49:43,754 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 11:49:44,615 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:09:05,333 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:09:35,247 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:09:37,167 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:09:45,460 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:10:57,085 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:11:05,038 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:11:31,038 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:11:34,284 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:11:44,443 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:11:45,192 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:12:00,636 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:12:01,468 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:12:04,952 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:12:05,774 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:12:34,666 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:12:46,232 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:12:52,620 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:12:53,440 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:14:08,049 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:14:08,854 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:14:13,228 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:14:14,063 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:14:21,652 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:14:22,461 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:14:28,367 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:14:29,122 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:16:00,535 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:16:01,328 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:21:53,803 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:21:54,593 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:29:39,967 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:29:41,049 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:29:43,131 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:29:44,001 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:29:44,736 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:29:45,594 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:29:48,535 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:29:51,173 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:29:52,536 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:29:53,318 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:29:54,899 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:29:55,733 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:29:56,331 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:29:57,141 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:29:57,869 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:29:58,622 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:30:10,416 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:30:11,244 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:30:12,282 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:30:34,911 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:30:37,548 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:30:38,303 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:31:11,785 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:31:12,628 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:31:14,202 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:31:15,128 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:31:19,034 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:31:19,877 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:31:20,735 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:31:22,647 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:31:26,576 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:31:28,382 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:31:30,679 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:31:36,598 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:31:56,702 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:31:57,281 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:31:58,085 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:32:19,482 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:32:44,317 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:32:45,787 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:32:46,613 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:32:51,985 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:32:58,792 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:33:04,817 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:33:05,652 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:33:12,336 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:33:14,378 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:33:21,917 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:33:22,693 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:35:13,668 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:38:19,801 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:38:28,070 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:38:28,829 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:38:35,451 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:38:36,235 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:38:37,348 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:38:38,131 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:38:44,014 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:38:44,826 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:38:45,103 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:38:45,871 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:38:46,665 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:38:50,234 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:38:51,056 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:38:54,136 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:38:55,020 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:39:57,518 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:39:58,355 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:39:58,950 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:39:59,716 - conference_logger - INFO - Starting application...[0m
+2025-01-31 12:41:58,497 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 12:41:59,301 - conference_logger - INFO - Starting application...[0m
+2025-01-31 14:15:21,371 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 14:15:22,271 - conference_logger - INFO - Starting application...[0m
+2025-01-31 14:27:34,484 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 14:28:39,180 - conference_logger - INFO - Starting application...[0m
+2025-01-31 14:28:44,485 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 14:28:53,806 - conference_logger - INFO - Starting application...[0m
+2025-01-31 14:29:00,667 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 14:29:01,419 - conference_logger - INFO - Starting application...[0m
+2025-01-31 14:29:09,263 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 14:29:13,959 - conference_logger - INFO - Starting application...[0m
+2025-01-31 14:29:14,556 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 14:29:15,413 - conference_logger - INFO - Starting application...[0m
+2025-01-31 14:31:24,519 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 14:31:25,400 - conference_logger - INFO - Starting application...[0m
+2025-01-31 14:31:28,215 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 14:31:28,973 - conference_logger - INFO - Starting application...[0m
+2025-01-31 14:31:34,838 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 14:31:35,599 - conference_logger - INFO - Starting application...[0m
+2025-01-31 14:31:41,730 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 14:31:42,527 - conference_logger - INFO - Starting application...[0m
+2025-01-31 14:31:47,091 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 14:31:47,841 - conference_logger - INFO - Starting application...[0m
+2025-01-31 14:32:01,680 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 14:32:07,153 - conference_logger - INFO - Starting application...[0m
+2025-01-31 14:32:12,331 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 14:32:37,248 - conference_logger - INFO - Starting application...[0m
+2025-01-31 14:32:46,614 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 14:32:47,390 - conference_logger - INFO - Starting application...[0m
+2025-01-31 14:32:48,179 - conference_logger - INFO - Starting application...[0m
+2025-01-31 14:38:49,073 - conference_logger - INFO - Starting application...[0m
+2025-01-31 14:39:05,825 - conference_logger - ERROR - Unhandled error: Multiple exceptions: [Errno 10061] Connect call failed ('::1', 5432, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 5432)[0m
+2025-01-31 14:43:56,395 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 14:43:58,178 - conference_logger - INFO - Starting application...[0m
+2025-01-31 14:46:20,256 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 14:46:21,065 - conference_logger - INFO - Starting application...[0m
+2025-01-31 14:46:25,369 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 14:46:26,153 - conference_logger - INFO - Starting application...[0m
+2025-01-31 15:07:59,361 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 15:08:00,329 - conference_logger - INFO - Starting application...[0m
+2025-01-31 15:08:11,907 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 15:08:12,682 - conference_logger - INFO - Starting application...[0m
+2025-01-31 15:08:13,994 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 15:08:14,767 - conference_logger - INFO - Starting application...[0m
+2025-01-31 15:08:21,246 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 15:08:25,703 - conference_logger - INFO - Starting application...[0m
+2025-01-31 15:08:32,030 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 15:08:32,821 - conference_logger - INFO - Starting application...[0m
+2025-01-31 15:09:11,595 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 15:09:12,358 - conference_logger - INFO - Starting application...[0m
+2025-01-31 15:09:13,208 - conference_logger - INFO - Starting application...[0m
+2025-01-31 15:16:57,847 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 15:16:58,797 - conference_logger - INFO - Starting application...[0m
+2025-01-31 15:17:00,471 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 15:17:01,275 - conference_logger - INFO - Starting application...[0m
+2025-01-31 15:17:01,897 - conference_logger - INFO - Shutting down application...[0m
+2025-01-31 15:17:02,644 - conference_logger - INFO - Starting application...[0m
+2025-01-31 15:17:03,446 - conference_logger - INFO - Starting application...[0m
+2025-01-31 15:30:35,647 - conference_logger - INFO - Shutting down application...[0m
+2025-02-04 15:56:07,874 - conference_logger - INFO - Starting application...[0m
+2025-02-04 16:01:40,580 - conference_logger - INFO - Shutting down application...[0m
+2025-02-04 16:01:41,412 - conference_logger - INFO - Starting application...[0m
+2025-02-04 16:01:42,277 - conference_logger - INFO - Starting application...[0m
