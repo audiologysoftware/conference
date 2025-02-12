@@ -7,7 +7,6 @@ from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.sql import text
 from dotenv import load_dotenv
 from loguru import logger
-import asyncio
 
 os.makedirs("app/config", exist_ok=True)
 load_dotenv()

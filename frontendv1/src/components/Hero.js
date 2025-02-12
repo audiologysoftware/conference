@@ -46,11 +46,11 @@ const Hero = () => {
         </div>
         <div className="hero-container" data-aos="zoom-in" data-aos-delay="100">
           <h1 className="mb-4 pb-0">
-            VISHRUTHA 2 : JSS ANNUAL VAK-SHARVANA CONFERENCE 2025
+            VISHRUTA 2 : JSS ANNUAL VAK-SHRAVANA CONFERENCE 2025
           </h1>
           <p className='herovas'>Vibes of Speech and Hearing Research Uniting Technology Advancements </p>
-          <h4 className="herova">Theme : Exploring The Best Clinical Practices In Communication Disorders,Dysphagia and Balance Problems among Paediatric Population</h4>
-          <h5 className="paras"><h2 className='hedd'>03-04 April 2025</h2>Sri Rajendra Centenary Auditorium JSS Hospital, Mysuru</h5>
+          <h4 className="herova">Theme : Exploring the Best Clinical Practices in Communication Disorders, Dysphagia and Balance Problems Among Paediatric Population</h4>
+          <h5 className="paras"><h2 className='hedd'>03-04 April 2025</h2>Sri Rajendra Centenary Auditorium, JSS Hospital, Mysuru</h5>
           <h5 className="para">Organized by JSS Institute of Speech and Hearing, Mysuru</h5>
 
           <div id="countDiv">

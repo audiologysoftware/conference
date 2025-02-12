@@ -7,3 +7,13 @@ class Email_Format(BaseModel):
     emaill_body: str
 
 
+class UserEmailDetails(BaseModel):
+    email: EmailStr
+    fullname: str
+    email_type: str
+
+class ReviewEmailDetails(BaseModel):
+    manuscript_id: int
+    email: EmailStr    
+    email_type: str   
+    

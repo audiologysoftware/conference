@@ -159,43 +159,23 @@ section {
   }
 }
 
+@media (width > 410px) {
+  #hero {        
+    font-size: 5px;
+    width: 100vw;
+  }
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-  #hero {
-    margin-top: 25px;
-    width: 100vw;
+  #hero {        
     font-size: 5px;
   }
 
-
-  .logo {
-    display: flex;
-    justify-content: center; /* Center the visible logo */
-    align-items: center;    /* Vertically align */
-    margin: 0 auto;         /* Center the container horizontally */
-    height: auto;           /* Adjust container height if necessary */
+  .logo-container{
+    display: none;
   }
-  
-  .topright-jsslogo {
-    position: absolute; /* Ensure it is absolutely positioned */
-    top: -50px; /* Move it up beyond the container */
-    right: 5px; /* Keep it slightly away from the right edge */
-    max-width: 40px; /* Maintain the reduced size */
-    height: auto; /* Preserve aspect ratio */
-    display: block; /* Show the logo */
-  }
-  
-  .topleft-jsslogo {
-    position: absolute; /* Ensure it is absolutely positioned */
-    top: -50px; /* Use a negative value to move it up beyond the container */
-    left: 5px; /* Keep it slightly away from the left edge */
-    max-width: 40px; /* Maintain the reduced size */
-    height: auto; /* Preserve aspect ratio */
-  }
-  
-  .hero-container h1 {
-    font-size: 100px;
-  }
+ 
 
   .herova {
     font-size: 20px;
@@ -230,44 +210,5 @@ section {
     font-weight: 500;
     letter-spacing: 0.5px;
     text-transform: uppercase;  
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-container h1 {
-    font-size: 24px;
-  }
-
-  .herova {
-    font-size: 16px;
-  }
-
-  .para {
-    font-size: 12px;
-  }
-
-  #countDiv div {
-    width: 55px;
-    padding: 8px;
-  }
-
-  #countDiv span, .countdown-number {
-    font-size: 18px;
-    font-weight: bold;
-    color: #c22a0f;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-    margin-bottom: 10px;
-  }
-  
-  .countdown-label, #countDiv .smallText {
-    font-size: 6px;
-    color: #fff;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-  }
-
-  .smallText{
- background-color: #0026ff;
   }
 }

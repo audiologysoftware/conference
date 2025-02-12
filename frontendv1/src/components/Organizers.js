@@ -5,40 +5,104 @@ const Organizers = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const committeeData = [
     {
+      title: "Invitation Committee",
+      members: [
+        { role: "Chairperson", name: "Mr. Harshan Kumar" },
+        { role: "Member Secretary", name: "Mr. Gurumallesh" },
+      ],
+    },
+    {
       title: "Registration Committee",
       members: [
-        { role: "Chairperson", name: "Ms. Rashmi D G" },
-        { role: "Member Secretary", name: "Mrs. Amrutha Varshini" },
+        { role: "Chairperson", name: "Ms. Rashmi D. G." },
+        { role: "Member Secretary", name: "Ms. Lokeshwari L" },
+        { role: "Members", name: "Ms Jayalakshmi,Ms Nayana,Ms Spoorthi Thammaiah,Ms Teja G" },
       ],
     },
     {
-      title: "Technical Committee",
+      title: "Catering Committee",
       members: [
-        { role: "Chairperson", name: "Dr. Kiran B" },
-        { role: "Member Secretary", name: "Ms. Sneha Rao" },
+        { role: "Chairperson", name: "Ms. Sanjana Singh S" },
+        { role: "Member Secretary", name: "Ms Kruthika" },
+      
       ],
     },
     {
-      title: "Event Coordination Committee",
+      title: "Scientific Committee",
       members: [
-        { role: "Chairperson", name: "Dr. Arun Kumar" },
-        { role: "Member Secretary", name: "Mrs. Lakshmi Nair" },
+        { role: "Chairperson", name: "Dr. Narasimhan S V" },
+        { role: "Member Secretary", name: "Mr. Vishal K" },
+        { role: "Members", name: "Dr. Asha Yathiraj ,Dr. Hemanth N,Ms. Vasuprada,Ms. Revathi R,Ms. Sruthi K Vinod,Ms. Sindhu P,Mr Guna Sagar" },
       ],
     },
     {
-      title: "Hospitality Committee",
+      title: "Souvenir Committee",
       members: [
-        { role: "Chairperson", name: "Mr. Rajesh Kumar" },
-        { role: "Member Secretary", name: "Ms. Asha R" },
+        { role: "Chairperson", name: " Mr. Vipin Ghosh" },
+        { role: "Member Secretary", name: "Ms. Kruthika S." },
       ],
     },
     {
-      title: "Logistics Committee",
+      title: "Travelling and Accommodation Committee ",
       members: [
-        { role: "Chairperson", name: "Ms. Anita Sharma" },
-        { role: "Member Secretary", name: "Mr. Suresh Babu" },
+        { role: "Chairperson", name: "Mr. Gunasagar S M" },
+        { role: "Member Secretary", name: "Ms. Vasupradaa M" },
+        { role: "Members", name: "Mr Pawan, Mr Naveen,Mr Abhishek" },
       ],
     },
+    {
+      title: "Finance, Budgeting Committee ",
+      members: [
+        { role: "Chairperson", name: "Ms. Sanjana Singh S" },
+        { role: "Member Secretary", name: "Mrs. Neelaveni" },
+      ],
+    },
+    {
+      title: "Sponsorship Committee",
+      members: [
+        { role: "Chairperson", name: "Dr. Hemanth N." },
+        { role: "Member Secretary", name: "Ms. Sindhu P." },
+      ],
+    },
+    // {
+    //   title: "Exhibitor Committee",
+    //   members: [
+    //     { role: "Chairperson", name: "Mr. Sridhar C." },
+      
+    //   ],
+    // },
+    {
+      title: "Stage and Audio-Visual Committee ",
+      members: [
+        { role: "Chairperson", name: "Dr. Shilpashri H. N." },
+        { role: "Member Secretary", name: "Mrs. Saraswathi S" },
+        { role: "Members", name: "Ms. Sahana K.,Ms Shravana,Ms Anjana,Ms Pramela" },
+      ],
+    },
+    {
+      title: "Digitization Committee",
+      members: [
+        { role: "Chairperson", name: "Dr. Hemanth N." },
+        { role: "Member Secretary", name: "Mr. Prashanth" },
+        { role: "Member", name: "Mr. Varun K" },
+      ],
+    },
+ 
+    {
+      title: "Cultural Committee",
+      members: [
+        { role: "Chairperson", name: "Ms. Monica Rathnamala" },
+        { role: "Member Secretary", name: "Ms Madalambika M B" },
+        { role: "Members", name: "Ms Bhoomika,Ms Ambika" },
+      ],
+    },
+    // {
+    //   title: "Preparation of Conference Report and report for RCI",
+    //   members: [
+    //     { role: "Chairperson", name: "Ms. Sindhu" },
+    //     { role: "Member Secretary", name: " Ms Sankalpa" },
+    //   ],
+    // },
   ];
 
 

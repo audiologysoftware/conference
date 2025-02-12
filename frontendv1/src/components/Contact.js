@@ -27,10 +27,11 @@ const Contact = () => {
     // Clear form after submission
     setFormData({
       name: '',
-      emailid: '',
+      email: '',
       subject: '',
       message: ''
     });
+    alert("your query submitted successfully!");
   };
 
   return (

@@ -1,0 +1,40 @@
+{
+    "user-registration":{
+        "subject":"Vishrutha Conference Registered successfully.",
+        "body": "Dear {fullname},<br><br>Thank you for registering for the Vishrutha Conference. We are excited to have you join us for an unforgettable experience.<br><br><b>Conference Details:</b><br>Date: 03-04 April 2025<br>Location: <a href='https://www.google.com/maps/dir//Shri+rajendra+auditorium+7MW4%2BF8R+Ramachandra+Agrahara+Mysuru,+Karnataka+570004/@12.2963295,76.6145631,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3baf71693ea2fe01:0x36fd3847b04bf8c3!2m2!1d76.6557627!2d12.2962487?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D' target='_blank'>Sri Rajendra Centenary Auditorium, JSS Hospital, Mysuru</a><br><br>We look forward to seeing you at the Vishrutha Conference.<br><br>Best regards,<br>Vishrutha Conference Team"
+    },
+    "upload-abstract": {
+            "subject": "Abstract uploaded successfully.",
+            "body": "Dear {fullname},<br><br>Thank you for uploading your abstract for the Vishrutha Conference. We appreciate your contribution.<br><br>Best regards,<br>Vishrutha Conference Team"
+    },
+    "upload-fullpaper": {
+            "subject": "Full-length Manuscript uploaded successfully.",
+            "body": "Dear {fullname},<br><br>Thank you for uploading your fullpaper for the Vishrutha Conference. We appreciate your contribution.<br><br>Best regards,<br>Vishrutha Conference Team"
+    },    
+    "accept-abstract": {
+        "subject": "Abstract Accepted for Vishrutha Conference",
+        "body": "Dear {fullname},<br><br>We are pleased to inform you that your abstract has been accepted for the Vishrutha Conference. Thank you for your valuable contribution. We look forward to seeing your presentation at the conference.<br><br>Best regards,<br>Vishrutha Conference Team"
+    },
+    "reject-abstract": {
+        "subject": "Abstract Submission for Vishrutha Conference",
+        "body": "Dear {fullname},<br><br>Thank you for submitting your abstract for the Vishrutha Conference. After careful consideration, we regret to inform you that your submission was not selected for this year's conference. We appreciate your effort and encourage you to submit again in the future.<br><br>Best regards,<br>Vishrutha Conference Team"
+    },
+    "email_reviewer":{
+        "subject": "Request for Abstract Review VISHRUTA 2 (JSS Annual Vak Shravana International Conference)",
+        "body": "Dear Reviewer ,<br><br>Greetings from the JSS Institute of Speech and Hearing!<br><br>We are delighted to invite you to serve as a reviewer for the JSS Annual Vak Shravana International Conference VISHRUTA 2 (Vibes of Speech and Hearing Research Uniting Technology Advancements), to be held on 3rd and 4th April 2025. <br><br>Your expertise and contributions make you an ideal candidate to review the submitted abstracts and ensure the scientific rigor of the conference proceedings.<br><br>Key Details:<br>Review Process: click on the below link to review the abstract<br><a href='{url}/{id}' target='_blank'>click here<a/><br><br>Review Deadline: All reviews must be completed by 01/03/2024.<br><br>For any clarification, please feel free to contact us at scientificcommittee@jssish.in<br><br>Warm regards,<br><br>Dr Narasimhan SV<br>Conference Organizing Committee<br>VISHRUTA 2<br>JSS Institute of Speech and Hearing<br>"    
+    },    
+    "thankyou_reviewer":{
+        "subject": "Thank you for reviewing the abstract",
+        "body": "Dear Reviewer ,<br><br>Thank you for reviewing the abstract. We appreciate your valuable contribution to the conference.<br><br>Best regards,<br>Vishrutha Conference Team"
+    },
+    "accept_abstrct":{
+        "subject": "Abstract Acceptance Notification – VISHRUTA 2 (JSS Annual Vak Shravana International Conference)",
+        "body": "Dear {name},<br><br>Greetings from the JSS Institute of Speech and Hearing!<br>We are pleased to inform you that your abstract titled “{title}” has been accepted for presentation at the VISHRUTA 2 – Vibes of Speech and Hearing Research Uniting Technology Advancements, the JSS Annual Vak Shravana International Conference, recognized by RCI, to be held on 3rd and 4th April 2025.<br>Further details regarding the presentation schedule and conference logistics will be shared with you shortly.<br>We extend our congratulations and look forward to your valuable contribution to this event.<br>Should you have any queries, feel free to contact us at scientificcommittee@jssish.<br> Thank you for your interest in VISHRUTA 2, and we look forward to your participation in making this conference a success! <br><br>Warm regards,<br>Dr Narasimhan SV<br>Conference Organizing Committee<br>VISHRUTA 2<br>JSS Institute of Speech and Hearing"
+    },
+    "reject_abstrct":{
+        "subject": "Abstract Submission Update – VISHRUTA 2 (JSS Annual Vak Shravana International Conference)",
+        "body": "Dear {name}, <br><br>Greetings from the JSS Institute of Speech and Hearing!<br>We appreciate your submission of the abstract titled “{title}” for consideration at the VISHRUTA 2 – Vibes of Speech and Hearing Research Uniting Technology Advancements, the JSS Annual Vak Shravana International Conference, recognized by RCI, to be held on 3rd and 4th April 2025.<br> After careful review by the scientific committee, we regret to inform you that your abstract has not been accepted for presentation at this year’s conference. This decision was made considering the conference stringent selection criteria and limited presentation slots.<br>We sincerely thank you for your interest and effort in submitting your research to VISHRUTA 2. We encourage you to continue your excellent work and look forward to your future contributions to the field of speech and hearing research.<br><br>Warm regards,<br>Dr Narasimhan SV,<br>Conference Organizing Committee<br>VISHRUTA 2<br>JSS Institute of Speech and Hearing" 
+    }            
+}
+
+

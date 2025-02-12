@@ -5,6 +5,15 @@ body {
   padding: 0;
   background-color: #f4f4f4;
 }
+.required-icon {
+  color: red;
+  font-size: 14px;
+  margin-left: 5px;
+}
+.error {
+  color: red;
+  font-size: 12px;
+}
 
 .reg-container {
   max-width: 1200px;
@@ -19,13 +28,47 @@ body {
 
 /* Section Header */
 .section-header {
+  margin-top: 20px;
   text-align: center;
 
+}
+.required-icon {
+  color: red;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+/* Bank Photo Container */
+.bank-photo {
+  display: flex;
+  justify-content: center; /* Center the photo horizontally */
+  align-items: center;    /* Center the photo vertically (if needed) */
+  margin-top: 20px;       /* Space above the image */
+}
+
+/* Bank Photo Styling */
+.bank-photo img {
+  width: 200px;             /* Fixed width for the image */
+  height: auto;             /* Maintain aspect ratio */
+  border-radius: 10px;      /* Smooth rounded corners */
+  border: 2px solid #ddd;   /* Subtle border for better visibility */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for a lifted look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bank-photo img:hover {
+  transform: scale(1.05);   /* Slight zoom-in effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .section-title {
   font-size: 32px;
   color: #333;
+  text-align: center;
   margin-bottom: 10px;
 }
 
@@ -137,8 +180,8 @@ h5, h6 {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
@@ -147,25 +190,25 @@ h5, h6 {
 }
 
 .modal-content {
-  background-color: #fff;
-  padding: 30px;
-  width: 400px;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.modal-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 30px;
-  color: #333;
-  cursor: pointer;
+.modal-closing {
+  position: fixed;
+  transform: translate(var(--closing-left, 0), var(--closing-top, 0)) scale(0);
+  opacity: 0;
 }
+
 
 .modal-close:hover {
   color: #f00;
+}
+
+.close-button{
+  width: 100%;
 }
 
 /* Style for the dropdown */
@@ -180,7 +223,6 @@ h5, h6 {
   box-sizing: border-box; /* Ensures padding doesn't affect width */
   transition: border-color 0.3s ease;
   
-  /* Hide the default dropdown arrow */
   -webkit-appearance: none; /* Removes the default arrow in webkit browsers (Chrome, Safari) */
   -moz-appearance: none; /* Removes the default arrow in Firefox */
   appearance: none; /* Standard CSS property to remove arrow */
@@ -196,7 +238,6 @@ h5, h6 {
 /* Label for the dropdown */
 .paper-table .form-group label {
   font-weight: bold;
-  
   color: #333;
   margin-bottom: 5px;
   display: block; /* Ensures the label is displayed on top */
@@ -272,6 +313,19 @@ input[type="email"] {
   border-radius: 5px;
   font-size: 16px;
 }
+/* Placeholder styling for all inputs */
+input::placeholder,
+select::placeholder,
+textarea::placeholder {
+  text-transform: capitalize; /* Capitalizes the first letter of each word */
+  color: #999; /* Optional: Change placeholder text color */
+  font-size: 14px; /* Optional: Adjust font size */
+}
+
+/* Add specificity if needed for your form */
+.text-input::placeholder {
+  text-transform: capitalize;
+}
 
 input[type="text"]:focus,
 input[type="email"]:focus {
@@ -333,17 +387,6 @@ input[type="email"]:focus {
   font-weight: bold;
 }/* Responsive Adjustments */
 
-.error{
-  color:red
-}
-
-.bank-photo{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 @media (max-width: 720px) {
   .reg-container {
     display: flex;
@@ -360,8 +403,17 @@ input[type="email"]:focus {
   .btn {
     font-size: 12px; /* Smaller font size for buttons */
     padding: 8px 16px; /* Reduced padding for compact buttons */
-    background-color: #007bff;
   }
+  .required-icon {
+    color: red;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+  
 
   .modal-content {
     width: 85%; /* Further reduce width of modal */
@@ -429,5 +481,32 @@ input[type="email"]:focus {
 
   .note {
     font-size: 12px; /* Smaller font size for notes */
+  }
+}
+@media (max-width: 600px) {
+  .bank-photo img {
+    width: 100px; /* Smaller width for mobile screens */
+
+  }
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  border-top: 4px solid yellow;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  color: yellow;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

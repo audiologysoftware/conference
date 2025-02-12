@@ -13,7 +13,7 @@ const Venue = () => {
       <div className="venue-container" data-aos="fade-up">
         <div className="venue-header">
           <h2>Venue</h2>
-          <p>Join us at the Sri Rajendra Centenary Auditorium, JSS Hospital, Mysuru.</p>
+          <p>Join us </p>
         </div>
            <div className="venue-header">
             <h2>Sri Rajendra Centenary Auditorium</h2>

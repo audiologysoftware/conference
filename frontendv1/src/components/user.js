@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { registerUser, getUserByEmail } from "../api/users";
+import { registerUser, getUserByEmail } from "../api/usersapi";
 import {listAllUsers} from '../api/management'
 import { ErrorDisplay } from "./ErrorDisplay";
 

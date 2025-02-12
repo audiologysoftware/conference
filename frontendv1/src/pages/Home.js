@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
+import MobilePopup from '../components/MobilePopup';
 const Navbar = lazy(() => import('../components/Navbar'));
 const About = lazy(() => import('../components/About'));
 const Speaker = lazy(() => import('../components/Speakers'));
@@ -17,9 +19,30 @@ const Layout = lazy(() => import('../components/Layout'));
 
 
 function Home() {
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const handleKeyPress = (event) => {
+            if (event.ctrlKey && event.key === "l") {
+                event.preventDefault(); // Prevent default browser behavior
+                navigate("/login");
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyPress);
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyPress);
+        };
+    }, [navigate]);
+
+
+
+
     return (
         <Layout navbar={<Navbar />} hero={<Hero />} footer={<Footer />}>
-            <Suspense fallback={<div>Loading...</div>}>                                                
+            <Suspense fallback={<div>Loading...</div>}>
                 <About />
                 <Speaker />
                 {/* <Sponsors /> */}
@@ -31,6 +54,7 @@ function Home() {
                 <Venue />
                 <Accommodations />
             </Suspense>
+            <MobilePopup />
         </Layout>
     );
 }

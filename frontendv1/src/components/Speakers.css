@@ -42,7 +42,7 @@
 
 .speaker img {
     width: 100%;
-    height: 180px; /* Reduced fixed height for images */
+    height: 240px; /* Reduced fixed height for images */
     object-fit: cover; /* Ensure the images cover the area without distortion */
     border-bottom: 2px solid #003366;
 }
@@ -83,7 +83,7 @@
     }
 
     .speaker img {
-        height: 150px; /* Reduced image height */
+        height: 250px; /* Reduced image height */
     }
 
     .speaker .details {
@@ -115,7 +115,7 @@
     }
 
     .speaker img {
-        height: 120px; /* Further reduced image height */
+        height: 170px; /* Further reduced image height */
     }
 
     .speaker .details {

@@ -22,6 +22,10 @@ body {
   overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
+.mobile-logo-container{
+  display: none;
+}
+
 /* Navbar List (Menu Items) */
 .navbar-list {
   display: flex;
@@ -69,6 +73,60 @@ body {
   padding: 8px;
 }
 
+.navbar-link.abstract {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 30px; /* Balloon-like rounded edges */
+  background: linear-gradient(135deg, #ff7eb3, #ff758c, #fce043);
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(255, 117, 140, 0.4); /* Glow effect */
+  position: relative;
+  overflow: hidden;
+  animation: pulse 2s infinite; /* Pulsing animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-link.abstract:hover {
+  transform: scale(1.2); /* Enlarges slightly on hover */
+  box-shadow: 0px 10px 25px rgba(255, 117, 140, 0.6), 0px 0px 40px rgba(252, 224, 67, 0.7); /* Intensifies the glow */
+}
+
+.navbar-link.abstract:before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  opacity: 0;
+  transform: rotate(45deg);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.navbar-link.abstract:hover:before {
+  opacity: 1;
+  transform: rotate(0deg) scale(1.7); /* Adds an animated glowing highlight */
+}
+
+/* Keyframe for pulsing animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0px 4px 15px rgba(255, 117, 140, 0.4);
+  }
+  50% {
+    transform: scale(1.05); /* Slight size increase */
+    box-shadow: 0px 6px 20px rgba(255, 117, 140, 0.6), 0px 0px 25px rgba(252, 224, 67, 0.5);
+  }
+}
+
+
+
 .navbar-link.registration.active {
   background-color: #b35d00; /* Darker orange for active */
 }
@@ -97,6 +155,18 @@ body {
     background-color: #fff; /* Set background color for navbar */
   }
 
+  .mobile-logo-container{
+    display: block;   
+    margin-right: auto;    
+    padding: 10px 0px;
+  }
+
+  .logo img{
+    max-width: 100%;
+    max-height: 40px;    
+  }
+
+
   .navbar-list {
     gap: 8px; /* Reduced gap between items */
     margin: 0; /* Ensure no extra margin */
@@ -118,6 +188,17 @@ body {
     margin: 0; /* Remove margin */
     z-index: 1000; /* Keep navbar on top */
     background-color: #fff; /* Set background color for navbar */
+  }
+  
+  .mobile-logo-container{
+    display: block;   
+    margin-right: auto;    
+    padding: 10px 0px;
+  }
+
+  .logo img{
+    max-width: 100%;
+    max-height: 40px;    
   }
 
   .navbar-list {
@@ -165,6 +246,17 @@ body {
   .navbar-link {
     font-size: 10px; /* Even smaller font for small screens */
     padding: 5px 8px; /* Smaller padding */
+  }
+
+  .mobile-logo-container{
+    display: block;   
+    margin-right: auto;    
+    padding: 10px 0px;
+  }
+
+  .logo img{
+    max-width: 100%;
+    max-height: 40px;    
   }
 
   .navbar-toggle {
