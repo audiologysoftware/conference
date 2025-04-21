@@ -14,11 +14,11 @@ import {
     TableRow,
     Paper
 } from "@mui/material";
-import { listAllUsers, listAllManuscripts, sendReviewerEmail, updateStatus } from '../api/management';
+import { listAllUsers, listAllManuscripts, sendReviewerEmail, updateStatus, deleteManuscript, getTransactionScreenshot, getAbstractfile } from '../api/management';
 import { useNavigate } from 'react-router-dom';
 import { logInfo } from '../utils/logger';
 import { getAllQueries } from '../api/queries';
-
+import * as XLSX from 'xlsx';
 
 const AdminDashboard = () => {
     const [data, setData] = useState([]);
@@ -30,6 +30,7 @@ const AdminDashboard = () => {
     const [selectedManuscript, setSelectedManuscript] = useState(null);
     const [reviewerEmail, setReviewerEmail] = useState('');
     const [scoreData, setScoreData] = useState({});
+    const [downloadData, setDownloadData] = useState([])
 
     const navigate = useNavigate();
 
@@ -84,6 +85,7 @@ const AdminDashboard = () => {
 
             // Set the processed data
             setData(processedResponse);
+            console.log(`process data ${JSON.stringify(processedResponse)}}`)
         } catch (error) {
             console.error('Error fetching manuscripts:', error);
         } finally {
@@ -136,6 +138,25 @@ const AdminDashboard = () => {
             alert('Failed to send email');
         }
     };
+
+
+    const handleGetFiles = async (id, filename, type) => {
+        try {
+            let response = ""
+            if(type=="user")
+                response = await getTransactionScreenshot(id);
+            else
+                response = await getAbstractfile(id);
+
+                console.log(filename)
+
+            handleDownload(response.detail.data, filename);
+        }
+        catch (error) {
+            console.error('Error fetching file:', error);
+            alert('Failed to fetch file');
+        }
+    }
 
     const handleDownload = (fileData, fileName) => {
         console.log(fileData)
@@ -195,10 +216,10 @@ const AdminDashboard = () => {
                     variant="outlined"
                     size="small"
                     onClick={() =>
-                        handleDownload(
-                            params.value, // fileData
+                        handleGetFiles(
+                            params.row.id, // fileData
                             `screenshot_${params.row.id}.${params.row.extension}`, // fileName with extension
-                            params.row.content_type // contentType
+                            "user"
                         )
                     }
                 >
@@ -270,11 +291,55 @@ const AdminDashboard = () => {
         }
     }
 
+    const handleDelete = async (id) => {
+        try {
+            const confirmed = window.confirm(`Are you sure you want to delete manuscript ID ${id}?`);
+            if (confirmed) {
+                const response = await deleteManuscript(id);
+                fetchManuscripts();
+                alert(response)
+            }
+        } catch (err) {
+            alert(err)
+        }
+
+    }
+   
+
+    const reorderColumns = () =>{
+        if (data.length > 0) {
+            const transformedData = data.map(item => {
+                const { author_names, score, abstract, extension, manuscript, plagiarism,content_type, ...rest } = item;
+                return { ...rest, score: score?.sum,  author_names, };
+            });
+
+            console.log(transformedData)
+                        
+            setDownloadData(transformedData);
+        }
+    }
+
+    const handleDownLoad = () =>{                
+
+        reorderColumns()
+                        
+        const csv = downloadData.map(row => Object.values(row).join(',')).join('\n');
+        const blob = new Blob([csv], { type: 'text/csv' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'data.csv';
+        a.click();
+        URL.revokeObjectURL(url);
+        alert("Data downloaded successfully")           
+    }
+
     const manuscriptColumns = [
         { field: 'id', headerName: 'ID', width: 70 },
         { field: 'title', headerName: 'Title', width: 300 },
         { field: 'author_names', headerName: 'Authors', width: 250 },
         { field: 'email_id', headerName: 'Email', width: 250 },
+        { field: 'presentation', headerName: 'presentation', width: 250 },
 
         {
             field: 'abstract',
@@ -285,11 +350,11 @@ const AdminDashboard = () => {
                     variant="outlined"
                     size="small"
                     onClick={() =>
-                        handleDownload(
-                            params.value, // fileData
-                            `screenshot_${params.row.id}.${params.row.extension}`, // fileName with extension
-                            params.row.content_type // contentType
-                        )
+                        handleGetFiles(
+                            params.row.id, // fileData
+                            `abstract_${params.row.id}.${params.row.extension}`, // fileName with extension
+                            "abstract"
+                        )                        
                     }
                 >
                     Download
@@ -342,6 +407,22 @@ const AdminDashboard = () => {
                 </>
             ),
         },
+        {
+            field: 'delete',
+            headerName: 'Delete',
+            width: 200,
+            renderCell: (params) => (
+                <Button
+                    variant="outlined"
+                    size="small"
+                    onClick={() =>
+                        handleDelete(params.row.id)
+                    }
+                >
+                    Delete
+                </Button>
+            ),
+        }
     ];
 
     const queryColumns = [
@@ -390,6 +471,9 @@ const AdminDashboard = () => {
                     <Button variant="contained" color="primary" onClick={handleSearch}>
                         Search
                     </Button>
+                    <Button variant="contained" color="primary" onClick={handleDownLoad}>
+                        Download
+                    </Button>
                 </Box>
             </Box>
 
@@ -430,7 +514,7 @@ const AdminDashboard = () => {
                         disabled={loading}  // Disable button while loading
                     >
                         {loading ? <CircularProgress size={24} color="inherit" /> : "Submit Review"}
-                    </Button>                   
+                    </Button>
                 </DialogActions>
             </Dialog>
             <Dialog open={openScore} onClose={handleScoreDialog} fullWidth maxWidth="sm">

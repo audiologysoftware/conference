@@ -3,6 +3,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.config.database import get_db
 from app.services.management_service import (
     list_all_users,
+    fetch_transaction_screenshot,
     list_all_manuscripts,
     list_email_mismatch,
     list_all_queries,
@@ -38,6 +39,26 @@ async def get_all_users(db: AsyncSession = Depends(get_db)):
     except Exception as e:
         logger.error("Error while fetching users: {}", str(e))
         raise HTTPException(status_code=500, detail="Internal Server Error")
+    
+@router.get('/transaction-screenshot', response_model=ApiResponse)
+async def get_transaction_screenshot(user_id:int, db:AsyncSession=Depends(get_db)):
+    try:
+        transaction_screenshot = await fetch_transaction_screenshot(db, user_id)
+        if transaction_screenshot is None:
+            raise HTTPException(status_code=404, detail="Transaction screenshot not found")
+        response = ApiResponse(
+            status_code=200,
+            detail={
+                "status":"success",
+                "data":transaction_screenshot,
+                "message": "transaction fetch successfully"
+            }
+        )
+        return response
+        
+    except Exception as e:
+        logger.error("Error while fetching transaction screenshot: {}", str(e))
+        raise HTTPException(status_code=500, detail="Internal Server Error")
 
 
 # 2. List all manuscripts
@@ -48,6 +69,26 @@ async def get_all_manuscripts(db: AsyncSession = Depends(get_db)):
         return manuscripts
     except Exception as e:
         logger.error("Error while fetching manuscripts: {}", str(e))
+        raise HTTPException(status_code=500, detail="Internal Server Error")
+    
+@router.get('/manuscript/{id}', response_model=ApiResponse)
+async def get_manuscript(id:int, db:AsyncSession=Depends(get_db)):
+    try:
+        manuscript = await get_abstract_by_id(db, id)
+        if manuscript is None:
+            raise HTTPException(status_code=404, detail="Manuscript not found")
+        response = ApiResponse(
+            status_code=200,
+            detail={
+                "status":"success",
+                "data":manuscript,
+                "message": "manuscript fetch successfully"
+            }
+        )
+        return response
+
+    except Exception as e:
+        logger.error("Error while fetching manuscript: {}", str(e))
         raise HTTPException(status_code=500, detail="Internal Server Error")
 
 
@@ -158,7 +199,7 @@ async def save_abstract_score(score_data:dict, db:AsyncSession=Depends(get_db)):
         raise HTTPException(status_code=500, detail="Internal Server Error")
 
 @router.get('/get-score/{id}', response_model=ApiResponse)
-async def fetch_scode(id:int, db:AsyncSession=Depends(get_db)):
+async def fetch_score(id:int, db:AsyncSession=Depends(get_db)):
     try:
         score = await get_score(db, id)
         if score is None:

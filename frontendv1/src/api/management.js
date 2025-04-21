@@ -14,6 +14,17 @@ export const listAllUsers = async () => {
   }
 };
 
+export const getTransactionScreenshot = async(userId) =>{
+  try{
+  const response = await apiClient.get("/management/transaction-screenshot", {params:{"user_id":userId}})
+  console.log(response.data)
+  return response.data
+  }catch(error){
+    logError("Failed to fetch transaction screenshot", error);
+    throw error.response?.data || "Failed to fetch transaction screenshot";
+  }
+}
+
 // List All Manuscripts
 export const listAllManuscripts = async () => {
   try {
@@ -26,6 +37,18 @@ export const listAllManuscripts = async () => {
     throw error.response?.data || "Failed to fetch manuscripts";
   }
 };
+
+export const getAbstractfile = async(id) =>{
+  try{
+    logInfo("Fetching abstract file")
+    const response = await apiClient.get(`/management/get-abstract/${id}`)
+    logInfo("Abstract file fetched successfully", response.data);
+    return response.data
+  }catch(error){
+    logError("Failed to fetch abstract file", error);
+    throw error.response?.data || "Failed to fetch abstract file";
+  }
+}
 
 // List Email Mismatches
 export const listEmailMismatches = async () => {
@@ -142,7 +165,21 @@ export const updateStatus = async(id, status) =>{
       alert("request error")
     }
   }
+}
 
+export const deleteManuscript = async(id) =>{
+  try{
+    logInfo(`Deleting manuscript for ${id}`)
+    const response = await apiClient.delete(`/manuscripts/delete-manuscript/`, {params:{id:id}})
+    logInfo("Manuscript deleted successfully", response.data);
+    return response.data
+  }catch(error){
+    if(error.response){
+      alert("response error")
+    }else if(error.request){
+      alert("request error")
+    }
+  }
 }
 
 

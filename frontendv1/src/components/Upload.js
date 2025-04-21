@@ -3,6 +3,8 @@ import "./Upload.css";
 import { uploadAbstract, uploadManuscript, getTitles, getAuthorNames } from "../api/manuscripts";
 import { logInfo } from "../utils/logger";
 
+const isUpload = process.env.REACT_APP_UPLOAD
+
 const Manuscript = () => { 
 
   const [error, setError] = useState(null);
@@ -30,6 +32,8 @@ const Manuscript = () => {
   const plagFileHandler = useRef();
   const manFileHandler = useRef();
 
+  
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -46,7 +50,7 @@ const Manuscript = () => {
         abstractFileHandler.current.value = null;
         return;
       }
-      if (!['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'].includes(file.type)) {
+      if (!['application/pdf'].includes(file.type)) {
         alert("Unsupported file type. only pdf files are alowed");
         abstractFileHandler.current.value = null;
         return;
@@ -119,51 +123,59 @@ const Manuscript = () => {
 
   const handleSubmit = async (e, type) => {
     e.preventDefault();
-    console.log("Form submitted:", form);
-    try {
-      if (type === "Abstract") {
-        if (form.abstract) {
-          if (!showTitleDropdown) {
-            console.log("title-textbox:", showTitleDropdown, type);
-            setLoading1(true); // Show loading spinner
-            await uploadAbstract({
-              title: form.title,
-              author_names: form.author_names,
-              email_id: form.email_id,
-              abstract: form.abstract,
-              presentation: form.presentation,
-            });
-            alert("Abstract uploaded successfully!");            
-            setShowTitleDropdown(true);          
-           
-              clearForm();
-                       
-            setLoading1(false); // Show loading spinner                                    
-          } else {
-            alert("Abstract is already submitted, you can submit the full-length manuscript");
-          }
-        } else alert("Upload the abstract");
-      }
-      if (type === "Full-Length Paper") {
-        if (form.plagiarism || form.manuscript) {
-          setLoading2(true); // Show loading spinner
-          await uploadManuscript({
-            id: parseInt(titleId),
-            plagiarism: form.plagiarism,
-            manuscript: form.manuscript,
-          });
-          alert("Manuscript and Plagiarism uploaded successfully!");
-          setShowTitleDropdown(true);
-          // clearForm();
-          setLoading2(false); // Show loading spinner
-          return;
-        } else {
-          if (!form.plagiarism) alert("Upload the plagiarism report");
-          else if (!form.manuscript) alert("Upload the full-length manuscript");
+
+    if (isUpload === "false") {
+      alert('Last date is over, Submission is forbidden')
+    }
+    else
+    {
+      console.log("Form submitted:", form);
+      try {
+        if (type === "Abstract") {
+          if (form.abstract) {
+            if (!showTitleDropdown) {
+              console.log("title-textbox:", showTitleDropdown, type);
+              setLoading1(true); // Show loading spinner
+              await uploadAbstract({
+                title: form.title,
+                author_names: form.author_names,
+                email_id: form.email_id,
+                abstract: form.abstract,
+                presentation: form.presentation,
+              });
+              alert("Abstract uploaded successfully!");            
+              setShowTitleDropdown(true);          
+            
+                clearForm();
+                        
+              setLoading1(false); // Show loading spinner                                    
+            } else {
+              alert("Abstract is already submitted, you can submit the full-length manuscript");
+            }
+          } else alert("Upload the abstract");
         }
+        if (type === "Full-Length Paper") {
+          if (form.plagiarism || form.manuscript) {
+            setLoading2(true); // Show loading spinner
+            await uploadManuscript({
+              id: parseInt(titleId),
+              plagiarism: form.plagiarism,
+              manuscript: form.manuscript,
+            });
+            alert("Manuscript and Plagiarism uploaded successfully!");
+            setShowTitleDropdown(true);
+            // clearForm();
+            setLoading2(false); // Show loading spinner
+            return;
+          } else {
+            if (!form.plagiarism) alert("Upload the plagiarism report");
+            else if (!form.manuscript) alert("Upload the full-length manuscript");
+          }
+        }
+      
+      } catch (err) {
+        alert(`Uploading failed ${err}`);
       }
-    } catch (err) {
-      alert(`Uploading failed ${err}`);
     }
   };
 
@@ -297,18 +309,18 @@ const Manuscript = () => {
           <div style={{width:"100%", display:"flex", flexDirection:"column", alignItems:"center", gap:"0px"}}>
             <button
                   type="button"
-                  className="submit-btn"
-                  onClick={(e) => handleSubmit(e, "Abstract")}
+                  className="submit-btn"                  
+                  onClick={(e) => handleSubmit(e, "Abstract")}                 
                 >
                   {loading1 ? (
-                        <span className="spinner" /> // Replace with a spinner element
+                      <span className="spinner" /> // Replace with a spinner element
                       ) : (
                         "Submit"
                       )}
               </button>
               <h6 style={{color:"red", fontSize:"13px", marginTop:"5px"}}>
                   Last date for submission of Abstract:{" "}
-                  <span className="date">March 1st 2025</span>
+                  <span className="date">March 15th 2025</span>
               </h6>             
           </div>
           <div className="contact-info-container">

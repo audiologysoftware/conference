@@ -13,18 +13,17 @@ const Schedule = () => {
 
     const schedules = {
         speech: {
-
             day1: [
-                { time: "9:00 am-9:50 am", session: "Comprehensive Clinical Evaluation of Dysphagia in the Neonatal Intensive Care Unit (NICU)- VFSS/FEES evaluation of paediatric swallow", details: "Dr Olivia  Brooks,Pediatric SLP, UF Health Shands Hospital, Gainesville, Florida, USA" },
+                { time: "9:00 am-9:50 am", session: "Clinical and Instrumental Evaluation  of Feeding and Swallowing in the Neonatal Intensive Care Unit (NICU)", details: "Dr. Angie Canning, Speech Pathologist(Senior Paediatric) Gold Coast University Hospital, South Port, Australia" },
                 { time: "9:50 am – 10.40 am", session: "Knowledge and Skills Needed by Speech-Language Pathologists providing Services to Infants and Families in the NICU Environment.", details: "Dr Deepthi Thandaweshwar, Assistant Professor, Dept. of Pediatrics, JSS Hospital, MysuruEarly" },
                 { time: "10:40 am-11.00 am", session: "Tea Break", details: "Tea Break" },
                 { time: "11:00 am – 11:30 am", session: "Inauguration", details: "Inaguration" },
-                { time: "11.30 am 12.00 pm", session: "Insight on steps in product development", details: "Vipul Arora, Associate Professor, Dept of Electrical Engineering, IIT Delhi." },
+                { time: "11:30 pm – 12:00 pm", session: "Steps involved in taking the Copy right for the developed materials ", details: "Dr. Sharath Kumar, Patent Cell, AIISH, Mysore." },
                 { time: "12.00 am 01.00 pm", session: "Parallel oral and Poster sessions", details: "Parallel oral and Poster sessions" },
                 { time: "01:00 pm – 01.45 pm", session: "Lunch", details: "Lunch Break" },
                 { time: "1.45 pm-2.15 pm", session: "Scope of AI and machine learning in healthcare", details: "Dr Nagendra Swamy, Professor, DoS in Computer Science, University of Mysore." },
                 { time: "2.15 pm-3.00 pm", session: "Essential Criteria for Securing a Patent for Developed Products", details: "Dr Balamuralidhara V, Associate Professor; JSS College of Pharmacy, Mysuru" },
-                { time: "3.00 pm-3.50 pm", session: "Identifying Sensory Triggers in Swallowing Difficulties among paediatric dysphagia.", details: "Dr Olivia  Brooks,Pediatric SLP, UF Health Shands Hospital,Gainesville, Florida, USA " },
+                { time: "3.00 pm-3.50 pm", session: "Identifying Sensory Triggers in Swallowing Difficulties among paediatric dysphagia.", details: "Ms Kavya S, Speech Language Pathologist, Magpie Speech Therapy, Bengaluru" },
                 { time: "3.50 pm–4.40 pm", session: "Diet consistency: A Clinical Framework of IDDSI for Predicting Adverse Events from Aspiration.", details: "Dr Gayathri Krishnan, Assistant Professor, AIISH Mysuru" },
                 { time: "4.40 pm–5.00 pm", session: "Tea break", details: "Tea break" },
                 { time: "5.00 pm–5.30 pm", session: "Short- and long-term usage of tracheostomy tube, complications of tracheostomy in paediatric dysphagia.", details: "Dr Jeanne Marshall, Conjoint Senior Research Fellow, School of Health and Rehabilitation Sciences, Faculty of Health and Behavioural Sciences, University of Queensland" }
@@ -32,20 +31,19 @@ const Schedule = () => {
             day2: [
                 { time: "8:00 am–9:00 am", session: "Poster and Oral presentations", details: "Poster and Oral Presentations" },
                 { time: "9:00 am–9:50 am", session: "Phonologically-based reading disabilities: A multi-lingual intervention approach", details: "Dr. K.S. Prema, Former Professor of Language Pathology, AIISH, Mysuru" },
-                { time: "9:50 am–10:40 am", session: "The Intersection of Language abilities and early literacy skills in Bilingual children with Communication disorders", details: "Dr. Shivani Tiwari, Associate Professor, Department of Speech and Hearing, MCHP, Manipal" },
+                { time: "9:50 am- 10:40 am", session: "Assessment of Language and Communication in infant-toddlers at risk of autism", details: "Dr. S S Meera Associate Professor, Department of Speech Pathology and Audiology, NIMHANS, Bangalore"},
                 { time: "10.40 am – 11:30 pm", session: "Tea break", details: "Tea break" },
-                { time: "11:30 pm – 12:00 pm", session: "Steps involved in taking the Copy right for the developed materials ", details: "Dr. Sharath Kumar, Patent Cell, AIISH, Mysore." },
+                { time: "11.30 am 12.00 pm", session: "Insight on steps in product development", details: "Vipul Arora, Associate Professor, Dept of Electrical Engineering, IIT Kanpur." },
                 { time: "12.00 pm -12.50 pm", session: "Phonological Intervention in Bilingual/multilingual children", details: "Dr. N Sreedevi, Professor of Speech Sciences, Department of Speech-Language Sciences, AIISH, Mysuru" },
                 { time: "12:50 pm – 1:30 pm", session: "Lunch", details: "Lunch" },
                 { time: "1.30 pm– 2:20 pm", session: "Teaching orthography to bilingual children with communication disorders", details: "Dr. Gopee Krishnan, Associate Professor, Department of Speech and Hearing, MCHP, Manipal" },
                 { time: "2:20 pm – 3:10 pm", session: "The Impact of Language Factors on Early Stuttering in Bilingual Children", details: "Ms. Chanchal Chowdhary, Assistant Professor in Speech-Language Pathology, Department of Speech and Hearing, MAHE, KMC Mangalore" },
                 { time: "3.10 pm – 3.25 pm", session: "Tea Break", details: "Tea Break" },
-                { time: "3:25 pm- 4:15 pm", session: "Speech Language and Communication Assessment in infant and toddlers with autism spectrum disorders", details: "Dr. S S Meera Associate Professor, Department of Speech Pathology and Audiology, NIMHANS, Bangalore" },
+                { time: "3:25 pm–4:15 pm", session: "The Intersection of Language abilities and early literacy skills in Bilingual children with Communication disorders", details: "Dr. Shivani Tiwari, Associate Professor, Department of Speech and Hearing, MCHP, Manipal" },
                 { time: "4.15 onwards ", session: "Valedictory", details: "Valedictory" }
             ]
         },
         audiology: {
-
             day1: [
                 {
                     "time": "9:00 am– 9:50 am",
@@ -68,9 +66,9 @@ const Schedule = () => {
                     "details": "Inauguration"
                 },
                 {
-                    "time": "11.30 am 12.00 pm",
-                    "session": "Insight on steps in product development",
-                    "details": "Vipul Arora, Associate Professor, Dept of Electrical Engineering, IIT Delhi."
+                    "time": "11:30 am – 12:00 am",
+                    "session": "Steps involved in taking the Copy right for the developed materials",
+                    "details": "Dr. Sharath Kumar, Patent Cell, AIISH, Mysore."
                 },
                 {
                     "time": "12.00 am 01.00 pm",
@@ -115,7 +113,7 @@ const Schedule = () => {
             ],
             day2: [
                 {
-                  "time": "8:00 pm - 9:00 pm",
+                  "time": "8:00 am - 9:00 am",
                   "session": "Poster and Oral Presentations",
                   "details": "Poster and Oral Presentations"
                 },
@@ -135,9 +133,9 @@ const Schedule = () => {
                   "details": "Tea break"
                 },
                 {
-                  "time": "11:30 am – 12:00 am",
-                  "session": "Steps involved in taking the Copy right for the developed materials",
-                  "details": "Dr. Sharath Kumar, Patent Cell, AIISH, Mysore."
+                    "time": "11.30 am 12.00 pm",
+                    "session": "Insight on steps in product development",
+                    "details": "Vipul Arora, Associate Professor, Dept of Electrical Engineering, IIT Kanpur."                  
                 },
                 {
                   "time": "12:00 am – 12:50 pm",

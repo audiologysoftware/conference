@@ -45,6 +45,9 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
+        <div className='best-view-message '>
+          <p>Best View in PC</p>
+        </div>
         <b className='visit'>
           Visitor Count:
           <div className="counter">
@@ -54,7 +57,6 @@ const Footer = () => {
           </div>
         </b>
         <p> &copy; Copyright 2025, JSS Institute Of Speech And Hearing, Mysuru</p>
-
       </div>
     </footer>
   );

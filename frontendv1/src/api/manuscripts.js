@@ -9,7 +9,7 @@ export const uploadAbstract = async (abstractData) => {
     logInfo("Abstract uploaded successfully", response.data);
     return response.data;
   } catch (error) {
-    logError("Failed to upload abstract", error);
+    logError(`Failed to upload abstract ${error}`);
     throw error.response?.data || "Failed to upload abstract";    
   }
 };

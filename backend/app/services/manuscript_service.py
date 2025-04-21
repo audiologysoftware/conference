@@ -1,6 +1,7 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from sqlalchemy.exc import SQLAlchemyError
+from sqlalchemy import delete
 from app.models.user_model import User
 from app.models.manuscript_model import Manuscript
 from loguru import logger
@@ -12,6 +13,7 @@ from app.schemas.email_schema import UserEmailDetails
 # Service: Upload Abstract
 async def upload_abstract(db: AsyncSession, data: AbstractUpload) -> bool:
     try:
+        print("data", data)
         # Upload the abstract
         new_manuscript = Manuscript(
             title=data.title,
@@ -119,5 +121,20 @@ async def upload_manuscript(db: AsyncSession, data: ManuscriptUpload) -> bool:
     except Exception as e:
         logger.error("Unexpected error while uploading manuscript: {}", str(e))
         raise
+
+async def delete_manuscript(db, manuscript_id):
+    try:
+        await db.execute(delete(Manuscript).where(Manuscript.id == manuscript_id))
+        await db.commit()   
+        return True 
+    except Exception as e:
+        logger.error("Unexpected error while deleting manuscript: {}", str(e))
+        await db.rollback()
+        raise
+    
+
+    
+    
+    
 
 

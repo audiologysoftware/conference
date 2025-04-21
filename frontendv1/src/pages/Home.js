@@ -45,7 +45,7 @@ function Home() {
             <Suspense fallback={<div>Loading...</div>}>
                 <About />
                 <Speaker />
-                {/* <Sponsors /> */}
+                <Sponsors />
                 <Organizers />
                 <Schedule />
                 <Registration />
