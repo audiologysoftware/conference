@@ -1,66 +1,59 @@
-/* Speaker Section */
-#speakers {
-    background-color: #f9f9f9;
-   padding: 0px;
-
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom:20px;
-}
-
-.section-header h2 {
-    font-size: 20px; /* Further reduced font size */
-    color: #003366;
-}
-
-/* Grid Layout for 3 speakers per row */
+/* Grid Layout */
 .speakers-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 speakers per row */
-    gap: 15px; /* Reduced gap between cards */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Increased gap between cards */
     justify-items: center;
-    padding: 0 15px; /* Adjusted padding */
-    margin: 0px;
-
+    padding: 0 15px;
+    margin: 0;
 }
 
+/* Fixed Card */
 .speaker {
-    width: 80vw; /* Reduced width for better scaling */
-    max-width: 250px; /* Further reduced max width for each speaker */
+    width: 250px;    /* Fixed width */
+    height: 350px;   /* Fixed height */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Extra gap at the bottom */
 }
 
 .speaker:hover {
     transform: translateY(-10px);
 }
 
+/* Image Styling */
 .speaker img {
     width: 100%;
-    height: 240px; /* Reduced fixed height for images */
-    object-fit: cover; /* Ensure the images cover the area without distortion */
+    height: 240px;            /* Fixed image height */
+    object-fit: cover;        /* Image covers the area */
+    object-position: 40% 10%; /* Adjusted to show more of the head */
     border-bottom: 2px solid #003366;
 }
 
+/* Details Section */
 .speaker .details {
-    padding: 10px; /* Further reduced padding */
+    padding: 10px;
+    height: auto;            /* Changed to auto for flexibility */
+    min-height: 110px;       /* Minimum height to ensure consistency */
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
 }
 
 .speaker .details h3 {
-    font-size: 16px; /* Reduced font size */
+    font-size: 16px;
     font-weight: bold;
-    margin-bottom: 8px; /* Reduced margin */
+    margin-bottom: 8px;
 }
 
 .speaker .details p {
-    font-size: 10px; /* Reduced font size */
+    font-size: 10px;
     color: #666;
+    margin: 0; /* Remove default margin */
 }
 
 .speaker .details a {
@@ -71,7 +64,9 @@
 
 .speaker .details a:hover {
     color: #ff6600;
-}/* Responsive Styling */
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .speakers-container {
         grid-template-columns: 1fr; /* 1 speaker per row on small screens */
@@ -79,15 +74,17 @@
 
     .speaker {
         width: 90vw; /* Reduced width for better scaling */
-        max-width: 200px; /* Further reduced max width for smaller cards */
+        max-width: 250px; /* Adjusted max width */
+        height: auto; /* Make height flexible */
     }
 
     .speaker img {
-        height: 250px; /* Reduced image height */
+        height: 200px; /* Adjusted image height */
     }
 
     .speaker .details {
-        padding: 8px; /* Further reduced padding */
+        padding: 8px; /* Reduced padding */
+        min-height: auto; /* Remove fixed height */
     }
 
     .section-header h2 {
@@ -96,10 +93,11 @@
 
     .speaker .details h3 {
         font-size: 14px; /* Reduced font size for speaker names */
+        margin-bottom: 4px; /* Reduced margin gap */
     }
 
     .speaker .details p {
-        font-size: 8px; /* Reduced font size for speaker details */
+        font-size: 10px; /* Adjusted font size for speaker details */
     }
 
     /* Add gap after the last speaker card */
@@ -111,23 +109,24 @@
 @media (max-width: 480px) {
     .speaker {
         width: 80vw; /* Further reduced width for very small screens */
-        max-width: 180px; /* Adjusted max width */
+        max-width: 200px; /* Adjusted max width */
     }
 
     .speaker img {
-        height: 170px; /* Further reduced image height */
+        height: 180px; /* Further adjusted image height */
     }
 
     .speaker .details {
-        padding: 6px; /* Adjusted padding */
+        padding: 6px; /* Further reduced padding */
     }
 
     .speaker .details h3 {
         font-size: 12px; /* Further reduced font size for speaker names */
+        margin-bottom: 4px; /* Reduced margin gap */
     }
 
     .speaker .details p {
-        font-size: 7px; /* Reduced font size for details text */
+        font-size: 9px; /* Adjusted font size for details text */
     }
 
     /* Add gap after the last speaker card */

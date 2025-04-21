@@ -143,7 +143,7 @@
   display: flex;
   justify-content: space-between; /* Align the submit buttons on the same line */
   gap: 20px; /* Add space between the buttons */
-  margin-top: 20px;  
+  margin-top: 20px;    
 }
 
 /* Submit Button Style */
@@ -156,7 +156,7 @@
   border-radius: 5px;
   margin-top: 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;  
+  transition: background-color 0.3s ease;        
 }
 .guidelines-link{
   text-align: center;

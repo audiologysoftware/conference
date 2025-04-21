@@ -17,7 +17,7 @@ import json
 # 1. List all registered users
 async def list_all_users(db: AsyncSession):
     try:
-        result = await db.execute(select(User))
+        result = await db.execute(select(User).order_by(User.id))
         users = result.scalars().all()    
         
         users_list = [
@@ -28,7 +28,7 @@ async def list_all_users(db: AsyncSession):
                 phone=user.phone,
                 bank_type=user.bank_type,
                 transaction_id=user.transaction_id,
-                transaction_screenshot=user.transaction_screenshot,
+                transaction_screenshot="",
                 extension=user.extension,
                 content_type=user.content_type,
                 file_size=str(user.file_size),
@@ -39,6 +39,15 @@ async def list_all_users(db: AsyncSession):
         return users_list
     except Exception as e:
         logger.error("Error while fetching users: {}", str(e))
+        raise
+
+async def fetch_transaction_screenshot(db:AsyncSession, user_id:int):
+    try:
+        result = await db.execute(select(User.transaction_screenshot).where(User.id == user_id))
+        transaction_screenshot = result.scalar()
+        return transaction_screenshot
+    except Exception as e:
+        logger.error("Error while fetching transaction screenshot: {}", str(e))
         raise
 
 
@@ -52,13 +61,14 @@ async def list_all_manuscripts(db: AsyncSession):
                 Manuscript.title,
                 Manuscript.author_names,
                 Manuscript.email_id,
+                Manuscript.presentation,
                 Manuscript.abstract,
                 Manuscript.plagiarism,
                 Manuscript.manuscript,
                 Manuscript.reviewer,
                 Manuscript.score,
                 Manuscript.status,
-            )
+            ).order_by(Manuscript.id)
         )
         manuscripts = result.all()
 
@@ -69,9 +79,10 @@ async def list_all_manuscripts(db: AsyncSession):
                 title=row.title,
                 author_names=row.author_names,
                 email_id=row.email_id,
-                abstract=row.abstract,
-                plagiarism=row.plagiarism,
-                manuscript=row.manuscript,
+                presentation=row.presentation,
+                abstract="",
+                plagiarism="",
+                manuscript="",
                 reviewer=row.reviewer,
                 score=row.score,
                 status=row.status,
@@ -84,6 +95,18 @@ async def list_all_manuscripts(db: AsyncSession):
 
     except Exception as e:
         logger.error("Error while fetching manuscripts: {}", str(e))
+        raise
+
+async def get_abstract_by_id(db: AsyncSession, manuscript_id: int):
+    try:
+        result = await db.execute(
+            select(Manuscript.abstract)
+            .where(Manuscript.id == manuscript_id)
+        )
+        abstract = result.scalars().first()
+        return abstract
+    except Exception as e:
+        logger.error("Error while fetching abstract by ID: {}", str(e))
         raise
 
 

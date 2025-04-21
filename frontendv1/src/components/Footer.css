@@ -69,6 +69,23 @@
   margin: 0;
 }
 
+.best-view-message {
+  display: none;
+  font-size: 10px;
+  color: #f3d70a;
+  text-align: center;
+  font: bold;
+
+ 
+}
+
+/* Only on mobile view, display the message in the center */
+@media (max-width: 768px) {
+  .best-view-message {
+    display: block;
+  }
+}
+
 /* Mobile View Adjustments */
 @media screen and (max-width: 600px) {
   .footer {

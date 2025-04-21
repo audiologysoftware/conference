@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.config.database import get_db
 from app.schemas.manuscript import AbstractUpload, AuthorRead, ManuscriptUpload, GetTitles
-from app.services.manuscript_service import upload_abstract, get_author_names, upload_manuscript, get_title_list
+from app.services.manuscript_service import upload_abstract, get_author_names, upload_manuscript, get_title_list, delete_manuscript
 from loguru import logger
 
 router = APIRouter()
@@ -66,4 +66,18 @@ async def upload_manuscript_endpoint(data: ManuscriptUpload, db: AsyncSession = 
         raise e
     except Exception as e:
         logger.error("Unexpected error during manuscript upload: {}", str(e))
+        raise HTTPException(status_code=500, detail="Internal Server Error")
+    
+@router.delete("/delete-manuscript", response_model=str)
+async def delete_manuscript_endpoint(id: int, db: AsyncSession = Depends(get_db)):
+    try:
+        success = await delete_manuscript(db, id)
+        if not success:
+            raise HTTPException(status_code=404, detail="Manuscript not found")
+        return "Manuscript deletion successful"
+    except HTTPException as e:
+        logger.error("HTTP error during manuscript deletion: {}", e.detail)
+        raise e
+    except Exception as e:
+        logger.error("Unexpected error during manuscript deletion: {}", str(e))
         raise HTTPException(status_code=500, detail="Internal Server Error")

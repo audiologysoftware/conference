@@ -138,7 +138,7 @@ body {
   justify-content: center;
   position: relative;
   width: 100%;
-  max-width: 320px;
+  max-width: 620px;
   margin: auto auto;
   padding: auto auto;
   overflow: hidden;
@@ -157,14 +157,17 @@ body {
 }
 
 .committee-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex: 0 0 100%;
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
   padding: 10px;
   text-align: center;
-  width: 100%;
-  height: auto;
+  width: 500px;
+  height: 270px;
   box-sizing: border-box;
 }
 

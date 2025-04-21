@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Registration.css';
 import qr from '../assets/img/speakers/QR code.jpg';
 import { registerUser } from '../api/usersapi';
@@ -7,6 +7,9 @@ import paytm from '../assets/img/banks/paytm.png'
 import googlepay from '../assets/img/banks/googlepay.png'
 import imps from '../assets/img/banks/imps.png'
 import { modal } from 'react-modal'
+import FeeDetailsPopup from './FeeDetailsPopup';
+
+const isUpload = process.env.REACT_APP_UPLOAD
 
 const Registration = () => {
   const [form, setForm] = useState({
@@ -35,6 +38,15 @@ const Registration = () => {
   const [isClosing, setIsClosing] = useState(false);
   const [iconPosition, setIconPosition] = useState({ top: 0, left: 0 });
   const screenShotFileUpload = useRef(null)
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [selectionValue, setSelectionValue] = useState(1);
+
+  const togglePopup = (value) => {
+    console.log(value)
+    setSelectionValue(value)
+    setIsPopupOpen(!isPopupOpen);
+  };
+
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -143,7 +155,7 @@ const Registration = () => {
           transaction_screenshot: false,
         });
       }
-    } catch (err) {
+    } catch (err) {      
       console.error("Error registering user:", err);
       alert("User registration failed");
     }
@@ -151,8 +163,6 @@ const Registration = () => {
       setLoading(false); // hide  loading spinner
     }
   };
-
-
 
   const handleIconClick = (e) => {
     const photo = bankPhotos[form.bank_type];
@@ -212,6 +222,7 @@ const Registration = () => {
 
 
   const isFormValid = Object.values(form).every((value) => value !== "");
+  
 
   return (
     <section id="registration">
@@ -220,13 +231,14 @@ const Registration = () => {
           <div className="card-body">
             <h2 className="section-title">Conference Registration</h2>
             <p className="section-subtitle">Join us for an insightful conference!</p>
-            <h4 className="registration-info">Registration Fee</h4>
+
+            {/* <h4 className="registration-info">Registration Fee</h4>
             <p className='note'>(UPI and IMPS only)</p>
             <table className="table">
               <thead>
                 <tr>
                   <th>Category</th>
-                  <th>Early Bird Fee (March 8th)</th>
+                  <th>Early Bird Fee (March 22nd)</th>
                   <th>Post Early Bird Fee</th>
                   <th>Spot Registration</th>
                 </tr>
@@ -234,24 +246,25 @@ const Registration = () => {
               <tbody>
                 <tr>
                   <td>Students & Alumini</td>
-                  <td>₹2000</td>
-                  <td>₹2500</td>
-                  <td>₹2800</td>
+                  <td className='hover-link' onMouseEnter={(e)=>togglePopup(1)}>₹2000</td>
+                  <td className='hover-link' onMouseEnter={(e)=>togglePopup(1)}>₹2500</td>
+                  <td className='hover-link' onMouseEnter={(e)=>togglePopup(1)}>₹2800</td>
                 </tr>
                 <tr>
                   <td>Professionals</td>
-                  <td>₹2500</td>
-                  <td>₹2800</td>
-                  <td>₹3100</td>
+                  <td className='hover-link' onMouseEnter={(e)=>togglePopup(1)}>₹2500</td>
+                  <td className='hover-link' onMouseEnter={(e)=>togglePopup(2)}>₹2800</td>
+                  <td className='hover-link' onMouseEnter={(e)=>togglePopup(3)}>₹3100</td>
                 </tr>
               </tbody>
             </table>
-            <div className='note'>The last date for early bird registration is 8th March 2025.</div>
+            <FeeDetailsPopup isOpen={isPopupOpen} onClose={togglePopup} selection = {selectionValue} />
+            <div className='note'>The last date for early bird registration is 22nd March 2025.</div> */}
 
 
             {/* Payment Section */}
             <div className="section-header">
-              <h3>Registation and Payment</h3>
+              <h3>Registation</h3>
             </div>
             <div className="paper-container">
               <table className="paper-table">
@@ -280,7 +293,9 @@ const Registration = () => {
                       <div className='note'>Note: Provide the Transaction Details After Payment</div>
                       <h5><b>Transaction Details</b></h5>
 
-                      <form method="POST" action="#" id="payment-form" onSubmit={handleSubmit}>
+                       {/* onSubmit={handleSubmit} */}
+                      {/* <form method="POST" action="#" id="payment-form" onSubmit={handleSubmit}>   */}
+                      <form id="payment-form">  
                         <div className="form-group">
                           Full name
                           <input
@@ -382,7 +397,8 @@ const Registration = () => {
                           <button
                             type="submit"
                             id="payment-submit"
-                            className="btn btn-primary"
+                            className="btn"
+                            disabled
                           >
                             {loading ? (
                               <span className="spinner" /> // Replace with a spinner element

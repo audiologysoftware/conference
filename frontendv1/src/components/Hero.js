@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Hero.css'; // Make sure this file imports all the necessary styles
 import logo from '../assets/img/logo.png';
 import jsslogo from '../assets/img/jsslogo.png';
+import rci from '../assets/img/rci.png';
 
 const Hero = () => {
   const [countdown, setCountdown] = useState({
@@ -38,11 +39,14 @@ const Hero = () => {
 
     <div className='hero-main-container'>
       <section id="hero">
-        <div className='logo-container'>
+        <div className='logo-container'>          
           <div className="logo">
             <img src={logo} className="topright-jsslogo" alt="Logo" />
             <img src={jsslogo} alt="jsslogo" className="topleft-jsslogo" />
-          </div>
+          </div>          
+        </div>
+        <div className='hero-rci'>
+            <img src={rci} alt="jsslogo" className="topleft-jsslogo" />
         </div>
         <div className="hero-container" data-aos="zoom-in" data-aos-delay="100">
           <h1 className="mb-4 pb-0">
